@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://2i8trwwcmcxo"]
+
+[ext_resource type="Script" uid="uid://ch4511sq54kdw" path="res://camera_3d.gd" id="1_g8tdk"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_sn0t7"]
+
+[sub_resource type="Sky" id="Sky_riqys"]
+sky_material = SubResource("ProceduralSkyMaterial_sn0t7")
+
+[sub_resource type="Environment" id="Environment_bhunq"]
+background_mode = 2
+sky = SubResource("Sky_riqys")
+
+[sub_resource type="QuadMesh" id="QuadMesh_bhunq"]
+
+[node name="Sala de Aula" type="Node3D" unique_id=1421979112]
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=446686118]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 0)
+script = ExtResource("1_g8tdk")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=615835147]
+environment = SubResource("Environment_bhunq")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1506503122]
+transform = Transform3D(0.77, 0, 0, 0, -0.003191062, 3.8849924, 0, -1.5999969, -0.0077482974, 0.6795677, -0.27468833, -0.0046693087)
+mesh = SubResource("QuadMesh_bhunq")
