@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cem71xf32o20s"
+path="res://.godot/imported/Som de Caneta Sair.ogg-ff89119d1f1fcf18d899ff8e85bec94e.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets UI/Som de Caneta Sair.ogg"
+dest_files=["res://.godot/imported/Som de Caneta Sair.ogg-ff89119d1f1fcf18d899ff8e85bec94e.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

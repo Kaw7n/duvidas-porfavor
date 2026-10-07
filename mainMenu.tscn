@@ -1,0 +1,154 @@
+[gd_scene format=3 uid="uid://ccd0bo7oecr6i"]
+
+[ext_resource type="Script" uid="uid://cgvgq6hhg483h" path="res://main_menu.gd" id="1_efmur"]
+[ext_resource type="Texture2D" uid="uid://xqcdlpt2sbe" path="res://Assets UI/mmenuMesa.png" id="1_w7d22"]
+[ext_resource type="Script" uid="uid://b7lijytg10hv2" path="res://camera_2d.gd" id="2_83s16"]
+[ext_resource type="Texture2D" uid="uid://b6dt1atgv5v8b" path="res://Assets UI/mmenuCaderno.png" id="2_wc2lj"]
+[ext_resource type="Texture2D" uid="uid://cy1b73nuoxdrc" path="res://Assets UI/Logo PlaceHolder.png" id="4_wc2lj"]
+[ext_resource type="Texture2D" uid="uid://3q6j76ji1rtj" path="res://Assets UI/Butões/1.png" id="5_hvu0j"]
+[ext_resource type="Texture2D" uid="uid://c3vwv5j0l32kj" path="res://Assets UI/Butões/3.png" id="6_0ei6b"]
+[ext_resource type="Texture2D" uid="uid://bpogl5i77ccwp" path="res://Assets UI/Butões/2.png" id="7_rdsan"]
+[ext_resource type="Texture2D" uid="uid://cmv02ey8sgkbh" path="res://Assets UI/Butões/4.png" id="8_efmur"]
+[ext_resource type="Texture2D" uid="uid://dl4idgv66l35k" path="res://Assets UI/Butões/6.png" id="9_ltgao"]
+[ext_resource type="Texture2D" uid="uid://bikbxp4lhhfk5" path="res://Assets UI/Butões/5.png" id="10_7le7c"]
+[ext_resource type="Texture2D" uid="uid://ls184dbrp7d0" path="res://Assets UI/Butões/7.png" id="11_gfslc"]
+[ext_resource type="Texture2D" uid="uid://c4j73ilmg6eum" path="res://Assets UI/Butões/9.png" id="12_d23al"]
+[ext_resource type="Texture2D" uid="uid://5bsndfsiplsa" path="res://Assets UI/Butões/8.png" id="13_n356e"]
+[ext_resource type="AudioStream" uid="uid://1vo0m5yrxtgk" path="res://Assets UI/Som-De-Caneta-Iniciar.ogg" id="15_d23al"]
+[ext_resource type="AudioStream" uid="uid://cw4a2vh30fpwl" path="res://Assets UI/Som-de-Caneta-Configurações.ogg" id="16_n356e"]
+[ext_resource type="AudioStream" uid="uid://cem71xf32o20s" path="res://Assets UI/Som de Caneta Sair.ogg" id="17_kthbb"]
+[ext_resource type="PackedScene" uid="uid://b8878qpop8c2s" path="res://fade.tscn" id="18_n356e"]
+
+[sub_resource type="Gradient" id="Gradient_w7d22"]
+offsets = PackedFloat32Array(0.1506024, 0.939759)
+colors = PackedColorArray(1, 1, 1, 0, 0, 0, 0, 0.4627451)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ml7fk"]
+gradient = SubResource("Gradient_w7d22")
+fill = 1
+fill_from = Vector2(0.5043478, 0.49130434)
+fill_to = Vector2(0.9956522, 1)
+
+[sub_resource type="GDScript" id="GDScript_2rfsq"]
+script/source = "extends AudioStreamPlayer2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
+
+[node name="MainMenu" type="Control" unique_id=66402352]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+offset_right = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_efmur")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=487005081]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=364255181]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = SubResource("GradientTexture2D_ml7fk")
+
+[node name="Mesa de Fundo" type="Sprite2D" parent="." unique_id=476997413]
+position = Vector2(577.00024, 323)
+scale = Vector2(0.5994792, 0.59351856)
+texture = ExtResource("1_w7d22")
+
+[node name="Caderno(Menu)" type="Sprite2D" parent="." unique_id=1288367719]
+position = Vector2(651, 324)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_wc2lj")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=2097106382]
+position = Vector2(24, 0)
+offset = Vector2(574.425, 322.75)
+zoom = Vector2(1.25, 1.25)
+script = ExtResource("2_83s16")
+
+[node name="Logo PlaceHolder" type="Sprite2D" parent="." unique_id=2014925057]
+position = Vector2(588.915, 198.47997)
+rotation = 0.08901179
+scale = Vector2(0.22330438, 0.25298297)
+texture = ExtResource("4_wc2lj")
+
+[node name="BotaoIniciar" type="TextureButton" parent="." unique_id=2141046020]
+layout_mode = 0
+offset_left = 447.00003
+offset_top = 281.00003
+offset_right = 720.1853
+offset_bottom = 323.40442
+rotation = 0.116937056
+texture_normal = ExtResource("5_hvu0j")
+texture_pressed = ExtResource("6_0ei6b")
+texture_hover = ExtResource("7_rdsan")
+ignore_texture_size = true
+stretch_mode = 3
+
+[node name="BotaoConfig" type="TextureButton" parent="." unique_id=615470740]
+layout_mode = 0
+offset_left = 458.00003
+offset_top = 369.00003
+offset_right = 672.0178
+offset_bottom = 411.40442
+rotation = 0.116937056
+texture_normal = ExtResource("8_efmur")
+texture_pressed = ExtResource("9_ltgao")
+texture_hover = ExtResource("10_7le7c")
+ignore_texture_size = true
+stretch_mode = 3
+
+[node name="BotaoSair" type="TextureButton" parent="." unique_id=996526146]
+layout_mode = 0
+offset_left = 508.00003
+offset_top = 467.00006
+offset_right = 602.9772
+offset_bottom = 509.40442
+rotation = 0.116937056
+texture_normal = ExtResource("11_gfslc")
+texture_pressed = ExtResource("12_d23al")
+texture_hover = ExtResource("13_n356e")
+ignore_texture_size = true
+stretch_mode = 3
+
+[node name="BotaoIniciarAudio" type="AudioStreamPlayer2D" parent="." unique_id=1532613108]
+stream = ExtResource("15_d23al")
+script = SubResource("GDScript_2rfsq")
+
+[node name="BotaoConfigAudio" type="AudioStreamPlayer2D" parent="." unique_id=794698497]
+stream = ExtResource("16_n356e")
+script = SubResource("GDScript_2rfsq")
+
+[node name="BotaoSairAudio" type="AudioStreamPlayer2D" parent="." unique_id=1572254170]
+stream = ExtResource("17_kthbb")
+script = SubResource("GDScript_2rfsq")
+
+[node name="Fade" parent="." unique_id=1383060492 instance=ExtResource("18_n356e")]
+visible = false
+layout_mode = 1
+offset_left = -1.0
+offset_top = -3.0
+offset_right = -1.0
+offset_bottom = -3.0
+
+[node name="Timer" type="Timer" parent="Fade" unique_id=872475080]
+
+[connection signal="pressed" from="BotaoIniciar" to="." method="_on_texture_button_pressed"]
+[connection signal="pressed" from="BotaoConfig" to="." method="_on_texture_button_2_pressed"]
+[connection signal="pressed" from="BotaoSair" to="." method="_on_texture_button_3_pressed"]
+[connection signal="timeout" from="Fade/Timer" to="." method="_on_timer_timeout"]

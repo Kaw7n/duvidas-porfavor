@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://2i8trwwcmcxo"]
 
-[ext_resource type="Script" uid="uid://ch4511sq54kdw" path="res://camera_3d.gd" id="1_g8tdk"]
+[ext_resource type="Script" uid="uid://c51d2mk6wi030" path="res://camera_3d.gd" id="1_g8tdk"]
+[ext_resource type="Script" uid="uid://5hf5auw7e5ti" path="res://sala_de_aula.gd" id="1_rynpk"]
+[ext_resource type="PackedScene" uid="uid://b8878qpop8c2s" path="res://fade.tscn" id="3_gv82f"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_sn0t7"]
 
@@ -14,6 +16,7 @@ sky = SubResource("Sky_riqys")
 [sub_resource type="QuadMesh" id="QuadMesh_bhunq"]
 
 [node name="Sala de Aula" type="Node3D" unique_id=1421979112]
+script = ExtResource("1_rynpk")
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=446686118]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 0)
@@ -25,3 +28,5 @@ environment = SubResource("Environment_bhunq")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1506503122]
 transform = Transform3D(0.77, 0, 0, 0, -0.003191062, 3.8849924, 0, -1.5999969, -0.0077482974, 0.6795677, -0.27468833, -0.0046693087)
 mesh = SubResource("QuadMesh_bhunq")
+
+[node name="Fade" parent="." unique_id=1383060492 instance=ExtResource("3_gv82f")]
