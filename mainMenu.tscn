@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://ccd0bo7oecr6i"]
 
-[ext_resource type="Script" uid="uid://cgvgq6hhg483h" path="res://main_menu.gd" id="1_efmur"]
+[ext_resource type="Script" uid="uid://cgvgq6hhg483h" path="res://Scripts/main_menu.gd" id="1_efmur"]
 [ext_resource type="Texture2D" uid="uid://xqcdlpt2sbe" path="res://Assets UI/mmenuMesa.png" id="1_w7d22"]
-[ext_resource type="Script" uid="uid://b7lijytg10hv2" path="res://camera_2d.gd" id="2_83s16"]
+[ext_resource type="Script" uid="uid://b7lijytg10hv2" path="res://Scripts/camera_2d.gd" id="2_83s16"]
 [ext_resource type="Texture2D" uid="uid://b6dt1atgv5v8b" path="res://Assets UI/mmenuCaderno.png" id="2_wc2lj"]
 [ext_resource type="Texture2D" uid="uid://cy1b73nuoxdrc" path="res://Assets UI/Logo PlaceHolder.png" id="4_wc2lj"]
 [ext_resource type="Texture2D" uid="uid://3q6j76ji1rtj" path="res://Assets UI/Butões/1.png" id="5_hvu0j"]
