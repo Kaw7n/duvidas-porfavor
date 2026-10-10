@@ -1,22 +1,20 @@
 extends Control
 
 # Barulho do iniciar
-func Som1() -> void:
+func som_1() -> void:
 	$BotaoIniciarAudio.play();
-
 # Barulho do Configurar
-func Som2() -> void:
+func som_2() -> void:
 	$BotaoConfigAudio.play();
-	
 # Barulho do sair
-func Som3() -> void:
+func som_3() -> void:
 	$BotaoSairAudio.play();
 
 # Sistema de passar o mouse e fazer barulho
 func _ready() -> void:
-	$BotaoIniciar.mouse_entered.connect(Som1);
-	$BotaoConfig.mouse_entered.connect(Som2);
-	$BotaoSair.mouse_entered.connect(Som3);
+	$BotaoIniciar.mouse_entered.connect(som_1);
+	$BotaoConfig.mouse_entered.connect(som_2);
+	$BotaoSair.mouse_entered.connect(som_3);
 	pass # Replace with function body.
 	
 # /////////
@@ -38,7 +36,3 @@ func _on_texture_button_3_pressed() -> void: # Botão de quitar
 # Fade in para Fade Out
 func _on_timer_timeout() -> void:
 	get_tree().change_scene_to_file("res://sala_de_aula.tscn")
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
