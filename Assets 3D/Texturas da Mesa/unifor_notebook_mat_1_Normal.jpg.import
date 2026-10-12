@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://das1rpk0ao0e6"
-path.s3tc="res://.godot/imported/unifor_notebook_mat_1_Normal.jpg-a766a056b114169333243e9a76bf2d60.s3tc.ctex"
+uid="uid://c3d8m3sgbl38g"
+path.s3tc="res://.godot/imported/unifor_notebook_mat_1_Normal.jpg-2c0cc32e25eeb23be71d24666cc4b162.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -14,8 +14,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://Assets 3D/Texturas da Mesa/unifor_notebook_mat_1_Normal.jpg"
-dest_files=["res://.godot/imported/unifor_notebook_mat_1_Normal.jpg-a766a056b114169333243e9a76bf2d60.s3tc.ctex"]
+source_file="res://Assets 3D/unifor_notebook_mat_1_Normal.jpg"
+dest_files=["res://.godot/imported/unifor_notebook_mat_1_Normal.jpg-2c0cc32e25eeb23be71d24666cc4b162.s3tc.ctex"]
 
 [params]
 
@@ -30,7 +30,7 @@ compress/channel_pack=0
 mipmaps/generate=true
 mipmaps/limit=-1
 roughness/mode=1
-roughness/src_normal="res://unifor_notebook_mat_1_Normal.jpg"
+roughness/src_normal="res://Assets 3D/unifor_notebook_mat_1_Normal.jpg"
 process/channel_remap/red=0
 process/channel_remap/green=1
 process/channel_remap/blue=2

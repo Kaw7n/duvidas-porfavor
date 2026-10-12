@@ -1,0 +1,346 @@
+[gd_scene format=3 uid="uid://ccd0bo7oecr6i"]
+
+[ext_resource type="Script" uid="uid://cgvgq6hhg483h" path="res://Scripts/main_menu.gd" id="1_j6ip4"]
+[ext_resource type="Texture2D" uid="uid://xqcdlpt2sbe" path="res://Assets UI/Menu/mmenuMesa.png" id="2_cvjuc"]
+[ext_resource type="Texture2D" uid="uid://b6dt1atgv5v8b" path="res://Assets UI/Menu/mmenuCaderno.png" id="3_bocn1"]
+[ext_resource type="Script" uid="uid://b7lijytg10hv2" path="res://Scripts/Cameras/camera_2d.gd" id="4_l0j11"]
+[ext_resource type="Texture2D" uid="uid://cy1b73nuoxdrc" path="res://Assets UI/Menu/Logo PlaceHolder.png" id="5_h5isk"]
+[ext_resource type="Texture2D" uid="uid://3q6j76ji1rtj" path="res://Assets UI/Butões/1.png" id="6_evydy"]
+[ext_resource type="Texture2D" uid="uid://c3vwv5j0l32kj" path="res://Assets UI/Butões/3.png" id="7_cvjuc"]
+[ext_resource type="Texture2D" uid="uid://bpogl5i77ccwp" path="res://Assets UI/Butões/2.png" id="8_bocn1"]
+[ext_resource type="Texture2D" uid="uid://cmv02ey8sgkbh" path="res://Assets UI/Butões/4.png" id="9_h5isk"]
+[ext_resource type="Texture2D" uid="uid://dl4idgv66l35k" path="res://Assets UI/Butões/6.png" id="10_xmwsq"]
+[ext_resource type="Texture2D" uid="uid://bikbxp4lhhfk5" path="res://Assets UI/Butões/5.png" id="11_fi82c"]
+[ext_resource type="Texture2D" uid="uid://ls184dbrp7d0" path="res://Assets UI/Butões/7.png" id="12_okv4r"]
+[ext_resource type="Texture2D" uid="uid://c4j73ilmg6eum" path="res://Assets UI/Butões/9.png" id="13_bn6jt"]
+[ext_resource type="Texture2D" uid="uid://5bsndfsiplsa" path="res://Assets UI/Butões/8.png" id="14_4iy1a"]
+[ext_resource type="AudioStream" uid="uid://cs3h3nwlh3fii" path="res://Audio/MusicaDeFundoMenu.wav" id="15_mptaf"]
+[ext_resource type="AudioStream" uid="uid://1vo0m5yrxtgk" path="res://Audio/Som-De-Caneta-Iniciar.ogg" id="16_evydy"]
+[ext_resource type="AudioStream" uid="uid://cw4a2vh30fpwl" path="res://Audio/Som-de-Caneta-Configurações.ogg" id="17_cvjuc"]
+[ext_resource type="AudioStream" uid="uid://cem71xf32o20s" path="res://Audio/Som de Caneta Sair.ogg" id="18_bocn1"]
+[ext_resource type="Texture2D" uid="uid://d16csv42rlvnb" path="res://Assets UI/menuConfig/Menu Config.png" id="18_s60ti"]
+[ext_resource type="Script" uid="uid://bcelyrojeuxth" path="res://Scripts/menu_config.gd" id="19_evydy"]
+[ext_resource type="PackedScene" uid="uid://b8878qpop8c2s" path="res://Cenas/fade.tscn" id="20_hcwcd"]
+[ext_resource type="FontFile" uid="uid://bk6hhfl5m7l68" path="res://Assets UI/Menu/Holidays Homework.ttf" id="21_xmwsq"]
+[ext_resource type="Script" uid="uid://dln3xy3tan4u6" path="res://Scripts/Audio/volume_main.gd" id="22_evydy"]
+[ext_resource type="Script" uid="uid://b8yha27ogs40w" path="res://Scripts/Audio/volume_bgm.gd" id="23_cvjuc"]
+[ext_resource type="Script" uid="uid://ckylgk8gcpbaw" path="res://Scripts/Audio/volume_sfx.gd" id="24_bocn1"]
+[ext_resource type="Script" uid="uid://d0tybdgcv8d6g" path="res://Scripts/Cameras/sens.gd" id="25_cvjuc"]
+
+[sub_resource type="Gradient" id="Gradient_w7d22"]
+offsets = PackedFloat32Array(0.1506024, 0.939759)
+colors = PackedColorArray(1, 1, 1, 0, 0, 0, 0, 0.4627451)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ml7fk"]
+gradient = SubResource("Gradient_w7d22")
+fill = 1
+fill_from = Vector2(0.5043478, 0.49130434)
+fill_to = Vector2(0.9956522, 1)
+
+[sub_resource type="GDScript" id="GDScript_2rfsq"]
+script/source = "extends AudioStreamPlayer2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bvhle"]
+bg_color = Color(0, 0, 0, 1)
+shadow_size = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ojd2t"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bgebw"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2rfsq"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_bhunq"]
+grow_begin = 0.0
+grow_end = 0.0
+thickness = 6
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_riqys"]
+color = Color(1, 1, 1, 1)
+grow_begin = 0.0
+grow_end = 0.0
+thickness = 6
+
+[node name="MainMenu" type="Control" unique_id=66402352]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+offset_right = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_j6ip4")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=487005081]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=364255181]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = SubResource("GradientTexture2D_ml7fk")
+
+[node name="Mesa de Fundo" type="Sprite2D" parent="." unique_id=476997413]
+position = Vector2(577.00024, 323)
+scale = Vector2(0.5994792, 0.59351856)
+texture = ExtResource("2_cvjuc")
+
+[node name="Caderno(Menu)" type="Sprite2D" parent="." unique_id=1288367719]
+position = Vector2(651, 324)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_bocn1")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=2097106382]
+position = Vector2(24, 0)
+offset = Vector2(574.425, 322.75)
+zoom = Vector2(1.25, 1.25)
+script = ExtResource("4_l0j11")
+
+[node name="Logo PlaceHolder" type="Sprite2D" parent="." unique_id=2014925057]
+position = Vector2(588.915, 198.47997)
+rotation = 0.08901179
+scale = Vector2(0.22330438, 0.25298297)
+texture = ExtResource("5_h5isk")
+
+[node name="BotaoIniciar" type="TextureButton" parent="." unique_id=2141046020]
+layout_mode = 0
+offset_left = 447.00003
+offset_top = 281.00003
+offset_right = 720.1853
+offset_bottom = 323.40442
+rotation = 0.116937056
+texture_normal = ExtResource("6_evydy")
+texture_pressed = ExtResource("7_cvjuc")
+texture_hover = ExtResource("8_bocn1")
+ignore_texture_size = true
+stretch_mode = 3
+
+[node name="BotaoConfig" type="TextureButton" parent="." unique_id=615470740]
+layout_mode = 0
+offset_left = 458.00003
+offset_top = 369.00003
+offset_right = 672.0178
+offset_bottom = 411.40442
+rotation = 0.116937056
+texture_normal = ExtResource("9_h5isk")
+texture_pressed = ExtResource("10_xmwsq")
+texture_hover = ExtResource("11_fi82c")
+ignore_texture_size = true
+stretch_mode = 3
+
+[node name="BotaoSair" type="TextureButton" parent="." unique_id=996526146]
+layout_mode = 0
+offset_left = 508.00003
+offset_top = 467.00006
+offset_right = 602.9772
+offset_bottom = 509.40442
+rotation = 0.116937056
+texture_normal = ExtResource("12_okv4r")
+texture_pressed = ExtResource("13_bn6jt")
+texture_hover = ExtResource("14_4iy1a")
+ignore_texture_size = true
+stretch_mode = 3
+
+[node name="MenuMusic" type="AudioStreamPlayer2D" parent="." unique_id=414845060]
+position = Vector2(603, 323)
+stream = ExtResource("15_mptaf")
+autoplay = true
+bus = &"BGM"
+
+[node name="BotaoIniciarAudio" type="AudioStreamPlayer2D" parent="." unique_id=1532613108]
+position = Vector2(603, 323)
+stream = ExtResource("16_evydy")
+bus = &"SFX"
+script = SubResource("GDScript_2rfsq")
+
+[node name="BotaoConfigAudio" type="AudioStreamPlayer2D" parent="." unique_id=794698497]
+position = Vector2(603, 323)
+stream = ExtResource("17_cvjuc")
+bus = &"SFX"
+script = SubResource("GDScript_2rfsq")
+
+[node name="BotaoSairAudio" type="AudioStreamPlayer2D" parent="." unique_id=1572254170]
+position = Vector2(603, 323)
+stream = ExtResource("18_bocn1")
+bus = &"SFX"
+script = SubResource("GDScript_2rfsq")
+
+[node name="MenuConfig" type="Panel" parent="." unique_id=672158535]
+layout_mode = 0
+offset_left = 245.0
+offset_top = 106.0
+offset_right = 945.0
+offset_bottom = 546.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_bvhle")
+script = ExtResource("19_evydy")
+
+[node name="MenuConfigLousa" type="Sprite2D" parent="MenuConfig" unique_id=312667412]
+position = Vector2(350, 219.5)
+scale = Vector2(1, 1.0068182)
+texture = ExtResource("18_s60ti")
+
+[node name="MasterText" type="Label" parent="MenuConfig" unique_id=1049443198]
+layout_mode = 0
+offset_left = 90.0
+offset_top = 124.0
+offset_right = 230.0
+offset_bottom = 154.0
+theme_override_fonts/font = ExtResource("21_xmwsq")
+theme_override_font_sizes/font_size = 26
+text = "Master"
+
+[node name="BgmText" type="Label" parent="MenuConfig" unique_id=550903842]
+layout_mode = 0
+offset_left = 90.0
+offset_top = 191.0
+offset_right = 230.0
+offset_bottom = 221.0
+theme_override_fonts/font = ExtResource("21_xmwsq")
+theme_override_font_sizes/font_size = 26
+text = "BGM"
+
+[node name="SFXText" type="Label" parent="MenuConfig" unique_id=64359669]
+layout_mode = 0
+offset_left = 90.0
+offset_top = 258.0
+offset_right = 230.0
+offset_bottom = 288.0
+theme_override_fonts/font = ExtResource("21_xmwsq")
+theme_override_font_sizes/font_size = 26
+text = "SFX"
+
+[node name="BgmText2" type="Label" parent="MenuConfig" unique_id=1772732198]
+layout_mode = 0
+offset_left = 90.0
+offset_top = 325.0
+offset_right = 288.0
+offset_bottom = 355.0
+theme_override_fonts/font = ExtResource("21_xmwsq")
+theme_override_font_sizes/font_size = 26
+text = "Sensibilidade"
+
+[node name="ExitConfig" type="Button" parent="MenuConfig" unique_id=1546229656]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 20.0
+offset_right = 67.0
+offset_bottom = 64.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.5002048, 0.49746454, 0.49000597, 1)
+theme_override_fonts/font = ExtResource("21_xmwsq")
+theme_override_styles/normal = SubResource("StyleBoxFlat_ojd2t")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_bgebw")
+theme_override_styles/hover = SubResource("StyleBoxFlat_2rfsq")
+text = "X"
+
+[node name="ExitGame" type="Button" parent="MenuConfig" unique_id=1560538733]
+layout_mode = 0
+offset_left = 254.0
+offset_top = 376.0
+offset_right = 445.0
+offset_bottom = 420.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.5002048, 0.49746454, 0.49000597, 1)
+theme_override_fonts/font = ExtResource("21_xmwsq")
+theme_override_styles/normal = SubResource("StyleBoxFlat_ojd2t")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_bgebw")
+theme_override_styles/hover = SubResource("StyleBoxFlat_2rfsq")
+text = "Encerrar Monitoria"
+
+[node name="VolumeMAIN" type="HSlider" parent="MenuConfig" unique_id=1094993085]
+layout_mode = 0
+offset_left = 300.0
+offset_top = 100.0
+offset_right = 599.9992
+offset_bottom = 176.0
+theme_override_styles/slider = SubResource("StyleBoxLine_bhunq")
+theme_override_styles/grabber_area = SubResource("StyleBoxLine_riqys")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxLine_riqys")
+max_value = 1.0
+step = 0.05
+value = 1.0
+script = ExtResource("22_evydy")
+audio_bus_name = "Master"
+
+[node name="VolumeBGM" type="HSlider" parent="MenuConfig" unique_id=89275153]
+layout_mode = 0
+offset_left = 300.0
+offset_top = 167.0
+offset_right = 599.9992
+offset_bottom = 243.0
+theme_override_styles/slider = SubResource("StyleBoxLine_bhunq")
+theme_override_styles/grabber_area = SubResource("StyleBoxLine_riqys")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxLine_riqys")
+max_value = 1.0
+step = 0.05
+value = 1.0
+script = ExtResource("23_cvjuc")
+audio_bus_name = "BGM"
+
+[node name="VolumeSFX" type="HSlider" parent="MenuConfig" unique_id=1741751027]
+layout_mode = 0
+offset_left = 300.0
+offset_top = 234.0
+offset_right = 599.9992
+offset_bottom = 310.0
+theme_override_styles/slider = SubResource("StyleBoxLine_bhunq")
+theme_override_styles/grabber_area = SubResource("StyleBoxLine_riqys")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxLine_riqys")
+max_value = 1.0
+step = 0.05
+value = 1.0
+script = ExtResource("24_bocn1")
+audio_bus_name = "SFX"
+
+[node name="Sensibilidade" type="HSlider" parent="MenuConfig" unique_id=1846834987]
+layout_mode = 0
+offset_left = 300.0
+offset_top = 301.0
+offset_right = 599.9992
+offset_bottom = 377.0
+theme_override_styles/slider = SubResource("StyleBoxLine_bhunq")
+theme_override_styles/grabber_area = SubResource("StyleBoxLine_riqys")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxLine_riqys")
+max_value = 0.5
+step = 0.01
+script = ExtResource("25_cvjuc")
+
+[node name="Fade" parent="." unique_id=1383060492 instance=ExtResource("20_hcwcd")]
+visible = false
+layout_mode = 1
+offset_left = -1.0
+offset_top = -3.0
+offset_right = -1.0
+offset_bottom = -3.0
+
+[node name="Timer" type="Timer" parent="Fade" unique_id=872475080]
+
+[connection signal="pressed" from="BotaoIniciar" to="." method="_on_texture_button_pressed"]
+[connection signal="pressed" from="BotaoConfig" to="." method="_on_texture_button_2_pressed"]
+[connection signal="pressed" from="BotaoSair" to="." method="_on_texture_button_3_pressed"]
+[connection signal="pressed" from="MenuConfig/ExitConfig" to="MenuConfig" method="_on_exit_config_pressed"]
+[connection signal="pressed" from="MenuConfig/ExitGame" to="MenuConfig" method="_on_exit_game_pressed"]
+[connection signal="value_changed" from="MenuConfig/VolumeMAIN" to="MenuConfig/VolumeMAIN" method="_on_value_changed"]
+[connection signal="value_changed" from="MenuConfig/VolumeBGM" to="MenuConfig/VolumeBGM" method="_on_value_changed"]
+[connection signal="value_changed" from="MenuConfig/VolumeSFX" to="MenuConfig/VolumeSFX" method="_on_value_changed"]
+[connection signal="value_changed" from="MenuConfig/Sensibilidade" to="MenuConfig/Sensibilidade" method="_on_value_changed"]
+[connection signal="timeout" from="Fade/Timer" to="." method="_on_timer_timeout"]
