@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bexacxkjgsigb"
-path.s3tc="res://.godot/imported/placeholder npc.png-d7cb375b6f3a419f35ad6e2664230d0d.s3tc.ctex"
+uid="uid://cros4chv53lfg"
+path.s3tc="res://.godot/imported/placeholder6.png-21ac235ebba9176d532274383704f10c.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets 2D/placeholder npc.png"
-dest_files=["res://.godot/imported/placeholder npc.png-d7cb375b6f3a419f35ad6e2664230d0d.s3tc.ctex"]
+source_file="res://Assets 2D/PlaceHolders/placeholder6.png"
+dest_files=["res://.godot/imported/placeholder6.png-21ac235ebba9176d532274383704f10c.s3tc.ctex"]
 
 [params]
 
