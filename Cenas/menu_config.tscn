@@ -1,0 +1,164 @@
+[gd_scene format=3 uid="uid://dq63luspgv5b3"]
+
+[ext_resource type="Script" uid="uid://bcelyrojeuxth" path="res://Scripts/menu_config.gd" id="1_q4o42"]
+[ext_resource type="Texture2D" uid="uid://d16csv42rlvnb" path="res://Assets UI/menuConfig/Menu Config.png" id="2_40i8v"]
+[ext_resource type="FontFile" uid="uid://bk6hhfl5m7l68" path="res://Assets UI/Menu/Holidays Homework.ttf" id="3_rgsga"]
+[ext_resource type="Script" uid="uid://dln3xy3tan4u6" path="res://Scripts/Audio/volume_main.gd" id="4_8jbuc"]
+[ext_resource type="Script" uid="uid://b8yha27ogs40w" path="res://Scripts/Audio/volume_bgm.gd" id="5_k24ik"]
+[ext_resource type="Script" uid="uid://ckylgk8gcpbaw" path="res://Scripts/Audio/volume_sfx.gd" id="6_e5n40"]
+[ext_resource type="Script" uid="uid://d0tybdgcv8d6g" path="res://Scripts/Cameras/sens.gd" id="7_kdjae"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bvhle"]
+bg_color = Color(0, 0, 0, 1)
+shadow_size = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ojd2t"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bgebw"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2rfsq"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_bhunq"]
+grow_begin = 0.0
+grow_end = 0.0
+thickness = 6
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_riqys"]
+color = Color(1, 1, 1, 1)
+grow_begin = 0.0
+grow_end = 0.0
+thickness = 6
+
+[node name="MenuConfig" type="Panel" unique_id=605328379]
+offset_left = 245.0
+offset_top = 106.0
+offset_right = 945.0
+offset_bottom = 546.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_bvhle")
+script = ExtResource("1_q4o42")
+
+[node name="MenuConfigLousa" type="Sprite2D" parent="." unique_id=690210158]
+position = Vector2(350, 219.5)
+scale = Vector2(1, 1.0068182)
+texture = ExtResource("2_40i8v")
+
+[node name="MasterText" type="Label" parent="." unique_id=204615485]
+layout_mode = 0
+offset_left = 90.0
+offset_top = 124.0
+offset_right = 230.0
+offset_bottom = 154.0
+theme_override_fonts/font = ExtResource("3_rgsga")
+theme_override_font_sizes/font_size = 26
+text = "Master"
+
+[node name="BgmText" type="Label" parent="." unique_id=1902671823]
+layout_mode = 0
+offset_left = 90.0
+offset_top = 191.0
+offset_right = 230.0
+offset_bottom = 221.0
+theme_override_fonts/font = ExtResource("3_rgsga")
+theme_override_font_sizes/font_size = 26
+text = "BGM"
+
+[node name="SFXText" type="Label" parent="." unique_id=872112312]
+layout_mode = 0
+offset_left = 90.0
+offset_top = 258.0
+offset_right = 230.0
+offset_bottom = 288.0
+theme_override_fonts/font = ExtResource("3_rgsga")
+theme_override_font_sizes/font_size = 26
+text = "SFX"
+
+[node name="BgmText2" type="Label" parent="." unique_id=653182783]
+layout_mode = 0
+offset_left = 90.0
+offset_top = 325.0
+offset_right = 288.0
+offset_bottom = 355.0
+theme_override_fonts/font = ExtResource("3_rgsga")
+theme_override_font_sizes/font_size = 26
+text = "Sensibilidade"
+
+[node name="ExitConfig" type="Button" parent="." unique_id=1923415869]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 20.0
+offset_right = 67.0
+offset_bottom = 64.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.5002048, 0.49746454, 0.49000597, 1)
+theme_override_fonts/font = ExtResource("3_rgsga")
+theme_override_styles/normal = SubResource("StyleBoxFlat_ojd2t")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_bgebw")
+theme_override_styles/hover = SubResource("StyleBoxFlat_2rfsq")
+text = "X"
+
+[node name="VolumeMAIN" type="HSlider" parent="." unique_id=1390019306]
+layout_mode = 0
+offset_left = 300.0
+offset_top = 100.0
+offset_right = 599.9992
+offset_bottom = 176.0
+theme_override_styles/slider = SubResource("StyleBoxLine_bhunq")
+theme_override_styles/grabber_area = SubResource("StyleBoxLine_riqys")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxLine_riqys")
+max_value = 1.0
+step = 0.05
+value = 1.0
+script = ExtResource("4_8jbuc")
+audio_bus_name = "Master"
+
+[node name="VolumeBGM" type="HSlider" parent="." unique_id=18844357]
+layout_mode = 0
+offset_left = 300.0
+offset_top = 167.0
+offset_right = 599.9992
+offset_bottom = 243.0
+theme_override_styles/slider = SubResource("StyleBoxLine_bhunq")
+theme_override_styles/grabber_area = SubResource("StyleBoxLine_riqys")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxLine_riqys")
+max_value = 1.0
+step = 0.05
+value = 1.0
+script = ExtResource("5_k24ik")
+audio_bus_name = "BGM"
+
+[node name="VolumeSFX" type="HSlider" parent="." unique_id=1455569683]
+layout_mode = 0
+offset_left = 300.0
+offset_top = 234.0
+offset_right = 599.9992
+offset_bottom = 310.0
+theme_override_styles/slider = SubResource("StyleBoxLine_bhunq")
+theme_override_styles/grabber_area = SubResource("StyleBoxLine_riqys")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxLine_riqys")
+max_value = 1.0
+step = 0.05
+value = 1.0
+script = ExtResource("6_e5n40")
+audio_bus_name = "SFX"
+
+[node name="Sensibilidade" type="HSlider" parent="." unique_id=1608442907]
+layout_mode = 0
+offset_left = 300.0
+offset_top = 301.0
+offset_right = 599.9992
+offset_bottom = 377.0
+theme_override_styles/slider = SubResource("StyleBoxLine_bhunq")
+theme_override_styles/grabber_area = SubResource("StyleBoxLine_riqys")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxLine_riqys")
+max_value = 0.5
+step = 0.01
+script = ExtResource("7_kdjae")
+
+[connection signal="value_changed" from="VolumeMAIN" to="VolumeMAIN" method="_on_value_changed"]
+[connection signal="value_changed" from="VolumeBGM" to="VolumeBGM" method="_on_value_changed"]
+[connection signal="value_changed" from="VolumeSFX" to="VolumeSFX" method="_on_value_changed"]
+[connection signal="value_changed" from="Sensibilidade" to="Sensibilidade" method="_on_value_changed"]

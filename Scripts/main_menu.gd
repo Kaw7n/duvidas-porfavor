@@ -1,5 +1,7 @@
 extends Control
 
+@onready var menu_config: Panel = $MenuConfig
+
 # Barulho do iniciar
 func som_1() -> void:
 	$BotaoIniciarAudio.play();
@@ -27,7 +29,7 @@ func _on_texture_button_pressed() -> void: # Botão De Inciar
 
 # O Botão de opcs que depois eu faço
 func _on_texture_button_2_pressed() -> void: # Botão de Configurações 
-	pass # Replace with function body.
+	menu_config.visible = true;
 
 # O Botão Pra sair 
 func _on_texture_button_3_pressed() -> void: # Botão de quitar
@@ -35,4 +37,4 @@ func _on_texture_button_3_pressed() -> void: # Botão de quitar
 
 # Fade in para Fade Out
 func _on_timer_timeout() -> void:
-	get_tree().change_scene_to_file("res://sala_de_aula.tscn")
+	get_tree().change_scene_to_file("res://Cenas/sala_de_aula.tscn")
