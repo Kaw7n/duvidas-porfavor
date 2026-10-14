@@ -13,6 +13,7 @@
 [ext_resource type="Script" uid="uid://b8yha27ogs40w" path="res://Scripts/Audio/volume_bgm.gd" id="12_1cpuw"]
 [ext_resource type="Script" uid="uid://ckylgk8gcpbaw" path="res://Scripts/Audio/volume_sfx.gd" id="13_j0rpt"]
 [ext_resource type="Script" uid="uid://d0tybdgcv8d6g" path="res://Scripts/Cameras/sens.gd" id="14_v7f1h"]
+[ext_resource type="Script" uid="uid://co4poyb5fox4b" path="res://Scripts/Npcs/gerenciador_dialogo.gd" id="20_sjri2"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_sn0t7"]
 
@@ -388,6 +389,9 @@ theme_override_styles/grabber_area_highlight = SubResource("StyleBoxLine_8gibp")
 max_value = 0.5
 step = 0.01
 script = ExtResource("14_v7f1h")
+
+[node name="GerenciadorDialogo" type="Node" parent="." unique_id=823998436]
+script = ExtResource("20_sjri2")
 
 [connection signal="pressed" from="MenuConfig/ExitConfig" to="MenuConfig" method="_on_exit_config_pressed"]
 [connection signal="pressed" from="MenuConfig/ExitGame" to="MenuConfig" method="_on_exit_game_pressed"]

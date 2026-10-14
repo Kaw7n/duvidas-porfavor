@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b3vm6xakpnvjt"
-path.s3tc="res://.godot/imported/unifor_notebook_mat_2_Metallic-notebook_mat_2_Roughness.png-a6cb8919afae9246b4657a4a371e1611.s3tc.ctex"
+path.s3tc="res://.godot/imported/unifor_notebook_mat_2_Metallic-notebook_mat_2_Roughness.png-80e74ea91aaf1d72a02c983c32f66702.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -14,8 +14,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://Assets 3D/unifor_notebook_mat_2_Metallic-notebook_mat_2_Roughness.png"
-dest_files=["res://.godot/imported/unifor_notebook_mat_2_Metallic-notebook_mat_2_Roughness.png-a6cb8919afae9246b4657a4a371e1611.s3tc.ctex"]
+source_file="res://Assets 3D/Texturas da Mesa/unifor_notebook_mat_2_Metallic-notebook_mat_2_Roughness.png"
+dest_files=["res://.godot/imported/unifor_notebook_mat_2_Metallic-notebook_mat_2_Roughness.png-80e74ea91aaf1d72a02c983c32f66702.s3tc.ctex"]
 
 [params]
 
