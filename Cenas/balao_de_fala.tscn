@@ -51,6 +51,7 @@ offset_left = -3.0
 offset_right = -3.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 1
 script = ExtResource("1_osuna")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1067282296]

@@ -1,0 +1,21 @@
+{
+  "aluno_tutorial": {
+	"falas": [
+	  "Oii monitor! Eu sou o aluno que está aqui para um tutorial!!!",
+	  "Aqui é a segunda linha do balão de fala, gostou?!",
+      "Se você tá lendo essa frase é porque deu certoooo!"
+	]
+  },
+  "aluno_duvida_1": {
+	"falas": [
+	  "Monitor, estou com uma dúvida sobre a realidade quântica.",
+      "Monitor, pode me ajudar a solucionar meus problemas?"
+	]
+  },
+  "moema": {
+	"falas": [
+		"Oii eu sou a moema, eu como coisinhas",
+		"E aí, que tal me ajudar em uma missão?"
+	]
+}
+}
