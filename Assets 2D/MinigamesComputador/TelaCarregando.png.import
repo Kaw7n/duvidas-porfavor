@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://pq0xfibn5ffk"
-path="res://.godot/imported/balao de fala1.png-fb857aebd431874cbb47f544cd2b07f8.ctex"
+uid="uid://b4wltnjvbgcbr"
+path="res://.godot/imported/TelaCarregando.png-a43cf62efdbf3d0e4df2ca1edce93313.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets 2D/balao de fala1.png"
-dest_files=["res://.godot/imported/balao de fala1.png-fb857aebd431874cbb47f544cd2b07f8.ctex"]
+source_file="res://Assets 2D/MinigamesComputador/TelaCarregando.png"
+dest_files=["res://.godot/imported/TelaCarregando.png-a43cf62efdbf3d0e4df2ca1edce93313.ctex"]
 
 [params]
 

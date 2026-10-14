@@ -1,0 +1,144 @@
+[gd_scene format=3 uid="uid://bys33r5tumdyt"]
+
+[ext_resource type="Texture2D" uid="uid://btspsgv6ha52c" path="res://Assets 2D/MinigamesComputador/TelaLogin.png" id="1_ke8cg"]
+[ext_resource type="Script" uid="uid://dj5p3c3y20ly1" path="res://Scripts/computador.gd" id="1_npykp"]
+[ext_resource type="Texture2D" uid="uid://b4wltnjvbgcbr" path="res://Assets 2D/MinigamesComputador/TelaCarregando.png" id="2_pcuh1"]
+[ext_resource type="Texture2D" uid="uid://br2rhvux5rodt" path="res://Assets 2D/MinigamesComputador/computador transparente.png" id="2_y4h44"]
+[ext_resource type="Texture2D" uid="uid://hfio5axqlo2c" path="res://Assets 2D/MinigamesComputador/TelaFinal.png" id="3_8so1n"]
+[ext_resource type="FontFile" uid="uid://crg25q10e3iqb" path="res://Misc/Dico.ttf" id="3_y4h44"]
+[ext_resource type="Texture2D" uid="uid://crle8ow7ksmdl" path="res://Assets 2D/MinigamesComputador/Desligado.png" id="6_r25xt"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ke8cg"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rhoyl"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nktf8"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bhunq"]
+bg_color = Color(0.082945846, 0.32457557, 0.9980058, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_color = Color(0, 0, 1, 0.6)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2djfb"]
+bg_color = Color(0.18465215, 9.62615e-07, 0.85740083, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vagm7"]
+bg_color = Color(0.48895627, 0.66710246, 1, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_npykp"]
+bg_color = Color(0.5058824, 0.50980395, 0.6431373, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.27058825, 0.23529412, 0.28627452, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pcuh1"]
+bg_color = Color(0.29759353, 0.29899722, 0.40620753, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.27058825, 0.23529412, 0.28627452, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8so1n"]
+bg_color = Color(0.73326457, 0.73708785, 0.8310152, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.27058825, 0.23529412, 0.28627452, 1)
+
+[node name="Computer" type="Control" unique_id=90605145 node_paths=PackedStringArray("login", "normal", "loading", "final", "computador", "inserir_senha", "acess_buton")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -64.0
+offset_top = -67.0
+offset_right = -64.0
+offset_bottom = -67.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.1, 1.1)
+script = ExtResource("1_npykp")
+login = NodePath("Login")
+normal = NodePath("Normal")
+loading = NodePath("Loading")
+final = NodePath("Final")
+computador = NodePath(".")
+inserir_senha = NodePath("Login/Password")
+acess_buton = NodePath("Login/AcessButon")
+
+[node name="Final" type="Sprite2D" parent="." unique_id=934432101]
+position = Vector2(574, 370)
+texture = ExtResource("3_8so1n")
+
+[node name="Loading" type="Sprite2D" parent="." unique_id=303232213]
+position = Vector2(574, 370)
+texture = ExtResource("2_pcuh1")
+
+[node name="Login" type="Sprite2D" parent="." unique_id=858851875]
+position = Vector2(578.1818, 374.54547)
+texture = ExtResource("1_ke8cg")
+
+[node name="Password" type="LineEdit" parent="Login" unique_id=1964315777]
+offset_left = 52.727234
+offset_top = 9.9999695
+offset_right = 168.18176
+offset_bottom = 40.99997
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_y4h44")
+theme_override_styles/normal = SubResource("StyleBoxFlat_ke8cg")
+theme_override_styles/read_only = SubResource("StyleBoxFlat_rhoyl")
+theme_override_styles/focus = SubResource("StyleBoxFlat_nktf8")
+
+[node name="AcessButon" type="Button" parent="Login" unique_id=703498048]
+offset_left = 45.45453
+offset_top = 71.81818
+offset_right = 341.81818
+offset_bottom = 100.0
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxFlat_bhunq")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_2djfb")
+theme_override_styles/hover = SubResource("StyleBoxFlat_vagm7")
+text = "Acessar"
+
+[node name="Normal" type="Sprite2D" parent="." unique_id=573809543]
+position = Vector2(574, 370)
+texture = ExtResource("6_r25xt")
+
+[node name="Computer" type="Sprite2D" parent="." unique_id=721169930]
+position = Vector2(574, 370)
+texture = ExtResource("2_y4h44")
+
+[node name="ExitConfig" type="Button" parent="." unique_id=1557880155]
+layout_mode = 0
+offset_left = 144.54546
+offset_top = 100.0
+offset_right = 186.54544
+offset_bottom = 144.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.5002048, 0.49746454, 0.49000597, 1)
+theme_override_fonts/font = ExtResource("3_y4h44")
+theme_override_styles/normal = SubResource("StyleBoxFlat_npykp")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_pcuh1")
+theme_override_styles/hover = SubResource("StyleBoxFlat_8so1n")
+text = "X"
+
+[connection signal="pressed" from="ExitConfig" to="." method="_on_exit_config_pressed"]

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://xg22br4ps8yh"
-path="res://.godot/imported/pensamento frame 2.png-37fc31cbaa1da0dd6851a37a2ceefeac.ctex"
+path="res://.godot/imported/pensamento frame 2.png-fa1f516103a8d662c332e12b333a5750.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets 2D/pensamento frame 2.png"
-dest_files=["res://.godot/imported/pensamento frame 2.png-37fc31cbaa1da0dd6851a37a2ceefeac.ctex"]
+source_file="res://Assets 2D/Balões/pensamento frame 2.png"
+dest_files=["res://.godot/imported/pensamento frame 2.png-fa1f516103a8d662c332e12b333a5750.ctex"]
 
 [params]
 
