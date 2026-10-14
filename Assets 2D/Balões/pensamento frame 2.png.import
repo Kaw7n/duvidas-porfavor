@@ -2,24 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://67m3wfqcy3tl"
-path.s3tc="res://.godot/imported/unifor_notebook_mat_1_BaseColor.jpg-bb5894eebedc2c5b1b868f77ae64b510.s3tc.ctex"
+uid="uid://xg22br4ps8yh"
+path="res://.godot/imported/pensamento frame 2.png-fa1f516103a8d662c332e12b333a5750.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
-}
-generator_parameters={
-"md5": "8cc68ec5206e161e56f2cb1cd4b80c0c"
+"vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets 3D/Texturas da Mesa/unifor_notebook_mat_1_BaseColor.jpg"
-dest_files=["res://.godot/imported/unifor_notebook_mat_1_BaseColor.jpg-bb5894eebedc2c5b1b868f77ae64b510.s3tc.ctex"]
+source_file="res://Assets 2D/Balões/pensamento frame 2.png"
+dest_files=["res://.godot/imported/pensamento frame 2.png-fa1f516103a8d662c332e12b333a5750.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0
@@ -27,7 +23,7 @@ compress/rdo_quality_loss=0.0
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
-mipmaps/generate=true
+mipmaps/generate=false
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""
@@ -41,4 +37,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=0
+detect_3d/compress_to=1
