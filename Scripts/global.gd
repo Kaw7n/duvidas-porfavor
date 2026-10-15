@@ -22,3 +22,5 @@ var duvida_cct = false;
 signal dim_in
 @warning_ignore("unused_signal")
 signal dim_out
+@warning_ignore("unused_signal")
+signal pass_level

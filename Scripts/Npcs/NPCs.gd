@@ -41,11 +41,23 @@ func seq_level():
 				print("Fim")
 
 func level_tutorial():
+	# Mudança de Sprite
 	play("PlaceHolder-Npc1")
+	
+	# Ativa a Sequencia de Animações -> entrar -> falar
 	Global.npcs_animations_sequence = ["npc_fade_in","npc_talk_1"]
 	await play_seq()
+	
+	# Ativa o tutorial
+	Global.duvida_tutorial = true; 
+	
+	 # Espera o sinal pass_level.emit
+	await Global.pass_level
+	#Ativa a sequencia de animações -> sair
 	Global.npcs_animations_sequence = ["npc_fade_out"]
 	await play_seq()
+	
+	#Passa um level
 	Global.level+=1 
 
 func level_ccs():

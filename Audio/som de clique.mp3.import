@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cd0s0j48r80sd"
+path="res://.godot/imported/som de clique.mp3-2610ea72205b372c6279cda092d4c207.mp3str"
+
+[deps]
+
+source_file="res://Audio/som de clique.mp3"
+dest_files=["res://.godot/imported/som de clique.mp3-2610ea72205b372c6279cda092d4c207.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
