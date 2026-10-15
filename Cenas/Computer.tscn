@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://bys33r5tumdyt"]
+[gd_scene format=4 uid="uid://bys33r5tumdyt"]
 
 [ext_resource type="Texture2D" uid="uid://btspsgv6ha52c" path="res://Assets 2D/MinigamesComputador/TelaLogin.png" id="1_ke8cg"]
 [ext_resource type="Script" uid="uid://dj5p3c3y20ly1" path="res://Scripts/computador.gd" id="1_npykp"]
@@ -6,7 +6,12 @@
 [ext_resource type="Texture2D" uid="uid://br2rhvux5rodt" path="res://Assets 2D/MinigamesComputador/computador transparente.png" id="2_y4h44"]
 [ext_resource type="Texture2D" uid="uid://hfio5axqlo2c" path="res://Assets 2D/MinigamesComputador/TelaFinal.png" id="3_8so1n"]
 [ext_resource type="FontFile" uid="uid://crg25q10e3iqb" path="res://Misc/Dico.ttf" id="3_y4h44"]
+[ext_resource type="Texture2D" uid="uid://deiyd5bqbsxhf" path="res://Assets 2D/MinigamesComputador/pcligando.png" id="6_35514"]
 [ext_resource type="Texture2D" uid="uid://crle8ow7ksmdl" path="res://Assets 2D/MinigamesComputador/Desligado.png" id="6_r25xt"]
+[ext_resource type="AudioStream" uid="uid://cd0s0j48r80sd" path="res://Audio/som de clique.mp3" id="8_i7crr"]
+[ext_resource type="AudioStream" uid="uid://d2fpi22mumlbt" path="res://Audio/Som-pc-melodia.wav" id="9_spv0u"]
+[ext_resource type="AudioStream" uid="uid://c1twpryba0mx8" path="res://Audio/Som de Pc Iniciando.mp3" id="10_35514"]
+[ext_resource type="AudioStream" uid="uid://b1irm5wmmhipv" path="res://Audio/MusicaOrquestraldeVitoriaPlaceHolder.wav" id="12_21igq"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ke8cg"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
@@ -63,7 +68,79 @@ border_width_right = 5
 border_width_bottom = 5
 border_color = Color(0.27058825, 0.23529412, 0.28627452, 1)
 
-[node name="Computer" type="Control" unique_id=90605145 node_paths=PackedStringArray("login", "normal", "loading", "final", "computador", "inserir_senha", "acess_buton")]
+[sub_resource type="AudioStreamWAV" id="AudioStreamWAV_21igq"]
+data = PackedByteArray("cW9hZgAALEABAKxEFAAIGAAAAAAAAAAAAAAAAOAAQAAgQlq/LLGASBRuqM+sscsaEgFEAAAFFOMUA985Y45d9TBTBTTADRDVOfXVNMFMENEgwVU001YwQylRBBBBBBBBEFOfXffXffEU58Fd80Z8Ax3zjjlzRRRRFGXfOONGXWMY0U98440Y5R13zjT1jRl1GNOONABOXWNwSAQQhB7rATmeeo11AlQIKfMAFNOWNOMZc9899898ZyTjBnzV31TlLeNOWNXfffdQQQ18SQQ0SS3TXlVn3TlTJNXeNOWNXVMcp0d899ddZR3zRnz3zl13HOXfOXWXfNMY445dd9d9dxzRRT3xTjj3HFOOPfPfOPeASAQSmiFBzFeeDEF1RITBPUBWVANOVFUsm45859d45Sjll33zV331KWWXfffWffVQQQ0Q1Z0FQS3P3bH3nn3VLeNWNNOWNPco404045Y40yjRTRTljRADHIvXfXfFOOUc0498985c0x1l13jjjl1jFPfOXWNFOONAQQCUwASiloWdSMVhBTAKbwkEFMEAlMAud9Zd5dU5dyjll33zV3j3JPfffWXeWXdQQQQQ5U1Z00lTN3BDDTDTLfdXfeNOXeMt9800U5Y40xx13x3Q3zlzHePXfPfXXfMgU04wA405Yxxl3xVzljRlGOOfBXfOXVMd85d85dZd9JBAUneSqRIBQ7pNMgANNEM8yAUwZ9ZZYyT3jl333zV3NEOVFWNXeNNAVYwQQ5U0w1X3JVVTJDVTPdNVNWMEFWMt9Zd9Y0U09y3zTljl31l3LWNOWOWOWOUt9YwAU00U0xwXwnzl3xV1HfWOXffAPWUdZ8Vd85d85YBIBBCO1KwRXXOWFhMFMFM9QZ9Yw9405zzBVjn1lljBOfVOVFWNXeM000001d5Z92VlTVJVTDDTMtdVVWVWWWUtd45d9Y5Y5S3zTl31jT3jKNFNFNOXfWUo0Vd9ZY0QUx1313z33yXzHfXXffAPfAMdZdZ8VdU986DRBIBBCOXkcyCqNpMgEEg5ZUQC94Q5ZSz3T333zV33OWWWXeXfffc9U59Z9Z9Vd2BBDlTDXlVTUVMWUENMEEEpZd9858QU5S31jnxD33zTKWOWOXfMGVEd9d8Vc098dxj13z313wFzGfBXfXfOXfMd9d899dZd9UBBBAJTTRCWoTdRIAFNFoNsWmFUGiUwQD6lTlRVjV33PWfWWWNXffc999U59Z9Z9VBBDlTTVnnYVdVUMMMNMNM994wU00QU0yzTjT31jT33LOfNEFOWXfUo05Y5d9805SjljljljjTjJONONONFNOUt9UQU00QCUx13131jljjWwEoxMwIgAghflwE0wQA00TaVljBTTlRVOXeOfXdGffUt999d5d9990VjVllln33ngNVEkNMgkENdUwQ5UQ5UVUzBBTTTRBBBLWXffWOWOfEg9440QU5Y0yjTjTjRBTllLfVFXffWXeEZY5d85d8Vdxz311nwD3z3sNEEBLc5EypbvLuJY3C0511lRBBBBVjTOXfffWfNfOdEVZZYwVY1Y0VjVjBVllTVZMOedWdNeMlFVVZU05U5US33xXxn131lLfWXfWXfWNMpd9UU58Q5YyljT3hTTjRBHfXfOXfFXXck0VYQ5YSAQRlnxV3zjl1lsNEEgEEBLdKsvEWmiQQGiUzBV3l331ADPVOWXeXfffU58w5d5d9450lllllllllnZNNMENdVWdNRVVUw00wQQS1l1l3zT33zMFNEFNNEFNMtZd98058VYyRBTTljljl3LfNNPeONEFMc99dZ8Z898x3z3z3xT13hgNEEpgEEAqbZTmiCrGA0Sq8JBBBBBAaJTMPdGfffVOU45Z81d9459UTADTn1n1n1cEEOVNNWVeVpw1SVQVUSUzjll331l31RNXfVFXffWWMpdZd99d4Vdy1ljljljlhDLePeOOWOWOUt9ZY5Y0Vd9Rz313xV133xFOPfGfAPXfawQBN8ME5UQVOPSF3QaVRIRVFNWNNNNEM999ZZ85999S33313n133nRNNWNWWfefdR2B151VQ1Uz3n331T3jRBLffPffNXXeMpd9d4999Y5yxD3jl31RTTKXffNNFXeFUt99Y0405YQyjRBTTRV331HRvfBXfXfOXA0QQAt4oCip6TBVjTBTAaUUAOfWVFWWM09099405Zdzl3333331lnPXefWffffddkw515Q15Q1U3TX33jTTTlPfXeOWXffWU945ZY00QU0y1l3j3j3313LfWXffNXfWUo040Vd99Y0xwn13z311llHePfPfGfFPeQSAQSmnDsvpyjljRaJAaIXwgNNNOVEOVN99U05U5ZZT13l33l3333SWMOWWWWWfVwQQ01ZwVVU1LDDDX31TTTTeENFWNNOVEp8Vd4999d4y3313jl313lLWXeONFXffMld9ZY040QUyTljljRTTlhFXfXVPfOOOWASAQSmAQClqy+x1jTTAIISkCUokFMFNNEQ05ZZZYwU0TTTTn1llllkEEEEEEEEEGAQQQQQ01Z03nlVVTVRIIIPwlOfOfWXfc9Zd999Zd45zzV331lljTRJXfXeXfMFOUpd9ZY5Y0U0yljl33zV31RHeXNPfGfAPUld99Y05Y4JsBS3zwTlRVjSHfcJpVEmWdNZUVZY1d40zl3331n1l3nTeXeNNNNOfVVY1ZZZZ9952XJX3JFTDTBNffffWXeOWU99ZY009405TljTljTTlljLffOfNPeOWMpdU5d4U05dwEArEQUAAgYz0PO8s8Vzr3+lgkk3xo5TC1RVjRV3hVjKWOWOWOWEOMd8hd8VdZZZaDRBAUwuxiJZ4dT7wMFNMBGiVYwZ99U501llljBTV3jPeXffffffWdJZZZZZZ9994BDVnlTDVTVXMNWVNEgOWVN9UQVY000QSnz3l313313NNOMFNEEFNEg5dU5Y5d99S3jl31ljRV3LfWNNFNOWEEgVY0QQUwA0aDRBKYTkzCybSffWeKyhMBGl99ZU5ZZY0V3jTTTlRBDSWNWNXeNNNNJ9Z9U59U01YBBBDTDIJDBQ+cMNfVNMFM9999d999d4y31331331l3LXeOfFXffWUt99Y5Zd9ZYyljRV33zTTlLffNNEFNNEEk00U00U05Y3BKYBBBAIC2zVHBNBhMEAlVup4wFUQ5ZU1TllTljBV3PNOfXdPeXfeAQQQQQQQQQXBBBBDTVnVTSd0dedVMXeU9d5d9Y1dU5TjTlljTljTRIFOXffXffWUo5d99Y5Y5ZS3zV33zTTjTKNEFNOWNFNMcFd85d899dyRBVjRBTTUWwFSVDFEFNNOI00wU0wCCA1zBBBVjBVjTPfffWWWXeXdE5ZU5ZZZZZVTTTTVlln3nZclUMVVMNMgy1ZZd405d9z1jTTl331RBKWOXfXeXWNUt805Zd9Zd9y13jl31RV33LWNOWOXffMEdd499c0498RT3xll3131jwNEEATeDGXe9UQQQSAQSmEljV3l3jlTRQOWMFWXeNNNUwU00000000llllln3333YNMVtMVUMMM921995d99Z0jTTRBBTTTTPffWMFOWWNMt9Zd9d45Y5SjjTl1Tljl3LfNXfWWNFWMpY5Y0U00U0RV3z313z3110NEEgEAKF55y4lQhUGg0wGaDTTTTTTTTPOWfNWXfffdJZY1Zd401d0333333333lZNMOfdcENMtRQ1901YwQ0TlTll331lljOVFNNOWNNOUs5Zd9Y05d9yzTnzjV3zBTJEONONOXfWUo04045Y045SjRTTRTTlhBgNEEEgEEAqa8bjgiASmCmDnQzZ3n1l33PWWfXeXfffdJd5Y1d4059UTllTllllllcEEEENNWcONRRQySw1ZU0z3333zV333zLeXfXffXfWUpd9Zd99d99yzTljljRTTjJOXfWWOWXfMgU05d99Y0QRn113l1l3l1JNNEFNNFMRagBsvlkYWiCWl3jTADRJTTTeOfWVEOWME59859999ZZzzTV3333333YFMEFWWVNWeF40ww0w0wQTNT3TllljllONOXeOWWNEEk5d9d45d9ZS31RV331ljlKOWOXfVFXfctUU00U05Y4x3xl3z313z3HPfOPfOOPfOQSnDtupoUFWyYaaJBTBBBPfXdOXeWOfVE59UQ5ZZZZU3l3jTTTTTlPeXfeWfWfedgRZ2U1QxVUznNX3lTTTTlOWXfWWXffWUs0999d45d9Sjnzljll1RBHffXXfXffPMZd9d899dZdxj3z3z1nwV3HfGXfXfWOXfASASAQAorDouQYRJBTAIIPqdAOWNXeOU5Zd99999Zd0TTTlllTl3lkEEEEEEEEEFVZZVZ39UyxUXVFnlVlTllLXOfXfXfffMpd99Y5Y099yzTl331jTjRJNNFXfWWXfUpY0QU05Y0Ux1313zl3z31HfPfOXWXffOQSAQSAQQFNroh1hAIcqJTbVNNOVNNEgNNUQ5ZZZd41U33jRDlllllSWNXeMFXfeWAQQQQQ015ZVzbXTDJDVllPWXeNOWWOWUs5d85Zd9Y5yzljljljl31KNOXfWWNOOUo0U05YQVY5SjRBTTRTTljHBXfOOXfOOMgCA5Y0QQCpLBSwueCAIIISneOVOWWVFM1d9ZZ801d9z31lll33l33SWWWWXeWWNVk00wQQVZVZ0Xn3nHX3LDVLfeeffXffXctZd9805d9dy3jjl31l31lLeONFXfWWXctY0045Y0U0xx3z313z3xTGOPfPfPfGXcd8AZd9d9d86BKaEwYgiKDbNMAlNNNMAgy0Z99ZZZd9z3331jV3ljnPWXeWXffffdJ9UQ5Z9995WBFnBJVTJJDOdfcMOffffUt9d9Zd99d9Sl331331333LXffXeNFOWMdd8Zd845dZR33z3z3z3z1GXfXfOXfOXcc440Y5dZZd4BIBBBCG2ryjHWNOWVEEEFN5Y00000Q5T1Tll33jTnzNNXfffffWWU5ZZZZd59991TVn3nbTVVXTdUMMMNMEEEld9985d99dy1333131RTTKXffNNONFNMcJ8U989d98R313z311l31HfWXfNFFGXcdd80AY0Y5d6BIBBIBBAExlw5IBEgEEEpeA401Y000003jBTTTTllRNXeWOVOWWWU9995d999992BBBBDTVXTTWedMkMMNMEM9999940QU0y3zll1ll1l3LfWNOWOXfWMddd9d9d9ddx3zj3z3zj3xFPWOXWWWOfMYU45d8UU44TBBAIIBBTgmpDKxyAFEFNNc00SFZZZZYzlljTTllljTNOfXeWNNOWU5Zd5d999991TTTVljDTVXUNNVWeVMMEMt9195ZZd5dy1331331jRTJOXfWXfWWNEZd8U9898Zdx13xT3zl131HfXfXfONGXcc445d8U444xl1jljl31jlkEpoyby466xfrvvCQUQ0QTID3ljllll3PfffWWWXfeM059Y1d9400zn1ln31n3lnVWecOWUFgkkx55VVU1ZU0zTTTRBBTTRBAQCsRARAAdDtme2C7WPtIfUYFr7dlja8KWNFOWOWNFMcE99ddd984xjjl1311ljRFOXWNFPfOOUdY0UU989ZYxjjRRRRQABlgEgEEALalPBdBrgwmiU00zzRJTRV3jTlLWXfWfXfffcs1d999d959TllTlln31lnVNWVNdMFWUE215555Uw1ZS33lll333zTKWNONFNEAEEd9d85d845dR31313zjl3zGOOXWOWONFMdY0UZd80AZR1QKITjjQAAgEgEEgEEADaOidc45YwmAU1BTRBBBTAIIOfOXeXfWXct99Zd999ZZyzn313ll33lQEEENNWctNM191QyS1VU1S3Vn3llllljHfXXfOXXfNEZd84444984RRRRjl1jjjlHfOOONABOOEU4444QiiEUBKAAAARCcccIgEEAgggoqZlNuU89YnGij+ZhRABTTl3LJoOWNOXffUkU05ZY05Zdy331lljTTn1QEEEEEENNWct991ZwyxV9yDDDDVTDTBJFWVVNWVNNNMUU0UQAAAAAA2mWm2W2m2mEJxxxxwp754bHHHHvnCjLhuu+eu+euu+MpogpxxpgkEcw0GACCCCCAABAKcaIBTjBEApwAAAAAA=")
+format = 3
+tags = {
+"encoder": "Lavf56.19.100"
+}
+
+[sub_resource type="Animation" id="Animation_21igq"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Normal:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../PcMelody:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_03xcq"]
+resource_name = "pc_melody"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../PcMelody:modulate")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3, 4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_cp5h6"]
+resource_name = "screen_turning_on"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Normal:modulate")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_hqgk8"]
+_data = {
+&"RESET": SubResource("Animation_21igq"),
+&"pc_melody": SubResource("Animation_03xcq"),
+&"screen_turning_on": SubResource("Animation_cp5h6")
+}
+
+[node name="Computer" type="Control" unique_id=90605145 node_paths=PackedStringArray("login", "normal", "loading", "final", "pc_melody", "computer_animations", "computador", "password", "acess_buton", "animation_player", "click_sound", "computer_melody", "computer_on", "incorret_passowrd", "musica_orquestralde_vitoria_place_holder")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -80,9 +157,17 @@ login = NodePath("Login")
 normal = NodePath("Normal")
 loading = NodePath("Loading")
 final = NodePath("Final")
+pc_melody = NodePath("PcMelody")
+computer_animations = NodePath("ComputerAnimations")
 computador = NodePath(".")
-inserir_senha = NodePath("Login/Password")
+password = NodePath("Login/Password")
 acess_buton = NodePath("Login/AcessButon")
+animation_player = NodePath("ComputerAnimations")
+click_sound = NodePath("ClickSound")
+computer_melody = NodePath("ComputerMelody")
+computer_on = NodePath("ComputerOn")
+incorret_passowrd = NodePath("IncorretPassowrd")
+musica_orquestralde_vitoria_place_holder = NodePath("MusicaOrquestraldeVitoriaPlaceHolder")
 
 [node name="Final" type="Sprite2D" parent="." unique_id=934432101]
 position = Vector2(574, 370)
@@ -93,7 +178,7 @@ position = Vector2(574, 370)
 texture = ExtResource("2_pcuh1")
 
 [node name="Login" type="Sprite2D" parent="." unique_id=858851875]
-position = Vector2(578.1818, 374.54547)
+position = Vector2(574.5454, 370.9091)
 texture = ExtResource("1_ke8cg")
 
 [node name="Password" type="LineEdit" parent="Login" unique_id=1964315777]
@@ -118,6 +203,10 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_2djfb")
 theme_override_styles/hover = SubResource("StyleBoxFlat_vagm7")
 text = "Acessar"
 
+[node name="PcMelody" type="Sprite2D" parent="." unique_id=928876623]
+position = Vector2(576.3636, 352.72726)
+texture = ExtResource("6_35514")
+
 [node name="Normal" type="Sprite2D" parent="." unique_id=573809543]
 position = Vector2(574, 370)
 texture = ExtResource("6_r25xt")
@@ -141,4 +230,24 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_pcuh1")
 theme_override_styles/hover = SubResource("StyleBoxFlat_8so1n")
 text = "X"
 
+[node name="ClickSound" type="AudioStreamPlayer" parent="." unique_id=186544889]
+stream = ExtResource("8_i7crr")
+
+[node name="ComputerMelody" type="AudioStreamPlayer" parent="." unique_id=186176515]
+stream = ExtResource("9_spv0u")
+
+[node name="ComputerOn" type="AudioStreamPlayer" parent="." unique_id=879743751]
+stream = ExtResource("10_35514")
+
+[node name="IncorretPassowrd" type="AudioStreamPlayer" parent="." unique_id=1287351094]
+stream = SubResource("AudioStreamWAV_21igq")
+
+[node name="MusicaOrquestraldeVitoriaPlaceHolder" type="AudioStreamPlayer" parent="." unique_id=406926347]
+stream = ExtResource("12_21igq")
+
+[node name="ComputerAnimations" type="AnimationPlayer" parent="." unique_id=990585914]
+root_node = NodePath("../ComputerOn")
+libraries/ = SubResource("AnimationLibrary_hqgk8")
+
+[connection signal="pressed" from="Login/AcessButon" to="." method="_on_acess_buton_pressed"]
 [connection signal="pressed" from="ExitConfig" to="." method="_on_exit_config_pressed"]
