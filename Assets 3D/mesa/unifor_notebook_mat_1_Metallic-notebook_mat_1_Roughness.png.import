@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b5u6alvyfgaok"
-path.s3tc="res://.godot/imported/unifor_notebook_mat_2_Normal.jpg-37bc53eea6336bb542fb1e4586584834.s3tc.ctex"
+uid="uid://c16j6vbtcipph"
+path.s3tc="res://.godot/imported/unifor_notebook_mat_1_Metallic-notebook_mat_1_Roughness.png-a4ed5f32810bc9daa9b648ed7e118b78.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "eb4e16ec9e624481d7bfcbd2f6ab82f6"
+"md5": "00d8a77de08ab1e945198f5e14e995b6"
 }
 
 [deps]
 
-source_file="res://Assets 3D/unifor_notebook_mat_2_Normal.jpg"
-dest_files=["res://.godot/imported/unifor_notebook_mat_2_Normal.jpg-37bc53eea6336bb542fb1e4586584834.s3tc.ctex"]
+source_file="res://Assets 3D/mesa/unifor_notebook_mat_1_Metallic-notebook_mat_1_Roughness.png"
+dest_files=["res://.godot/imported/unifor_notebook_mat_1_Metallic-notebook_mat_1_Roughness.png-a4ed5f32810bc9daa9b648ed7e118b78.s3tc.ctex"]
 
 [params]
 
@@ -25,12 +25,12 @@ compress/lossy_quality=0.7
 compress/uastc_level=0
 compress/rdo_quality_loss=0.0
 compress/hdr_compression=1
-compress/normal_map=1
+compress/normal_map=0
 compress/channel_pack=0
 mipmaps/generate=true
 mipmaps/limit=-1
-roughness/mode=1
-roughness/src_normal="res://Assets 3D/unifor_notebook_mat_2_Normal.jpg"
+roughness/mode=0
+roughness/src_normal=""
 process/channel_remap/red=0
 process/channel_remap/green=1
 process/channel_remap/blue=2
