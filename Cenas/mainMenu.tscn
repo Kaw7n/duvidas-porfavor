@@ -26,6 +26,7 @@
 [ext_resource type="Script" uid="uid://b8yha27ogs40w" path="res://Scripts/Audio/volume_bgm.gd" id="23_cvjuc"]
 [ext_resource type="Script" uid="uid://ckylgk8gcpbaw" path="res://Scripts/Audio/volume_sfx.gd" id="24_bocn1"]
 [ext_resource type="Script" uid="uid://d0tybdgcv8d6g" path="res://Scripts/Cameras/sens.gd" id="25_cvjuc"]
+[ext_resource type="FontFile" uid="uid://crg25q10e3iqb" path="res://Misc/Dico.ttf" id="26_bocn1"]
 
 [sub_resource type="Gradient" id="Gradient_w7d22"]
 offsets = PackedFloat32Array(0.1506024, 0.939759)
@@ -74,6 +75,15 @@ color = Color(1, 1, 1, 1)
 grow_begin = 0.0
 grow_end = 0.0
 thickness = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h5isk"]
+bg_color = Color(0.5058824, 0.50980395, 0.6431373, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xmwsq"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fi82c"]
+bg_color = Color(0.73333335, 0.7372549, 0.83137256, 0)
 
 [node name="MainMenu" type="Control" unique_id=66402352]
 layout_mode = 3
@@ -236,21 +246,6 @@ theme_override_fonts/font = ExtResource("21_xmwsq")
 theme_override_font_sizes/font_size = 26
 text = "Sensibilidade"
 
-[node name="ExitConfig" type="Button" parent="MenuConfig" unique_id=1546229656]
-layout_mode = 0
-offset_left = 25.0
-offset_top = 20.0
-offset_right = 67.0
-offset_bottom = 64.0
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_color = Color(0.5002048, 0.49746454, 0.49000597, 1)
-theme_override_fonts/font = ExtResource("21_xmwsq")
-theme_override_styles/normal = SubResource("StyleBoxFlat_ojd2t")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_bgebw")
-theme_override_styles/hover = SubResource("StyleBoxFlat_2rfsq")
-text = "X"
-
 [node name="ExitGame" type="Button" parent="MenuConfig" unique_id=1560538733]
 layout_mode = 0
 offset_left = 254.0
@@ -324,6 +319,21 @@ max_value = 0.5
 step = 0.01
 script = ExtResource("25_cvjuc")
 
+[node name="ExitConfig" type="Button" parent="MenuConfig" unique_id=350778333]
+layout_mode = 0
+offset_left = 22.999985
+offset_top = 16.0
+offset_right = 64.99997
+offset_bottom = 60.0
+theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.5002048, 0.49746454, 0.49000597, 1)
+theme_override_fonts/font = ExtResource("26_bocn1")
+theme_override_styles/normal = SubResource("StyleBoxFlat_h5isk")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_xmwsq")
+theme_override_styles/hover = SubResource("StyleBoxFlat_fi82c")
+text = "X"
+
 [node name="Fade" parent="." unique_id=1383060492 instance=ExtResource("20_hcwcd")]
 visible = false
 layout_mode = 1
@@ -337,10 +347,10 @@ offset_bottom = -3.0
 [connection signal="pressed" from="BotaoIniciar" to="." method="_on_texture_button_pressed"]
 [connection signal="pressed" from="BotaoConfig" to="." method="_on_texture_button_2_pressed"]
 [connection signal="pressed" from="BotaoSair" to="." method="_on_texture_button_3_pressed"]
-[connection signal="pressed" from="MenuConfig/ExitConfig" to="MenuConfig" method="_on_exit_config_pressed"]
 [connection signal="pressed" from="MenuConfig/ExitGame" to="MenuConfig" method="_on_exit_game_pressed"]
 [connection signal="value_changed" from="MenuConfig/VolumeMAIN" to="MenuConfig/VolumeMAIN" method="_on_value_changed"]
 [connection signal="value_changed" from="MenuConfig/VolumeBGM" to="MenuConfig/VolumeBGM" method="_on_value_changed"]
 [connection signal="value_changed" from="MenuConfig/VolumeSFX" to="MenuConfig/VolumeSFX" method="_on_value_changed"]
 [connection signal="value_changed" from="MenuConfig/Sensibilidade" to="MenuConfig/Sensibilidade" method="_on_value_changed"]
+[connection signal="pressed" from="MenuConfig/ExitConfig" to="MenuConfig" method="_on_exit_config_pressed"]
 [connection signal="timeout" from="Fade/Timer" to="." method="_on_timer_timeout"]

@@ -12,7 +12,7 @@ func _ready():
 	seq_level()
 
 func seq_level():
-	while Global.level <= 7:
+	while Global.level < 7:
 		match Global.level:
 			0:
 				print('Fase Tutorial')
@@ -34,9 +34,11 @@ func seq_level():
 				await level_ccj()
 			6:
 				print('Fase Moema')
-				await level_moema()
+				if Global.lives >= 1:
+					await level_moema() #
+				else: 
+					await level_game_over()
 				print("Fim")
-				Global.level+=1
 
 func level_tutorial():
 	play("PlaceHolder-Npc1")
@@ -94,12 +96,14 @@ func level_moema():
 	await play_seq()
 	Global.level+=1 
 
+func level_game_over():
+	print("game over")
+
 signal seq_end
 
 func play_seq():
 	Global.i = 0;
 	await seq_end
-	
 
 func _on_click_npc(_collider):
 	if npcs_animations.is_playing() or Global.i >= Global.npcs_animations_sequence.size():

@@ -17,8 +17,10 @@
 [ext_resource type="Texture2D" uid="uid://cj8vswvh3jrxr" path="res://Assets 2D/PlaceHolders/placeholder7.png" id="11_bvhle"]
 [ext_resource type="Script" uid="uid://dln3xy3tan4u6" path="res://Scripts/Audio/volume_main.gd" id="11_qf4tx"]
 [ext_resource type="Script" uid="uid://b8yha27ogs40w" path="res://Scripts/Audio/volume_bgm.gd" id="12_1cpuw"]
+[ext_resource type="Script" uid="uid://i7d3kdfoikpf" path="res://Cenas/dim.gd" id="12_f0k5d"]
 [ext_resource type="Script" uid="uid://ckylgk8gcpbaw" path="res://Scripts/Audio/volume_sfx.gd" id="13_j0rpt"]
 [ext_resource type="Script" uid="uid://d0tybdgcv8d6g" path="res://Scripts/Cameras/sens.gd" id="13_jdm6y"]
+[ext_resource type="PackedScene" uid="uid://bys33r5tumdyt" path="res://Cenas/Computer.tscn" id="20_sjri2"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_sn0t7"]
 
@@ -241,6 +243,113 @@ _data = {
 [sub_resource type="BoxShape3D" id="BoxShape3D_bhunq"]
 size = Vector3(0.53886604, 1.868042, 1.2168427)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_riqys"]
+size = Vector3(0.3879242, 0.2498169, 0.2103424)
+
+[sub_resource type="Animation" id="Animation_oulm0"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_7awky"]
+resource_name = "dim_in"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:color")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.51),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 0.5882353)]
+}
+
+[sub_resource type="Animation" id="Animation_bvhle"]
+resource_name = "dim_out"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:color")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0.5882353), Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8gibp"]
+_data = {
+&"RESET": SubResource("Animation_oulm0"),
+&"dim_in": SubResource("Animation_7awky"),
+&"dim_out": SubResource("Animation_bvhle")
+}
+
+[sub_resource type="Animation" id="Animation_f0k5d"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_8gibp"]
+resource_name = "fade_in"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_vf5hu"]
+resource_name = "fade_out_computer"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_oulm0"]
+_data = {
+&"RESET": SubResource("Animation_f0k5d"),
+&"fade_in_computer": SubResource("Animation_8gibp"),
+&"fade_out_computer": SubResource("Animation_vf5hu")
+}
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sjri2"]
 bg_color = Color(0.6044946, 0.460261, 0.16267654, 1)
 shadow_color = Color(0.3622378, 0.2328456, 0.004846045, 0.6)
@@ -289,25 +398,52 @@ sprite_frames = SubResource("SpriteFrames_bhunq")
 animation = &"PlaceHolder-Npc1"
 script = ExtResource("6_jdm6y")
 camera_3d = NodePath("../Camera3D")
-area_3d = NodePath("../Area3D")
+area_3d = NodePath("../AreaClickNpc")
 npcs_animations = NodePath("NpcsAnimations")
 
 [node name="NpcsAnimations" type="AnimationPlayer" parent="NPCs" unique_id=765308715]
 libraries/ = SubResource("AnimationLibrary_tp12v")
 
-[node name="Area3D" type="Area3D" parent="." unique_id=1897334752]
+[node name="AreaClickNpc" type="Area3D" parent="." unique_id=1897334752 groups=["npc"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5704832, 0, 0)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=79509214]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.7099545, 0.33035815, -0.0434494)
+[node name="CollisionShape3DNpc" type="CollisionShape3D" parent="AreaClickNpc" unique_id=79509214]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.13947129, 0.33035815, -0.0434494)
 shape = SubResource("BoxShape3D_bhunq")
 
-[node name="MenuConfig" type="Panel" parent="." unique_id=477531899]
+[node name="AreaClickComputer" type="Area3D" parent="." unique_id=783192016 groups=["computer"]]
+
+[node name="CollisionShape3DComputer" type="CollisionShape3D" parent="AreaClickComputer" unique_id=256719915]
+transform = Transform3D(0.43477648, 0, 0.9005384, 0, 1, 0, -0.9005384, 0, 0.43477648, 0.9105661, 6.48126e-05, 0.49147084)
+shape = SubResource("BoxShape3D_riqys")
+
+[node name="Dim" type="ColorRect" parent="." unique_id=240347224 node_paths=PackedStringArray("animation_player")]
+offset_right = 1153.0
+offset_bottom = 647.0
+color = Color(0, 0, 0, 0)
+script = ExtResource("12_f0k5d")
+animation_player = NodePath("AnimationPlayer")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Dim" unique_id=416306550]
+libraries/ = SubResource("AnimationLibrary_8gibp")
+
+[node name="Computer" parent="." unique_id=90605145 node_paths=PackedStringArray("camera_3d", "area_click_computer", "animation_player") instance=ExtResource("20_sjri2")]
+modulate = Color(1, 1, 1, 0)
+camera_3d = NodePath("../Camera3D")
+area_click_computer = NodePath("../AreaClickComputer")
+animation_player = NodePath("AnimationPlayer")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Computer" unique_id=1293792405]
+libraries/ = SubResource("AnimationLibrary_oulm0")
+
+[node name="MenuConfig" type="Panel" parent="." unique_id=477531899 node_paths=PackedStringArray("computer")]
 offset_left = 245.0
 offset_top = 106.0
 offset_right = 945.0
 offset_bottom = 546.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_sjri2")
 script = ExtResource("8_rljct")
+computer = NodePath("../Computer")
 
 [node name="MenuConfigLousa" type="Sprite2D" parent="MenuConfig" unique_id=445458525]
 position = Vector2(350, 219.5)

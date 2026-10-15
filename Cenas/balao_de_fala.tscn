@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://5mru63u16iym"]
 
 [ext_resource type="Script" uid="uid://comgwshu3sdps" path="res://Scripts/Npcs/balao_de_fala.gd" id="1_osuna"]
-[ext_resource type="Texture2D" uid="uid://pq0xfibn5ffk" path="res://Assets 2D/balao de fala1.png" id="2_osuna"]
+[ext_resource type="Texture2D" uid="uid://pq0xfibn5ffk" path="res://Assets 2D/Balões/balao de fala1.png" id="2_osuna"]
 
 [sub_resource type="Animation" id="Animation_osuna"]
 length = 0.001
