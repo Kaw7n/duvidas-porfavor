@@ -2,20 +2,17 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bjf6qxbejlr7x"
-path.s3tc="res://.godot/imported/unifor_notebook_mat_2_BaseColor.jpg-f5b2ab5565e94bd250b8145f53474b0f.s3tc.ctex"
+uid="uid://bexacxkjgsigb"
+path.s3tc="res://.godot/imported/placeholder1.png-c6fcf5e537d0b08ff8a60e0f809c30b7.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
-generator_parameters={
-"md5": "fb3d7f7d6afab01ac51aae90e9572836"
-}
 
 [deps]
 
-source_file="res://Assets 3D/Texturas da Mesa/unifor_notebook_mat_2_BaseColor.jpg"
-dest_files=["res://.godot/imported/unifor_notebook_mat_2_BaseColor.jpg-f5b2ab5565e94bd250b8145f53474b0f.s3tc.ctex"]
+source_file="res://Assets 2D/PlaceHolders/placeholder1.png"
+dest_files=["res://.godot/imported/placeholder1.png-c6fcf5e537d0b08ff8a60e0f809c30b7.s3tc.ctex"]
 
 [params]
 

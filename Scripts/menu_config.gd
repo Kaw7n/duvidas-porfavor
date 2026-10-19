@@ -1,13 +1,15 @@
 extends Panel
 
 @onready var menu_config: Panel = $"."
+@export var computer: Control
 
 func _ready() -> void:
 	menu_config.visible = false; #Deixar config escondido
 	
 func _input(event: InputEvent) -> void:
-	if event.is_action_pressed("esc"): 
-		switchMenu()
+	if event.is_action_pressed("esc"):
+		if computer == null or computer.visible == false:
+			switchMenu()
 
 func switchMenu():
 	if menu_config.visible == false:

@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://ctxlw0yuf6wvp"
-path="res://.godot/imported/unifor.glb-a71b2204b9a27390dbc9be0533e042a7.scn"
+path="res://.godot/imported/unifor.glb-ae7a37ec92b5956ef4a27168c3c92ac7.scn"
 
 [deps]
 
-source_file="res://Assets 3D/unifor.glb"
-dest_files=["res://.godot/imported/unifor.glb-a71b2204b9a27390dbc9be0533e042a7.scn"]
+source_file="res://Assets 3D/mesa/unifor.glb"
+dest_files=["res://.godot/imported/unifor.glb-ae7a37ec92b5956ef4a27168c3c92ac7.scn"]
 
 [params]
 

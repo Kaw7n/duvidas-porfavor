@@ -2,17 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bexacxkjgsigb"
-path.s3tc="res://.godot/imported/placeholder npc.png-d7cb375b6f3a419f35ad6e2664230d0d.s3tc.ctex"
+uid="uid://c16j6vbtcipph"
+path.s3tc="res://.godot/imported/unifor_notebook_mat_1_Metallic-notebook_mat_1_Roughness.png-a4ed5f32810bc9daa9b648ed7e118b78.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
+generator_parameters={
+"md5": "00d8a77de08ab1e945198f5e14e995b6"
+}
 
 [deps]
 
-source_file="res://Assets 2D/placeholder npc.png"
-dest_files=["res://.godot/imported/placeholder npc.png-d7cb375b6f3a419f35ad6e2664230d0d.s3tc.ctex"]
+source_file="res://Assets 3D/mesa/unifor_notebook_mat_1_Metallic-notebook_mat_1_Roughness.png"
+dest_files=["res://.godot/imported/unifor_notebook_mat_1_Metallic-notebook_mat_1_Roughness.png-a4ed5f32810bc9daa9b648ed7e118b78.s3tc.ctex"]
 
 [params]
 

@@ -28,6 +28,10 @@ GerenciadorDialogo="*uid://co4poyb5fox4b"
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 
+[global_group]
+
+npc=""
+
 [input]
 
 click={
