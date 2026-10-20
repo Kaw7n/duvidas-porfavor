@@ -3,15 +3,979 @@
 [ext_resource type="Texture2D" uid="uid://btspsgv6ha52c" path="res://Assets 2D/MinigamesComputador/TelaLogin.png" id="1_ke8cg"]
 [ext_resource type="Script" uid="uid://dj5p3c3y20ly1" path="res://Scripts/computador.gd" id="1_npykp"]
 [ext_resource type="Texture2D" uid="uid://b4wltnjvbgcbr" path="res://Assets 2D/MinigamesComputador/TelaCarregando.png" id="2_pcuh1"]
+[ext_resource type="Texture2D" uid="uid://ow41lxoeahnf" path="res://Assets 2D/MinigamesComputador/Blackout.png" id="2_u27gc"]
 [ext_resource type="Texture2D" uid="uid://br2rhvux5rodt" path="res://Assets 2D/MinigamesComputador/computador transparente.png" id="2_y4h44"]
+[ext_resource type="Texture2D" uid="uid://cfv10npxui2wk" path="res://Assets 2D/MinigamesComputador/PastaMoema/Sprite Moema cabeça 1.png" id="3_5lp86"]
 [ext_resource type="Texture2D" uid="uid://hfio5axqlo2c" path="res://Assets 2D/MinigamesComputador/TelaFinal.png" id="3_8so1n"]
+[ext_resource type="Texture2D" uid="uid://cs8lri51yc5ay" path="res://Assets 2D/MinigamesComputador/ContagemUm.png" id="3_pkwbt"]
 [ext_resource type="FontFile" uid="uid://crg25q10e3iqb" path="res://Misc/Dico.ttf" id="3_y4h44"]
+[ext_resource type="Texture2D" uid="uid://be7bhq3a8ikbs" path="res://Assets 2D/MinigamesComputador/ContagemDois.png" id="4_8n3u2"]
+[ext_resource type="Texture2D" uid="uid://cpxwt7jcs0sw4" path="res://Assets 2D/MinigamesComputador/PastaMoema/Sprite Moema cabeça 2.png" id="4_hxbug"]
+[ext_resource type="Texture2D" uid="uid://ckgfoopbfip0p" path="res://Assets 2D/MinigamesComputador/PastaMoema/Sprite Moema em pé 1.png" id="5_basu4"]
+[ext_resource type="Texture2D" uid="uid://8y6ecjha8nfm" path="res://Assets 2D/MinigamesComputador/Contagem Tres.png" id="5_xddws"]
 [ext_resource type="Texture2D" uid="uid://deiyd5bqbsxhf" path="res://Assets 2D/MinigamesComputador/pcligando.png" id="6_35514"]
+[ext_resource type="Texture2D" uid="uid://drf7gsnxgckcq" path="res://Assets 2D/MinigamesComputador/PastaMoema/Sprite Moema em pé 2.png" id="6_dj3gp"]
 [ext_resource type="Texture2D" uid="uid://crle8ow7ksmdl" path="res://Assets 2D/MinigamesComputador/Desligado.png" id="6_r25xt"]
+[ext_resource type="Texture2D" uid="uid://cbri5xb8gnxg4" path="res://Assets 2D/MinigamesComputador/CCTMinigame.png" id="6_spkgw"]
+[ext_resource type="Texture2D" uid="uid://brl5jyactrh26" path="res://Assets 2D/MinigamesComputador/PastaMoema/Sprite Moema falsa cabeça 1.png" id="7_45mwl"]
 [ext_resource type="AudioStream" uid="uid://cd0s0j48r80sd" path="res://Audio/som de clique.mp3" id="8_i7crr"]
+[ext_resource type="Texture2D" uid="uid://csnwwkp3ryckc" path="res://Assets 2D/MinigamesComputador/PastaMoema/Sprite Moema falsa cabeça 2.png" id="8_t7jtf"]
 [ext_resource type="AudioStream" uid="uid://d2fpi22mumlbt" path="res://Audio/Som-pc-melodia.wav" id="9_spv0u"]
+[ext_resource type="Texture2D" uid="uid://b78you8tsdock" path="res://Assets 2D/MinigamesComputador/PastaMoema/Sprite Moema falsa em pé 1.png" id="9_tgs3b"]
+[ext_resource type="Texture2D" uid="uid://48vglg6ybi1q" path="res://Assets 2D/MinigamesComputador/PastaMoema/Sprite Moema falsa em pé 2.png" id="10_41kec"]
 [ext_resource type="AudioStream" uid="uid://c1twpryba0mx8" path="res://Audio/Som de Pc Iniciando.mp3" id="10_35514"]
-[ext_resource type="AudioStream" uid="uid://b1irm5wmmhipv" path="res://Audio/MusicaOrquestraldeVitoriaPlaceHolder.wav" id="12_21igq"]
+[ext_resource type="Texture2D" uid="uid://bc5h7ewvaspl3" path="res://Assets 2D/MinigamesComputador/cct_fail.png" id="16_41kec"]
+[ext_resource type="Texture2D" uid="uid://jgsbf2c84bcr" path="res://Assets 2D/MinigamesComputador/cct_win.png" id="17_kthoi"]
+[ext_resource type="Texture2D" uid="uid://c8lddfovsj6gu" path="res://Assets 2D/MinigamesComputador/PastaMoema/Codes.png" id="25_hxbug"]
+[ext_resource type="AudioStream" uid="uid://b5dr2n8crujf2" path="res://Audio/SFX/DuvidaFail.mp3" id="26_t7jtf"]
+[ext_resource type="AudioStream" uid="uid://dhicbvxs53qct" path="res://Audio/SFX/DuvidaWin.mp3" id="27_tgs3b"]
+[ext_resource type="AudioStream" uid="uid://ctmnt0i6rirb8" path="res://Audio/SFX/MoemaFail.wav" id="28_41kec"]
+[ext_resource type="AudioStream" uid="uid://bvyijf0qvyx57" path="res://Audio/SFX/MoemaRight.wav" id="29_kthoi"]
+[ext_resource type="AudioStream" uid="uid://bevobtklf2jma" path="res://Audio/musica_cct.wav" id="32_kthoi"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bhunq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_5lp86")
+}],
+"loop": 1,
+"name": &"TrueMoema1-1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_hxbug")
+}],
+"loop": 1,
+"name": &"TrueMoema1-2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_basu4")
+}],
+"loop": 1,
+"name": &"TrueMoema1-3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_dj3gp")
+}],
+"loop": 1,
+"name": &"TrueMoema1-4",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2r0jt"]
+size = Vector2(274.16656, 331.6666)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_riqys"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_5lp86")
+}],
+"loop": 1,
+"name": &"TrueMoema2-1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_hxbug")
+}],
+"loop": 1,
+"name": &"TrueMoema2-2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_basu4")
+}],
+"loop": 1,
+"name": &"TrueMoema2-3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_dj3gp")
+}],
+"loop": 1,
+"name": &"TrueMoema2-4",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qr0ht"]
+size = Vector2(309.99982, 386.66656)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_sn0t7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_5lp86")
+}],
+"loop": 1,
+"name": &"TrueMoema3-1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_hxbug")
+}],
+"loop": 1,
+"name": &"TrueMoema3-2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_basu4")
+}],
+"loop": 1,
+"name": &"TrueMoema3-3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_dj3gp")
+}],
+"loop": 1,
+"name": &"TrueMoema3-4",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6f8o3"]
+size = Vector2(329.9994, 390.72858)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6f8o3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_5lp86")
+}],
+"loop": 1,
+"name": &"TrueMoema4-1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_hxbug")
+}],
+"loop": 1,
+"name": &"TrueMoema4-2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_basu4")
+}],
+"loop": 1,
+"name": &"TrueMoema4-3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_dj3gp")
+}],
+"loop": 1,
+"name": &"TrueMoema4-4",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": 1,
+"name": &"TrueMoema4-Null",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sn0t7"]
+size = Vector2(296.96973, 349.54553)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qr0ht"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_5lp86")
+}],
+"loop": 1,
+"name": &"TrueMoema5-1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_hxbug")
+}],
+"loop": 1,
+"name": &"TrueMoema5-2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_basu4")
+}],
+"loop": 1,
+"name": &"TrueMoema5-3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_dj3gp")
+}],
+"loop": 1,
+"name": &"TrueMoema5-4",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": 1,
+"name": &"TrueMoema5-Null",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_riqys"]
+size = Vector2(309.09088, 360.6061)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1esiv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_45mwl")
+}],
+"loop": 1,
+"name": &"FalseMoema - 1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_t7jtf")
+}],
+"loop": 1,
+"name": &"FalseMoema - 2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_tgs3b")
+}],
+"loop": 1,
+"name": &"FalseMoema - 3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_41kec")
+}],
+"loop": 1,
+"name": &"FalseMoema - 4",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bhunq"]
+size = Vector2(284.16663, 409.16666)
+
+[sub_resource type="Animation" id="Animation_kthoi"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../TrueMoema1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(555, 324)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../TrueMoema1:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"TrueMoema1-3"]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../TrueMoema2:animation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"TrueMoema2-3"]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../TrueMoema2:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(555, 324)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../TrueMoema3:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(555, 324)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../TrueMoema3:animation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"TrueMoema3-4"]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("../FalseMoema:animation")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"FalseMoema - 4"]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("../FalseMoema:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(555, 324)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("../TrueMoema4:animation")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"TrueMoema4-Null"]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("../TrueMoema4:position")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(550, 350)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("../TrueMoema5:position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(576.364, 350)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("../TrueMoema5:animation")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"TrueMoema5-Null"]
+}
+
+[sub_resource type="Animation" id="Animation_nywf0"]
+resource_name = "round1"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../TrueMoema1:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"TrueMoema1-3"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../TrueMoema1:position")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(555, 350), Vector2(528.1818, 211.8182)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../TrueMoema2:animation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"TrueMoema2-3"]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../TrueMoema2:position")
+tracks/3/interp = 2
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(555, 350), Vector2(304.54547, 244.54544)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../TrueMoema3:animation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"TrueMoema3-4"]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../TrueMoema3:position")
+tracks/5/interp = 2
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(555, 350), Vector2(319.09088, 469.09094)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("../FalseMoema:animation")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"FalseMoema - 4"]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("../FalseMoema:position")
+tracks/7/interp = 2
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(555, 350), Vector2(840.90906, 239.09094)]
+}
+
+[sub_resource type="Animation" id="Animation_hxbug"]
+resource_name = "round2"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../TrueMoema1:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(528.1818, 211.8182), Vector2(550, 350), Vector2(550, 350), Vector2(841.8181, 251.81815)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../TrueMoema1:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [&"TrueMoema1-3", &"TrueMoema1-1"]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../TrueMoema2:position")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.5, 1.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(304.54547, 244.54544), Vector2(555, 350), Vector2(555, 350), Vector2(390.9091, 245.45454)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../TrueMoema2:animation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [&"TrueMoema2-3", &"TrueMoema2-1"]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../TrueMoema3:position")
+tracks/4/interp = 2
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.5, 1.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(319.09088, 469.09094), Vector2(555, 350), Vector2(555, 350), Vector2(309.09094, 366.36365)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../TrueMoema3:animation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [&"TrueMoema3-4", &"TrueMoema3-1"]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("../FalseMoema:position")
+tracks/6/interp = 2
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.5, 1.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(840.90906, 239.09094), Vector2(555, 350), Vector2(555, 350), Vector2(396.3636, 490)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("../FalseMoema:animation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [&"FalseMoema - 4", &"FalseMoema - 2"]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("../TrueMoema4:animation")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [&"TrueMoema4-Null", &"TrueMoema4-3"]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("../TrueMoema4:position")
+tracks/9/interp = 2
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0.5, 1.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(550, 350), Vector2(550, 350), Vector2(804.5455, 438.1819)]
+}
+
+[sub_resource type="Animation" id="Animation_basu4"]
+resource_name = "round3"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../TrueMoema2:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(390.9091, 245.45454), Vector2(550, 350), Vector2(550, 350), Vector2(372.72726, 212.72726)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../TrueMoema2:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [&"TrueMoema2-1", &"TrueMoema2-1"]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../TrueMoema3:animation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(-0.01, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [&"TrueMoema3-1", &"TrueMoema3-2"]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../TrueMoema3:position")
+tracks/3/interp = 2
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.5, 1.51, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(309.09094, 366.36365), Vector2(550, 350), Vector2(550, 350), Vector2(749.09094, 448.1819)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../FalseMoema:position")
+tracks/4/interp = 2
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.5, 1.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(396.3636, 490), Vector2(550, 350), Vector2(550, 350), Vector2(870, 340)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../FalseMoema:animation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [&"FalseMoema - 2", &"FalseMoema - 3"]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("../TrueMoema1:position")
+tracks/6/interp = 2
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.5, 1.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(841.8181, 251.81815), Vector2(550, 350), Vector2(550, 350), Vector2(732.7273, 229.09091)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("../TrueMoema1:animation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [&"TrueMoema1-1", &"TrueMoema1-3"]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("../TrueMoema4:position")
+tracks/8/interp = 2
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 0.5, 1.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(804.5455, 438.1819), Vector2(550, 350), Vector2(550, 350), Vector2(331.81815, 488.18182)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("../TrueMoema4:animation")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [&"TrueMoema4-3", &"TrueMoema4-4"]
+}
+
+[sub_resource type="Animation" id="Animation_dj3gp"]
+resource_name = "round4"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../TrueMoema2:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(372.72726, 212.72726), Vector2(550, 350), Vector2(550, 350), Vector2(415.4545, 352.72726)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../TrueMoema2:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [&"TrueMoema2-1", &"TrueMoema2-2"]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../TrueMoema4:position")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.5, 1.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(331.81815, 488.18182), Vector2(550, 350), Vector2(550, 350), Vector2(304.54547, 474.54544)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../TrueMoema4:animation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [&"TrueMoema4-4", &"TrueMoema4-2"]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../TrueMoema1:position")
+tracks/4/interp = 2
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.5, 1.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(732.7273, 229.09091), Vector2(550, 350), Vector2(550, 350), Vector2(813.63635, 477.27264)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../TrueMoema1:animation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [&"TrueMoema1-3", &"TrueMoema1-2"]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("../FalseMoema:position")
+tracks/6/interp = 2
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.5, 1.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(870, 340), Vector2(550, 350), Vector2(550, 350), Vector2(731.8182, 350.90906)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("../FalseMoema:animation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [&"FalseMoema - 3", &"FalseMoema - 1"]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("../TrueMoema3:position")
+tracks/8/interp = 2
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 0.5, 1.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(749.09094, 448.1819), Vector2(550, 350), Vector2(550, 350), Vector2(846.36365, 245.45454)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("../TrueMoema3:animation")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [&"TrueMoema3-2", &"TrueMoema3-2"]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("../TrueMoema5:position")
+tracks/10/interp = 2
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0.5, 1.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(576.364, 350), Vector2(576.364, 350), Vector2(301.81818, 238.18182)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("../TrueMoema5:animation")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [&"TrueMoema5-Null", &"TrueMoema5-2"]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3bkdy"]
+_data = {
+&"RESET": SubResource("Animation_kthoi"),
+&"round1": SubResource("Animation_nywf0"),
+&"round2": SubResource("Animation_hxbug"),
+&"round3": SubResource("Animation_basu4"),
+&"round4": SubResource("Animation_dj3gp")
+}
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cp5h6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_pkwbt")
+}],
+"loop": 1,
+"name": &"One",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_xddws")
+}],
+"loop": 1,
+"name": &"Tree",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_8n3u2")
+}],
+"loop": 1,
+"name": &"Two",
+"speed": 5.0
+}]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_riqys"]
+bg_color = Color(1, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_color = Color(1, 0, 0, 0.6)
+shadow_size = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pkwbt"]
+bg_color = Color(0.66560394, 1.961328e-06, 4.3317675e-07, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_color = Color(1, 0, 0, 0.6)
+shadow_size = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8n3u2"]
+bg_color = Color(0.99999994, 0.22953573, 0.17418528, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_color = Color(1, 0, 0, 0.6)
+shadow_size = 10
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ke8cg"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
@@ -101,6 +1065,128 @@ tracks/1/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 1)]
 }
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../CctMinigame:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../Counter:animation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"One"]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../Counter:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../Blackout:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.58431375, 0.58431375, 0.58431375, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_nd8hd"]
+resource_name = "blackout_dim"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Blackout:modulate")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.58431375, 0.58431375, 0.58431375, 1), Color(0.58431375, 0.58431375, 0.58431375, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_ibxk0"]
+resource_name = "cct_minigame_in"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../CctMinigame:modulate")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_b4f2c"]
+resource_name = "ccc_minigame_out"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../CctMinigame:modulate")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_pkwbt"]
+resource_name = "Counter"
+length = 3.0000000000000004
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Counter:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [&"Tree", &"Two", &"One"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Counter:modulate")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2, 2.5, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
 
 [sub_resource type="Animation" id="Animation_03xcq"]
 resource_name = "pc_melody"
@@ -136,42 +1222,192 @@ tracks/0/keys = {
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_hqgk8"]
 _data = {
 &"RESET": SubResource("Animation_21igq"),
+&"blackout_dim": SubResource("Animation_nd8hd"),
+&"cct_minigame_in": SubResource("Animation_ibxk0"),
+&"cct_minigame_out": SubResource("Animation_b4f2c"),
+&"counter": SubResource("Animation_pkwbt"),
 &"pc_melody": SubResource("Animation_03xcq"),
 &"screen_turning_on": SubResource("Animation_cp5h6")
 }
 
-[node name="Computer" type="Control" unique_id=90605145 node_paths=PackedStringArray("login", "normal", "loading", "final", "pc_melody", "computer_animations", "computador", "password", "acess_buton", "animation_player", "click_sound", "computer_melody", "computer_on", "incorret_passowrd", "musica_orquestralde_vitoria_place_holder")]
+[node name="Computer" type="Control" unique_id=90605145 node_paths=PackedStringArray("login", "normal", "loading", "final", "pc_melody", "cct_minigame", "blackout", "counter", "computer_animations", "computador", "password", "access_button", "animation_player", "click_sound", "computer_melody", "computer_on", "incorret_password", "cct_music", "true_moema_1", "true_moema_2", "true_moema_3", "true_moema_4", "true_moema_5", "false_moema", "moema_animations", "timer_moema", "computer_codes", "duvida_fail", "duvida_win", "moema_fail", "moema_right", "cct_fail", "cct_win")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -64.0
-offset_top = -67.0
-offset_right = -64.0
-offset_bottom = -67.0
+offset_left = -78.99999
+offset_top = -64.0
+offset_right = -79.0
+offset_bottom = -64.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(1.1, 1.1)
+mouse_filter = 2
 script = ExtResource("1_npykp")
 login = NodePath("Login")
 normal = NodePath("Normal")
 loading = NodePath("Loading")
 final = NodePath("Final")
 pc_melody = NodePath("PcMelody")
+cct_minigame = NodePath("CctMinigame")
+blackout = NodePath("Blackout")
+counter = NodePath("Counter")
 computer_animations = NodePath("ComputerAnimations")
 computador = NodePath(".")
 password = NodePath("Login/Password")
-acess_buton = NodePath("Login/AcessButon")
+access_button = NodePath("Login/AccessButton")
 animation_player = NodePath("ComputerAnimations")
 click_sound = NodePath("ClickSound")
 computer_melody = NodePath("ComputerMelody")
 computer_on = NodePath("ComputerOn")
-incorret_passowrd = NodePath("IncorretPassowrd")
-musica_orquestralde_vitoria_place_holder = NodePath("MusicaOrquestraldeVitoriaPlaceHolder")
+incorret_password = NodePath("IncorretPassword")
+cct_music = NodePath("CCTMusic")
+true_moema_1 = NodePath("TrueMoema1")
+true_moema_2 = NodePath("TrueMoema2")
+true_moema_3 = NodePath("TrueMoema3")
+true_moema_4 = NodePath("TrueMoema4")
+true_moema_5 = NodePath("TrueMoema5")
+false_moema = NodePath("FalseMoema")
+moema_animations = NodePath("MoemaAnimations")
+timer_moema = NodePath("TimerMoema")
+computer_codes = NodePath("Codes")
+duvida_fail = NodePath("DuvidaFail")
+duvida_win = NodePath("DuvidaWin")
+moema_fail = NodePath("MoemaFail")
+moema_right = NodePath("MoemaRight")
+cct_fail = NodePath("CctFail")
+cct_win = NodePath("CctWin")
 
 [node name="Final" type="Sprite2D" parent="." unique_id=934432101]
 position = Vector2(574, 370)
 texture = ExtResource("3_8so1n")
+
+[node name="TrueMoema1" type="AnimatedSprite2D" parent="." unique_id=1300836918]
+position = Vector2(555, 324)
+scale = Vector2(0.27272728, 0.27272728)
+sprite_frames = SubResource("SpriteFrames_bhunq")
+animation = &"TrueMoema1-3"
+
+[node name="Area2D" type="Area2D" parent="TrueMoema1" unique_id=1163762652]
+
+[node name="TrueMoema1- CollisionShape2D" type="CollisionShape2D" parent="TrueMoema1/Area2D" unique_id=2126841482]
+position = Vector2(-46.666668, 10.000244)
+shape = SubResource("RectangleShape2D_2r0jt")
+
+[node name="TrueMoema2" type="AnimatedSprite2D" parent="." unique_id=1613620056]
+position = Vector2(555, 324)
+scale = Vector2(0.27272728, 0.27272728)
+sprite_frames = SubResource("SpriteFrames_riqys")
+animation = &"TrueMoema2-3"
+
+[node name="Area2D" type="Area2D" parent="TrueMoema2" unique_id=1145677890]
+position = Vector2(1460.0001, 456.66638)
+
+[node name="TrueMoema2- CollisionShape2D" type="CollisionShape2D" parent="TrueMoema2/Area2D" unique_id=1911804047]
+position = Vector2(-1520, -443.33313)
+shape = SubResource("RectangleShape2D_qr0ht")
+
+[node name="TrueMoema3" type="AnimatedSprite2D" parent="." unique_id=2128278421]
+position = Vector2(555, 324)
+scale = Vector2(0.27272728, 0.27454543)
+sprite_frames = SubResource("SpriteFrames_sn0t7")
+animation = &"TrueMoema3-4"
+
+[node name="Area2D" type="Area2D" parent="TrueMoema3" unique_id=2051356254]
+
+[node name="TrueMoema3- CollisionShape2D" type="CollisionShape2D" parent="TrueMoema3/Area2D" unique_id=960723433]
+position = Vector2(-60.000202, 23.178831)
+shape = SubResource("RectangleShape2D_6f8o3")
+
+[node name="TrueMoema4" type="AnimatedSprite2D" parent="." unique_id=1052585260]
+position = Vector2(550, 350)
+scale = Vector2(0.3, 0.3)
+sprite_frames = SubResource("SpriteFrames_6f8o3")
+animation = &"TrueMoema4-Null"
+
+[node name="Area2D" type="Area2D" parent="TrueMoema4" unique_id=1010164038]
+
+[node name="TrueMoema4- CollisionShape2D" type="CollisionShape2D" parent="TrueMoema4/Area2D" unique_id=675947137]
+position = Vector2(-45.454643, 9.090886)
+scale = Vector2(0.9999999, 0.9999999)
+shape = SubResource("RectangleShape2D_sn0t7")
+
+[node name="TrueMoema5" type="AnimatedSprite2D" parent="." unique_id=1098591907]
+position = Vector2(576.364, 350)
+scale = Vector2(0.3, 0.3)
+sprite_frames = SubResource("SpriteFrames_qr0ht")
+animation = &"TrueMoema5-Null"
+
+[node name="Area2D" type="Area2D" parent="TrueMoema5" unique_id=1535437137]
+
+[node name="TrueMoema5- CollisionShape2D" type="CollisionShape2D" parent="TrueMoema5/Area2D" unique_id=364902812]
+position = Vector2(-45.45454, 9.090916)
+scale = Vector2(0.9999999, 0.9999999)
+shape = SubResource("RectangleShape2D_riqys")
+
+[node name="FalseMoema" type="AnimatedSprite2D" parent="." unique_id=1807144591]
+position = Vector2(555, 324)
+scale = Vector2(0.27272728, 0.27272728)
+sprite_frames = SubResource("SpriteFrames_1esiv")
+animation = &"FalseMoema - 4"
+
+[node name="Area2D" type="Area2D" parent="FalseMoema" unique_id=1586234257]
+
+[node name="FalseMoema-CollisionShape2D" type="CollisionShape2D" parent="FalseMoema/Area2D" unique_id=526352050]
+position = Vector2(-24.583496, -1.25)
+shape = SubResource("RectangleShape2D_bhunq")
+
+[node name="TimerMoema" type="Timer" parent="." unique_id=2131291454]
+wait_time = 3.0
+
+[node name="Codes" type="Sprite2D" parent="." unique_id=1131606834]
+position = Vector2(563.63635, 344.95682)
+scale = Vector2(0.3, 0.3083157)
+texture = ExtResource("25_hxbug")
+
+[node name="CctFail" type="Sprite2D" parent="." unique_id=2030314693]
+position = Vector2(574, 370)
+texture = ExtResource("16_41kec")
+
+[node name="CctWin" type="Sprite2D" parent="." unique_id=1887786566]
+position = Vector2(574, 370)
+texture = ExtResource("17_kthoi")
+
+[node name="MoemaAnimations" type="AnimationPlayer" parent="." unique_id=1061631572]
+root_node = NodePath("../Moemas")
+libraries/ = SubResource("AnimationLibrary_3bkdy")
+
+[node name="Moemas" type="Node" parent="." unique_id=502667282]
+
+[node name="Blackout" type="Sprite2D" parent="." unique_id=235865294]
+modulate = Color(0.58431375, 0.58431375, 0.58431375, 1)
+position = Vector2(580.90906, 358.1818)
+texture = ExtResource("2_u27gc")
+
+[node name="Counter" type="AnimatedSprite2D" parent="." unique_id=1749851820]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(577.2727, 370)
+sprite_frames = SubResource("SpriteFrames_cp5h6")
+animation = &"One"
+frame_progress = 0.27293962
+
+[node name="CctMinigame" type="Sprite2D" parent="." unique_id=1296564166]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(577.2727, 362.72726)
+texture = ExtResource("6_spkgw")
+
+[node name="CCT_Begin" type="Button" parent="CctMinigame" unique_id=1496619115]
+offset_left = -102.72728
+offset_top = -14.545448
+offset_right = 131.27272
+offset_bottom = 40.909096
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_y4h44")
+theme_override_font_sizes/font_size = 27
+theme_override_styles/normal = SubResource("StyleBoxFlat_riqys")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_pkwbt")
+theme_override_styles/hover = SubResource("StyleBoxFlat_8n3u2")
+text = "INICIAR LIMPEZA"
 
 [node name="Loading" type="Sprite2D" parent="." unique_id=303232213]
 position = Vector2(574, 370)
@@ -192,7 +1428,7 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_ke8cg")
 theme_override_styles/read_only = SubResource("StyleBoxFlat_rhoyl")
 theme_override_styles/focus = SubResource("StyleBoxFlat_nktf8")
 
-[node name="AcessButon" type="Button" parent="Login" unique_id=703498048]
+[node name="AccessButton" type="Button" parent="Login" unique_id=703498048]
 offset_left = 45.45453
 offset_top = 71.81818
 offset_right = 341.81818
@@ -239,15 +1475,46 @@ stream = ExtResource("9_spv0u")
 [node name="ComputerOn" type="AudioStreamPlayer" parent="." unique_id=879743751]
 stream = ExtResource("10_35514")
 
-[node name="IncorretPassowrd" type="AudioStreamPlayer" parent="." unique_id=1287351094]
+[node name="IncorretPassword" type="AudioStreamPlayer" parent="." unique_id=1287351094]
 stream = SubResource("AudioStreamWAV_21igq")
 
-[node name="MusicaOrquestraldeVitoriaPlaceHolder" type="AudioStreamPlayer" parent="." unique_id=406926347]
-stream = ExtResource("12_21igq")
+[node name="DuvidaFail" type="AudioStreamPlayer" parent="." unique_id=1417343371]
+stream = ExtResource("26_t7jtf")
+volume_db = -10.0
+
+[node name="DuvidaWin" type="AudioStreamPlayer" parent="." unique_id=1639277359]
+stream = ExtResource("27_tgs3b")
+volume_db = -10.0
+
+[node name="MoemaFail" type="AudioStreamPlayer" parent="." unique_id=1111113581]
+stream = ExtResource("28_41kec")
+volume_db = -10.0
+
+[node name="MoemaRight" type="AudioStreamPlayer" parent="." unique_id=1570343936]
+stream = ExtResource("29_kthoi")
+volume_db = -10.0
+
+[node name="CCTMusic" type="AudioStreamPlayer" parent="." unique_id=662351478]
+stream = ExtResource("32_kthoi")
+volume_db = -12.0
 
 [node name="ComputerAnimations" type="AnimationPlayer" parent="." unique_id=990585914]
 root_node = NodePath("../ComputerOn")
 libraries/ = SubResource("AnimationLibrary_hqgk8")
 
-[connection signal="pressed" from="Login/AcessButon" to="." method="_on_acess_buton_pressed"]
+[connection signal="mouse_entered" from="TrueMoema1/Area2D" to="." method="_on_fail_mouse_entered"]
+[connection signal="mouse_exited" from="TrueMoema1/Area2D" to="." method="_on_fail_mouse_exited"]
+[connection signal="mouse_entered" from="TrueMoema2/Area2D" to="." method="_on_fail_mouse_entered"]
+[connection signal="mouse_exited" from="TrueMoema2/Area2D" to="." method="_on_fail_mouse_exited"]
+[connection signal="mouse_entered" from="TrueMoema3/Area2D" to="." method="_on_fail_mouse_entered"]
+[connection signal="mouse_exited" from="TrueMoema3/Area2D" to="." method="_on_fail_mouse_exited"]
+[connection signal="mouse_entered" from="TrueMoema4/Area2D" to="." method="_on_fail_mouse_entered"]
+[connection signal="mouse_exited" from="TrueMoema4/Area2D" to="." method="_on_fail_mouse_exited"]
+[connection signal="mouse_entered" from="TrueMoema5/Area2D" to="." method="_on_fail_mouse_entered"]
+[connection signal="mouse_exited" from="TrueMoema5/Area2D" to="." method="_on_fail_mouse_exited"]
+[connection signal="mouse_entered" from="FalseMoema/Area2D" to="." method="_on_win_mouse_entered"]
+[connection signal="mouse_exited" from="FalseMoema/Area2D" to="." method="_on_win_mouse_exited"]
+[connection signal="timeout" from="TimerMoema" to="." method="_on_timer_moema_timeout"]
+[connection signal="pressed" from="CctMinigame/CCT_Begin" to="." method="_on_cct_begin_pressed"]
+[connection signal="pressed" from="Login/AccessButton" to="." method="_on_access_button_pressed"]
 [connection signal="pressed" from="ExitConfig" to="." method="_on_exit_config_pressed"]
