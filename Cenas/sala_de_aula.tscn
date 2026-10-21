@@ -4,16 +4,22 @@
 [ext_resource type="Script" uid="uid://c51d2mk6wi030" path="res://Scripts/Cameras/camera_3d.gd" id="2_pw2gw"]
 [ext_resource type="PackedScene" uid="uid://b8878qpop8c2s" path="res://Cenas/fade.tscn" id="3_eh8p8"]
 [ext_resource type="PackedScene" uid="uid://ctxlw0yuf6wvp" path="res://Assets 3D/mesa/unifor.glb" id="4_3pmrl"]
+[ext_resource type="Texture2D" uid="uid://byyhehy05ggtw" path="res://Assets 2D/Npcs/CCT/Falando.cct.png" id="5_bvhle"]
 [ext_resource type="Texture2D" uid="uid://bexacxkjgsigb" path="res://Assets 2D/PlaceHolders/placeholder1.png" id="5_p3qhx"]
+[ext_resource type="Texture2D" uid="uid://vib3qggysvur" path="res://Assets 2D/Npcs/CCT/Feliz.cct.png" id="6_8gibp"]
 [ext_resource type="Script" uid="uid://wx7k30hgklwr" path="res://Scripts/Npcs/NPCs.gd" id="6_jdm6y"]
 [ext_resource type="Texture2D" uid="uid://dycnq7tf8awkh" path="res://Assets 2D/PlaceHolders/placeholder2.png" id="6_v7f1h"]
 [ext_resource type="Texture2D" uid="uid://bi3mawtuu3cll" path="res://Assets 2D/PlaceHolders/placeholder3.png" id="7_sjri2"]
+[ext_resource type="Texture2D" uid="uid://c8ygjotllsnl6" path="res://Assets 2D/Npcs/CCT/Neutro.cct.png" id="7_vf5hu"]
+[ext_resource type="Texture2D" uid="uid://c14vp8hr6bgm1" path="res://Assets 2D/Npcs/PATOFRED/Feliz.png" id="8_71m6s"]
 [ext_resource type="Texture2D" uid="uid://dju85ynfy87k0" path="res://Assets 2D/PlaceHolders/placeholder4.png" id="8_f0k5d"]
 [ext_resource type="Texture2D" uid="uid://d16csv42rlvnb" path="res://Assets UI/menuConfig/Menu Config.png" id="8_j8kef"]
 [ext_resource type="Script" uid="uid://bcelyrojeuxth" path="res://Scripts/menu_config.gd" id="8_rljct"]
+[ext_resource type="Texture2D" uid="uid://e1erjd1uvl1r" path="res://Assets 2D/Npcs/PATOFRED/Neutro.png" id="9_audgn"]
 [ext_resource type="FontFile" uid="uid://bk6hhfl5m7l68" path="res://Assets UI/Menu/Holidays Homework.ttf" id="9_jdm6y"]
 [ext_resource type="Texture2D" uid="uid://dc3lka15rkg57" path="res://Assets 2D/PlaceHolders/placeholder5.png" id="9_oulm0"]
 [ext_resource type="Texture2D" uid="uid://cros4chv53lfg" path="res://Assets 2D/PlaceHolders/placeholder6.png" id="10_7awky"]
+[ext_resource type="Texture2D" uid="uid://co0c2nmdvb22f" path="res://Assets 2D/Npcs/PATOFRED/Falando.png" id="10_j46ms"]
 [ext_resource type="Texture2D" uid="uid://cj8vswvh3jrxr" path="res://Assets 2D/PlaceHolders/placeholder7.png" id="11_bvhle"]
 [ext_resource type="Script" uid="uid://dln3xy3tan4u6" path="res://Scripts/Audio/volume_main.gd" id="11_qf4tx"]
 [ext_resource type="Script" uid="uid://b8yha27ogs40w" path="res://Scripts/Audio/volume_bgm.gd" id="12_1cpuw"]
@@ -34,6 +40,54 @@ sky = SubResource("Sky_riqys")
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_bhunq"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_8gibp")
+}],
+"loop": 1,
+"name": &"CCT-happy",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_vf5hu")
+}],
+"loop": 1,
+"name": &"CCT-normal",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_bvhle")
+}],
+"loop": 1,
+"name": &"CCT-talk",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_71m6s")
+}],
+"loop": 1,
+"name": &"PATOFRED-happy",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_audgn")
+}],
+"loop": 1,
+"name": &"PATOFRED-normal",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_j46ms")
+}],
+"loop": 1,
+"name": &"PATOFRED-talk",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("5_p3qhx")
@@ -143,7 +197,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 1.4951926),
 "transitions": PackedFloat32Array(0.59460354, 1.5157168),
 "update": 0,
-"values": [Vector2(150, -10), Vector2(0, 0)]
+"values": [Vector2(250, -20), Vector2(0, 0)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -171,7 +225,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 1.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(0, 0), Vector2(-150, -10)]
+"values": [Vector2(0, 0), Vector2(-250, -20)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -387,16 +441,17 @@ script = ExtResource("2_pw2gw")
 environment = SubResource("Environment_bhunq")
 
 [node name="Fade" parent="." unique_id=1383060492 instance=ExtResource("3_eh8p8")]
+mouse_filter = 2
 
 [node name="MesaPlaceHolder" parent="." unique_id=74057663 instance=ExtResource("4_3pmrl")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -0.14845729, -1.3371872, 0.47763813)
 
 [node name="NPCs" type="AnimatedSprite3D" parent="." unique_id=1061259584 node_paths=PackedStringArray("camera_3d", "area_3d", "npcs_animations")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 1.5439756, 0, 0)
+transform = Transform3D(-1.3113417e-08, 0, 0.3, 0, 0.3, 0, -0.3, 0, -1.3113417e-08, 1.5, 0, 0)
 offset = Vector2(150, -10)
 modulate = Color(0, 0, 0, 0)
 sprite_frames = SubResource("SpriteFrames_bhunq")
-animation = &"PlaceHolder-Npc1"
+animation = &"CCT-happy"
 script = ExtResource("6_jdm6y")
 camera_3d = NodePath("../Camera3D")
 area_3d = NodePath("../AreaClickNpc")
@@ -421,6 +476,7 @@ shape = SubResource("BoxShape3D_riqys")
 [node name="Dim" type="ColorRect" parent="." unique_id=240347224 node_paths=PackedStringArray("animation_player")]
 offset_right = 1153.0
 offset_bottom = 647.0
+mouse_filter = 2
 color = Color(0, 0, 0, 0)
 script = ExtResource("12_f0k5d")
 animation_player = NodePath("AnimationPlayer")

@@ -17,6 +17,9 @@ var lives = 3;
 var duvida_tutorial = false;
 var duvida_cct = false;
 
+#Duvida Deu certo ou errado? = false = errado / true = certo
+var duvida_status = true
+
 #Animações
 @warning_ignore("unused_signal")
 signal dim_in

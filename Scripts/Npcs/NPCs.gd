@@ -47,9 +47,8 @@ func level_tutorial():
 	# Ativa a Sequencia de Animações -> entrar -> falar
 	Global.npcs_animations_sequence = ["npc_fade_in","npc_talk_1"]
 	await play_seq()
-	
-	# Ativa o tutorial
 	Global.duvida_tutorial = true; 
+	# Ativa o tutorial
 	
 	 # Espera o sinal pass_level.emit
 	await Global.pass_level
@@ -58,9 +57,9 @@ func level_tutorial():
 	await play_seq()
 	
 	#Passa um level
-	Global.level+=1 
+	Global.level = Global.level + 3 #Enquanto Não temos os CCS e CCG
 
-func level_ccs():
+func level_ccs(): # Desativado
 	play("PlaceHolder-Npc2")
 	Global.npcs_animations_sequence = ["npc_fade_in","npc_talk_2"]
 	await play_seq()
@@ -68,7 +67,7 @@ func level_ccs():
 	await play_seq()
 	Global.level+=1 
 
-func level_ccg():
+func level_ccg(): # Desativado
 	play("PlaceHolder-Npc3")
 	Global.npcs_animations_sequence = ["npc_fade_in","npc_talk_3"]
 	await play_seq()
@@ -77,17 +76,28 @@ func level_ccg():
 	Global.level+=1 
 
 func level_pato_fred():
-	play("PlaceHolder-Npc4")
-	Global.npcs_animations_sequence = ["npc_fade_in","npc_talk_1"]
-	await play_seq()
+	Global.npcs_animations_sequence = ["npc_fade_in"]
+	await play_seq("PATOFRED-normal")
+	Global.npcs_animations_sequence = ["npc_talk_1"]
+	await play_seq("PATOFRED-talk")
 	Global.npcs_animations_sequence = ["npc_fade_out"]
-	await play_seq()
+	await play_seq("PATOFRED-happy")
 	Global.level+=1 
 
 func level_cct():
-	play("PlaceHolder-Npc5")
-	Global.npcs_animations_sequence = ["npc_fade_in","npc_talk_2"]
-	await play_seq()
+	Global.npcs_animations_sequence = ["npc_fade_in"]
+	await play_seq("CCT-normal")
+	Global.npcs_animations_sequence = ["npc_talk_2"]
+	await play_seq("CCT-talk")
+	
+	Global.duvida_cct = true; 
+	await Global.pass_level
+	if Global.duvida_status == true:
+		Global.npcs_animations_sequence = ["npc_talk_1"]
+		await play_seq("CCT-happy")
+	elif Global.duvidas_status == false:
+		Global.npcs_animations_sequence = ["npc_talk_1"]
+		await play_seq("CCT-normal")
 	Global.npcs_animations_sequence = ["npc_fade_out"]
 	await play_seq()
 	Global.level+=1 
@@ -113,17 +123,24 @@ func level_game_over():
 
 signal seq_end
 
-func play_seq():
-	Global.i = 0;
+var sprite_toggle := ""
+
+func play_seq(sprite: String = ""):
+	Global.i = 0
+	sprite_toggle = sprite
 	await seq_end
 
 func _on_click_npc(_collider):
 	if npcs_animations.is_playing() or Global.i >= Global.npcs_animations_sequence.size():
-		return #Proteger 
-		
-	npcs_animations.play(Global.npcs_animations_sequence[Global.i]);
-	Global.i+= 1;
-	
+		return
+
+	if sprite_toggle != "":
+		play(sprite_toggle)
+		sprite_toggle = ""
+
+	npcs_animations.play(Global.npcs_animations_sequence[Global.i])
+	Global.i += 1
+
 	if Global.i >= Global.npcs_animations_sequence.size():
 		await npcs_animations.animation_finished
 		seq_end.emit()
