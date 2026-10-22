@@ -2,24 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://q668g44knmv8"
-path.s3tc="res://.godot/imported/unifor_notebook_mat_2_BaseColor.jpg-6f3d815d1ba9bce3edb74ac9dd5ab0eb.s3tc.ctex"
+uid="uid://b6uihd4pgiy5d"
+path="res://.godot/imported/446 Sem Título_20261021175507.png-d2397c0433c8d8c3b044cc7c82fe5d2a.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
-}
-generator_parameters={
-"md5": "fb3d7f7d6afab01ac51aae90e9572836"
+"vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets 3D/unifor_notebook_mat_2_BaseColor.jpg"
-dest_files=["res://.godot/imported/unifor_notebook_mat_2_BaseColor.jpg-6f3d815d1ba9bce3edb74ac9dd5ab0eb.s3tc.ctex"]
+source_file="res://Assets 2D/Pato fred labirinto/446 Sem Título_20261021175507.png"
+dest_files=["res://.godot/imported/446 Sem Título_20261021175507.png-d2397c0433c8d8c3b044cc7c82fe5d2a.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0
@@ -27,7 +23,7 @@ compress/rdo_quality_loss=0.0
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
-mipmaps/generate=true
+mipmaps/generate=false
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""
@@ -41,4 +37,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=0
+detect_3d/compress_to=1

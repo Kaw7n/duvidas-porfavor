@@ -2,13 +2,14 @@ extends Panel
 
 @onready var menu_config: Panel = $"."
 @export var computer: Control
+@export var minigame_pato_fred: Control
 
 func _ready() -> void:
 	menu_config.visible = false; #Deixar config escondido
 	
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("esc"):
-		if computer == null or computer.visible == false:
+		if computer == null or computer.visible == false or minigame_pato_fred == null:
 			switchMenu()
 
 func switchMenu():

@@ -244,10 +244,9 @@ func moema_next_round():
 
 func game_over():
 	cct_music.stop()
-	Global.pass_level.emit()
-	Global.duvida_cct = false; 
 	#caso seja derrota
 	if lifes <= 0:
+		Global.lives-=1
 		cct_fail.visible = true
 		duvida_fail.play()
 		Global.duvida_status = false
@@ -255,6 +254,9 @@ func game_over():
 		cct_win.visible = true
 		duvida_win.play()
 		Global.duvida_status = true
+		
+	Global.duvida_cct = false; 
+	Global.pass_level.emit()
 	
 	final.visible = false 
 	true_moema_1.visible = false

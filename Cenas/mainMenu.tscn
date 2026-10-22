@@ -14,7 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://ls184dbrp7d0" path="res://Assets UI/Butões/7.png" id="12_okv4r"]
 [ext_resource type="Texture2D" uid="uid://c4j73ilmg6eum" path="res://Assets UI/Butões/9.png" id="13_bn6jt"]
 [ext_resource type="Texture2D" uid="uid://5bsndfsiplsa" path="res://Assets UI/Butões/8.png" id="14_4iy1a"]
-[ext_resource type="AudioStream" uid="uid://cs3h3nwlh3fii" path="res://Audio/MusicaDeFundoMenu.wav" id="15_mptaf"]
+[ext_resource type="AudioStream" uid="uid://ce1b2ydqcvayy" path="res://Audio/Nova Musica de fundo do menu.wav" id="15_bocn1"]
 [ext_resource type="AudioStream" uid="uid://1vo0m5yrxtgk" path="res://Audio/Som-De-Caneta-Iniciar.ogg" id="16_evydy"]
 [ext_resource type="AudioStream" uid="uid://cw4a2vh30fpwl" path="res://Audio/Som-de-Caneta-Configurações.ogg" id="17_cvjuc"]
 [ext_resource type="AudioStream" uid="uid://cem71xf32o20s" path="res://Audio/Som de Caneta Sair.ogg" id="18_bocn1"]
@@ -170,7 +170,7 @@ stretch_mode = 3
 
 [node name="MenuMusic" type="AudioStreamPlayer2D" parent="." unique_id=414845060]
 position = Vector2(603, 323)
-stream = ExtResource("15_mptaf")
+stream = ExtResource("15_bocn1")
 autoplay = true
 bus = &"BGM"
 

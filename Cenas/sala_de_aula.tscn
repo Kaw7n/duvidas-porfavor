@@ -3,9 +3,13 @@
 [ext_resource type="Script" uid="uid://5hf5auw7e5ti" path="res://Scripts/sala_de_aula.gd" id="1_pw2gw"]
 [ext_resource type="Script" uid="uid://c51d2mk6wi030" path="res://Scripts/Cameras/camera_3d.gd" id="2_pw2gw"]
 [ext_resource type="PackedScene" uid="uid://b8878qpop8c2s" path="res://Cenas/fade.tscn" id="3_eh8p8"]
-[ext_resource type="PackedScene" uid="uid://ctxlw0yuf6wvp" path="res://Assets 3D/mesa/unifor.glb" id="4_3pmrl"]
+[ext_resource type="LightmapGIData" uid="uid://c5hbchpq1uqs0" path="res://Cenas/sala_de_aula.lmbake" id="4_0oxgf"]
+[ext_resource type="Texture2D" uid="uid://cuy3rrjy0uyul" path="res://Assets 2D/Npcs/CCS/Feliz.ccs.png" id="4_ge76m"]
+[ext_resource type="PackedScene" uid="uid://vbvb6pd62vm1" path="res://Assets 3D/SalaFinal/Room.glb" id="4_pj44w"]
 [ext_resource type="Texture2D" uid="uid://byyhehy05ggtw" path="res://Assets 2D/Npcs/CCT/Falando.cct.png" id="5_bvhle"]
+[ext_resource type="Texture2D" uid="uid://dbxyuy00t66ws" path="res://Assets 2D/Npcs/CCS/Neutro.ccs.png" id="5_k6lfj"]
 [ext_resource type="Texture2D" uid="uid://bexacxkjgsigb" path="res://Assets 2D/PlaceHolders/placeholder1.png" id="5_p3qhx"]
+[ext_resource type="Texture2D" uid="uid://cdt7w54burrky" path="res://Assets 2D/Npcs/CCS/Falando.ccs.png" id="6_0oxgf"]
 [ext_resource type="Texture2D" uid="uid://vib3qggysvur" path="res://Assets 2D/Npcs/CCT/Feliz.cct.png" id="6_8gibp"]
 [ext_resource type="Script" uid="uid://wx7k30hgklwr" path="res://Scripts/Npcs/NPCs.gd" id="6_jdm6y"]
 [ext_resource type="Texture2D" uid="uid://dycnq7tf8awkh" path="res://Assets 2D/PlaceHolders/placeholder2.png" id="6_v7f1h"]
@@ -27,7 +31,10 @@
 [ext_resource type="Script" uid="uid://ckylgk8gcpbaw" path="res://Scripts/Audio/volume_sfx.gd" id="13_j0rpt"]
 [ext_resource type="Script" uid="uid://d0tybdgcv8d6g" path="res://Scripts/Cameras/sens.gd" id="13_jdm6y"]
 [ext_resource type="PackedScene" uid="uid://bys33r5tumdyt" path="res://Cenas/Computer.tscn" id="20_sjri2"]
-[ext_resource type="Script" uid="uid://co4poyb5fox4b" path="res://Scripts/Npcs/gerenciador_dialogo.gd" id="21_dialogo"]
+[ext_resource type="Texture2D" uid="uid://l2k3lquorgid" path="res://Assets 2D/Npcs/RODRIGO/Feliz.rodrigo.png" id="22_pj44w"]
+[ext_resource type="Texture2D" uid="uid://syw0t2s0wr8l" path="res://Assets 2D/Npcs/RODRIGO/Neutro.rodrigo.png" id="23_fnbj8"]
+[ext_resource type="Texture2D" uid="uid://snbscjpybt1s" path="res://Assets 2D/Npcs/RODRIGO/Falando.rodrigo.png" id="24_iuki7"]
+[ext_resource type="PackedScene" uid="uid://cl3a12t6jis1w" path="res://Cenas/minigame_pato_fred.tscn" id="28_pj44w"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_sn0t7"]
 
@@ -40,6 +47,30 @@ sky = SubResource("Sky_riqys")
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_bhunq"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_ge76m")
+}],
+"loop": 1,
+"name": &"CCS-happy",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_k6lfj")
+}],
+"loop": 1,
+"name": &"CCS-normal",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_0oxgf")
+}],
+"loop": 1,
+"name": &"CCS-talk",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("6_8gibp")
@@ -142,6 +173,30 @@ animations = [{
 }],
 "loop": 1,
 "name": &"PlaceHolder-Npc7",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("22_pj44w")
+}],
+"loop": 1,
+"name": &"RODRIGO-happy",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("23_fnbj8")
+}],
+"loop": 1,
+"name": &"RODRIGO-normal",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("24_iuki7")
+}],
+"loop": 1,
+"name": &"RODRIGO-talk",
 "speed": 5.0
 }]
 
@@ -299,7 +354,7 @@ _data = {
 size = Vector3(0.53886604, 1.868042, 1.2168427)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_riqys"]
-size = Vector3(0.3879242, 0.2498169, 0.2103424)
+size = Vector3(0.5449505, 0.27578735, 0.2103424)
 
 [sub_resource type="Animation" id="Animation_oulm0"]
 length = 0.001
@@ -443,15 +498,40 @@ environment = SubResource("Environment_bhunq")
 [node name="Fade" parent="." unique_id=1383060492 instance=ExtResource("3_eh8p8")]
 mouse_filter = 2
 
-[node name="MesaPlaceHolder" parent="." unique_id=74057663 instance=ExtResource("4_3pmrl")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -0.14845729, -1.3371872, 0.47763813)
+[node name="LightmapGI" type="LightmapGI" parent="." unique_id=233645378]
+interior = true
+texel_scale = 10.0
+light_data = ExtResource("4_0oxgf")
+
+[node name="Luz do Sol" type="OmniLight3D" parent="." unique_id=1710094617]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.685886, 0.6679988, 1.5408219)
+light_color = Color(0.5424673, 0.64144963, 0.6945635, 1)
+light_energy = 1.5
+light_size = 0.5
+light_specular = 0.0
+shadow_enabled = true
+distance_fade_enabled = true
+omni_range = 10.0
+omni_attenuation = -0.2
+
+[node name="Luz da Sala" type="OmniLight3D" parent="." unique_id=1254406195]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.8159956, 1.0918822, -0.06727409)
+light_color = Color(0.81309855, 0.78405416, 0.7886256, 1)
+light_energy = 2.619
+light_specular = 0.0
+shadow_enabled = true
+distance_fade_enabled = true
+omni_range = 10.751
+
+[node name="Room" parent="." unique_id=1118715749 instance=ExtResource("4_pj44w")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -0.078740954, -1.4429402, 0.015421808)
 
 [node name="NPCs" type="AnimatedSprite3D" parent="." unique_id=1061259584 node_paths=PackedStringArray("camera_3d", "area_3d", "npcs_animations")]
 transform = Transform3D(-1.3113417e-08, 0, 0.3, 0, 0.3, 0, -0.3, 0, -1.3113417e-08, 1.5, 0, 0)
 offset = Vector2(150, -10)
 modulate = Color(0, 0, 0, 0)
 sprite_frames = SubResource("SpriteFrames_bhunq")
-animation = &"CCT-happy"
+animation = &"CCS-happy"
 script = ExtResource("6_jdm6y")
 camera_3d = NodePath("../Camera3D")
 area_3d = NodePath("../AreaClickNpc")
@@ -470,7 +550,7 @@ shape = SubResource("BoxShape3D_bhunq")
 [node name="AreaClickComputer" type="Area3D" parent="." unique_id=783192016 groups=["computer"]]
 
 [node name="CollisionShape3DComputer" type="CollisionShape3D" parent="AreaClickComputer" unique_id=256719915]
-transform = Transform3D(0.43477648, 0, 0.9005384, 0, 1, 0, -0.9005384, 0, 0.43477648, 0.9105661, 6.48126e-05, 0.49147084)
+transform = Transform3D(0.43477648, 0, 0.9005384, 0, 1, 0, -0.9005384, 0, 0.43477648, 0.93158937, 0.013050042, 0.7418947)
 shape = SubResource("BoxShape3D_riqys")
 
 [node name="Dim" type="ColorRect" parent="." unique_id=240347224 node_paths=PackedStringArray("animation_player")]
@@ -493,7 +573,12 @@ animation_player = NodePath("AnimationPlayer")
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Computer" unique_id=1293792405]
 libraries/ = SubResource("AnimationLibrary_oulm0")
 
+[node name="MinigamePatoFred" parent="." unique_id=759866613 instance=ExtResource("28_pj44w")]
+offset_top = 69.0
+offset_bottom = -9.0
+
 [node name="MenuConfig" type="Panel" parent="." unique_id=477531899 node_paths=PackedStringArray("computer")]
+visible = false
 offset_left = 245.0
 offset_top = 106.0
 offset_right = 945.0
@@ -634,9 +719,6 @@ theme_override_styles/grabber_area_highlight = SubResource("StyleBoxLine_8gibp")
 max_value = 0.5
 step = 0.01
 script = ExtResource("13_jdm6y")
-
-[node name="GerenciadorDialogo" type="Node" parent="." unique_id=823998436]
-script = ExtResource("21_dialogo")
 
 [connection signal="pressed" from="MenuConfig/ExitConfig" to="MenuConfig" method="_on_exit_config_pressed"]
 [connection signal="pressed" from="MenuConfig/ExitGame" to="MenuConfig" method="_on_exit_game_pressed"]

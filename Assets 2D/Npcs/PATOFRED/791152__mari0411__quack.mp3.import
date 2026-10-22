@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://ckyqqwops1dvu"
+path="res://.godot/imported/791152__mari0411__quack.mp3-526a3acfc52e91680d8517f44b2f9320.mp3str"
+
+[deps]
+
+source_file="res://Assets 2D/Npcs/PATOFRED/791152__mari0411__quack.mp3"
+dest_files=["res://.godot/imported/791152__mari0411__quack.mp3-526a3acfc52e91680d8517f44b2f9320.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
