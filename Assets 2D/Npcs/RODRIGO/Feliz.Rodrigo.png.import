@@ -2,20 +2,17 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bssnfpasg2jgi"
-path.s3tc="res://.godot/imported/unifor_notebook_mat_1_Metallic-notebook_mat_1_Roughness.png-d02b87d3aa60054717db984e1b025dd3.s3tc.ctex"
+uid="uid://b2o10448sn42s"
+path.s3tc="res://.godot/imported/Feliz.Rodrigo.png-5a771fadb2e123215fcd960afbd8cee2.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
-generator_parameters={
-"md5": "00d8a77de08ab1e945198f5e14e995b6"
-}
 
 [deps]
 
-source_file="res://Assets 3D/unifor_notebook_mat_1_Metallic-notebook_mat_1_Roughness.png"
-dest_files=["res://.godot/imported/unifor_notebook_mat_1_Metallic-notebook_mat_1_Roughness.png-d02b87d3aa60054717db984e1b025dd3.s3tc.ctex"]
+source_file="res://Assets 2D/Npcs/RODRIGO/Feliz.Rodrigo.png"
+dest_files=["res://.godot/imported/Feliz.Rodrigo.png-5a771fadb2e123215fcd960afbd8cee2.s3tc.ctex"]
 
 [params]
 

@@ -2,20 +2,17 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://o5o37f7uwu3x"
-path.s3tc="res://.godot/imported/unifor_notebook_mat_1_Normal.jpg-2c0cc32e25eeb23be71d24666cc4b162.s3tc.ctex"
+uid="uid://cyxyleomgyg1g"
+path.s3tc="res://.godot/imported/Neutro.ccs.png-bc0aaae02bc4ff80955a4caa6ec20140.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
-generator_parameters={
-"md5": "683ac9c2296bcafbdc3a3628b88abf36"
-}
 
 [deps]
 
-source_file="res://Assets 3D/unifor_notebook_mat_1_Normal.jpg"
-dest_files=["res://.godot/imported/unifor_notebook_mat_1_Normal.jpg-2c0cc32e25eeb23be71d24666cc4b162.s3tc.ctex"]
+source_file="res://Assets 2D/Npcs/CCS/Neutro.ccs.png"
+dest_files=["res://.godot/imported/Neutro.ccs.png-bc0aaae02bc4ff80955a4caa6ec20140.s3tc.ctex"]
 
 [params]
 
@@ -25,12 +22,12 @@ compress/lossy_quality=0.7
 compress/uastc_level=0
 compress/rdo_quality_loss=0.0
 compress/hdr_compression=1
-compress/normal_map=1
+compress/normal_map=0
 compress/channel_pack=0
 mipmaps/generate=true
 mipmaps/limit=-1
-roughness/mode=1
-roughness/src_normal="res://Assets 3D/unifor_notebook_mat_1_Normal.jpg"
+roughness/mode=0
+roughness/src_normal=""
 process/channel_remap/red=0
 process/channel_remap/green=1
 process/channel_remap/blue=2

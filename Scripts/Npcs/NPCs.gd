@@ -12,7 +12,7 @@ func _ready():
 	seq_level()
 
 func seq_level():
-	while Global.level < 7:
+	while Global.level < 6:
 		match Global.level:
 			0:
 				print('Fase Tutorial')
@@ -29,10 +29,7 @@ func seq_level():
 			4: 
 				print('Fase CCT')
 				await level_cct()
-			5: 
-				print('Fase CCJ')
-				await level_ccj()
-			6:
+			5:
 				print('Fase Moema')
 				if Global.lives >= 1:
 					await level_moema() #
@@ -42,27 +39,33 @@ func seq_level():
 
 func level_tutorial():
 	# Mudança de Sprite
-	play("PlaceHolder-Npc1")
+	play("RODRIGO-happy")
 	
 	# Ativa a Sequencia de Animações -> entrar -> falar
-	Global.npcs_animations_sequence = ["npc_fade_in","npc_talk_1"]
+	Global.npcs_animations_sequence = ["npc_fade_in"]
 	await play_seq()
+	Global.npcs_animations_sequence = ["npc_talk_1"]
+	await play_seq("RODRIGO-talk")
 	Global.duvida_tutorial = true; 
 	# Ativa o tutorial
 	
 	 # Espera o sinal pass_level.emit
 	await Global.pass_level
 	#Ativa a sequencia de animações -> sair
+	play("RODRIGO-happy")
 	Global.npcs_animations_sequence = ["npc_fade_out"]
 	await play_seq()
 	
 	#Passa um level
-	Global.level = Global.level + 3 #Enquanto Não temos os CCS e CCG
+	Global.level+=1 
 
 func level_ccs(): # Desativado
 	play("PlaceHolder-Npc2")
-	Global.npcs_animations_sequence = ["npc_fade_in","npc_talk_2"]
-	await play_seq()
+	Global.npcs_animations_sequence = ["npc_fade_in"]
+	await play_seq("CCS-normal")
+	Global.npcs_animations_sequence = ["npc_talk_1"]
+	await play_seq("CCS-talk")
+	play("CCS-happy")
 	Global.npcs_animations_sequence = ["npc_fade_out"]
 	await play_seq()
 	Global.level+=1 
@@ -80,8 +83,19 @@ func level_pato_fred():
 	await play_seq("PATOFRED-normal")
 	Global.npcs_animations_sequence = ["npc_talk_1"]
 	await play_seq("PATOFRED-talk")
+	
+	Global.duvida_pato_fred = true; 
+	Global.signal_pato_fred.emit()
+	await Global.pass_level;
+	
+	if Global.duvida_status == true:
+		Global.npcs_animations_sequence = ["npc_talk_1"]
+		await play_seq("PATOFRED-happy")
+	elif Global.duvida_status == false:
+		Global.npcs_animations_sequence = ["npc_talk_1"]
+		await play_seq("PATOFRED-normal")
 	Global.npcs_animations_sequence = ["npc_fade_out"]
-	await play_seq("PATOFRED-happy")
+	await play_seq()
 	Global.level+=1 
 
 func level_cct():
@@ -98,14 +112,6 @@ func level_cct():
 	elif Global.duvidas_status == false:
 		Global.npcs_animations_sequence = ["npc_talk_1"]
 		await play_seq("CCT-normal")
-	Global.npcs_animations_sequence = ["npc_fade_out"]
-	await play_seq()
-	Global.level+=1 
-	
-func level_ccj():
-	play("PlaceHolder-Npc6")
-	Global.npcs_animations_sequence = ["npc_fade_in","npc_talk_3"]
-	await play_seq()
 	Global.npcs_animations_sequence = ["npc_fade_out"]
 	await play_seq()
 	Global.level+=1 

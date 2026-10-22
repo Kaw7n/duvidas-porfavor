@@ -16,6 +16,11 @@ var lives = 3;
 #Duvidas
 var duvida_tutorial = false;
 var duvida_cct = false;
+var duvida_pato_fred = false;
+
+#Sinais de duvidas
+@warning_ignore("unused_signal")
+signal signal_pato_fred
 
 #Duvida Deu certo ou errado? = false = errado / true = certo
 var duvida_status = true
