@@ -158,12 +158,10 @@ func _on_area_2d_ok_path_mouse_entered() -> void:
 	pass
 
 func _on_area_2d_ok_path_mouse_exited() -> void:
-	print("saiu do caminho")
 	if maze == true:
 			fail()
 	
 func _on_area_2d_blocked_path_mouse_entered() -> void:
-	print("entrou na area proibida")
 	if maze == true:
 			fail()
 

@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bmfgj6icpqw6x"
-path.s3tc="res://.godot/imported/Neutro.Rodrigo.png-18d629ccfcc6f3c97eca26f840234f81.s3tc.ctex"
+uid="uid://syw0t2s0wr8l"
+path.s3tc="res://.godot/imported/Neutro.rodrigo.png-e7a916b0f0019c7805ecb543618cbb7b.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets 2D/Npcs/RODRIGO/Neutro.Rodrigo.png"
-dest_files=["res://.godot/imported/Neutro.Rodrigo.png-18d629ccfcc6f3c97eca26f840234f81.s3tc.ctex"]
+source_file="res://Assets 2D/Npcs/RODRIGO/Neutro.rodrigo.png"
+dest_files=["res://.godot/imported/Neutro.rodrigo.png-e7a916b0f0019c7805ecb543618cbb7b.s3tc.ctex"]
 
 [params]
 

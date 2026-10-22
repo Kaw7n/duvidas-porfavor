@@ -1,10 +1,13 @@
 [gd_scene format=3 uid="uid://cl3a12t6jis1w"]
 
 [ext_resource type="Script" uid="uid://ckt3f65yu0kfg" path="res://Scripts/minigame_pato_fred.gd" id="1_nr1tt"]
+[ext_resource type="Texture2D" uid="uid://ch3mjuq58jjyj" path="res://Assets 2D/Pato fred labirinto/PatoFredCursor.png" id="2_0u104"]
 [ext_resource type="Texture2D" uid="uid://cgd6f2wmrhxbs" path="res://Assets 2D/Balões/Balões de pensamento/446 Sem Título_20261021180224.png" id="2_tc76v"]
 [ext_resource type="Texture2D" uid="uid://c64kgh6yboaf6" path="res://Assets 2D/Balões/Balões de pensamento/446 Sem Título_20261021180220.png" id="3_8v7xh"]
 [ext_resource type="Texture2D" uid="uid://cqogx1wrr7sqi" path="res://Assets 2D/Balões/Balões de pensamento/446 Sem Título_20261021180228.png" id="4_uko5u"]
+[ext_resource type="Texture2D" uid="uid://xrutas85mnsu" path="res://Assets 2D/Pato fred labirinto/Mapa.png" id="5_n0iqb"]
 [ext_resource type="Texture2D" uid="uid://wyrg3gssgwi6" path="res://Assets 2D/Pato fred labirinto/Blocos sem nome.png" id="5_pg5yy"]
+[ext_resource type="Texture2D" uid="uid://cvg5pjhu1b8ei" path="res://Assets 2D/Pato fred labirinto/Caminho.png" id="6_0u104"]
 [ext_resource type="Texture2D" uid="uid://b6uihd4pgiy5d" path="res://Assets 2D/Pato fred labirinto/446 Sem Título_20261021175507.png" id="6_ddw2e"]
 [ext_resource type="Texture2D" uid="uid://cb60l6h848dwx" path="res://Assets 2D/Pato fred labirinto/446 Sem Título_20261021175513.png" id="7_y1o5u"]
 [ext_resource type="Texture2D" uid="uid://btnxihkynqq3o" path="res://Assets 2D/Pato fred labirinto/446 Sem Título_20261021175519.png" id="8_mmrsi"]
@@ -15,9 +18,6 @@
 [ext_resource type="AudioStream" uid="uid://b5dr2n8crujf2" path="res://Audio/SFX/DuvidaFail.mp3" id="13_y1o5u"]
 [ext_resource type="AudioStream" uid="uid://bkb7e1vaq75v4" path="res://Audio/SFX/DucksFalling.wav" id="14_vb36g"]
 [ext_resource type="AudioStream" uid="uid://5kld4p51fv5g" path="res://Audio/SFX/PatoFredMusic.wav" id="15_weu0a"]
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_nr1tt"]
-load_path = "res://.godot/imported/PatoFredCursor.png-19ab67ac03408334281adeb2217a1fc0.ctex"
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_bhunq"]
 animations = [{
@@ -35,12 +35,6 @@ animations = [{
 "name": &"speech_bubble",
 "speed": 5.0
 }]
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_avtdj"]
-load_path = "res://.godot/imported/Mapa.png-910232b24e3fd50c70f151df85aeb813.ctex"
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ykjkq"]
-load_path = "res://.godot/imported/Caminho.png-f2f9db4b0235a34e9e2ebec2f342ac7d.ctex"
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_bhunq"]
 radius = 27.292906
@@ -640,7 +634,7 @@ area_2d_ok_path = NodePath("Caminho/Area2DOkPath")
 area_2d_blocked_path_1 = NodePath("Caminho/Area2DBlockedPath1")
 area_2d_blocked_path_2 = NodePath("Caminho/Area2DBlockedPath2")
 mouse_begin = NodePath("MouseBegin")
-pato_fred_cursor = SubResource("CompressedTexture2D_nr1tt")
+pato_fred_cursor = ExtResource("2_0u104")
 area_2d_exit = NodePath("Caminho/Area2DExit")
 area_2d_white_duck = NodePath("WhiteDuck/Area2DWhiteDuck")
 area_2d_red_duck = NodePath("RedDuck/Area2DRedDuck")
@@ -675,13 +669,13 @@ frame_progress = 0.79818326
 modulate = Color(1, 1, 1, 0)
 position = Vector2(570, 250)
 scale = Vector2(0.7, 0.7)
-texture = SubResource("CompressedTexture2D_avtdj")
+texture = ExtResource("5_n0iqb")
 
 [node name="Caminho" type="Sprite2D" parent="." unique_id=916742329]
 modulate = Color(1, 1, 1, 0)
 position = Vector2(570, 250)
 scale = Vector2(0.7, 0.7)
-texture = SubResource("CompressedTexture2D_ykjkq")
+texture = ExtResource("6_0u104")
 
 [node name="Area2DOkPath" type="Area2D" parent="Caminho" unique_id=838893633]
 scale = Vector2(0.99999994, 0.99999994)

@@ -4,12 +4,12 @@
 [ext_resource type="Script" uid="uid://c51d2mk6wi030" path="res://Scripts/Cameras/camera_3d.gd" id="2_pw2gw"]
 [ext_resource type="PackedScene" uid="uid://b8878qpop8c2s" path="res://Cenas/fade.tscn" id="3_eh8p8"]
 [ext_resource type="LightmapGIData" uid="uid://c5hbchpq1uqs0" path="res://Cenas/sala_de_aula.lmbake" id="4_0oxgf"]
-[ext_resource type="Texture2D" uid="uid://e44gkb3hecqn" path="res://Assets 2D/Npcs/CCS/Feliz.ccs.png" id="4_ge76m"]
+[ext_resource type="Texture2D" uid="uid://cuy3rrjy0uyul" path="res://Assets 2D/Npcs/CCS/Feliz.ccs.png" id="4_ge76m"]
 [ext_resource type="PackedScene" uid="uid://vbvb6pd62vm1" path="res://Assets 3D/SalaFinal/Room.glb" id="4_pj44w"]
 [ext_resource type="Texture2D" uid="uid://byyhehy05ggtw" path="res://Assets 2D/Npcs/CCT/Falando.cct.png" id="5_bvhle"]
-[ext_resource type="Texture2D" uid="uid://cyxyleomgyg1g" path="res://Assets 2D/Npcs/CCS/Neutro.ccs.png" id="5_k6lfj"]
+[ext_resource type="Texture2D" uid="uid://dbxyuy00t66ws" path="res://Assets 2D/Npcs/CCS/Neutro.ccs.png" id="5_k6lfj"]
 [ext_resource type="Texture2D" uid="uid://bexacxkjgsigb" path="res://Assets 2D/PlaceHolders/placeholder1.png" id="5_p3qhx"]
-[ext_resource type="Texture2D" uid="uid://nsywjpxxi0ci" path="res://Assets 2D/Npcs/CCS/Falando.ccs.png" id="6_0oxgf"]
+[ext_resource type="Texture2D" uid="uid://cdt7w54burrky" path="res://Assets 2D/Npcs/CCS/Falando.ccs.png" id="6_0oxgf"]
 [ext_resource type="Texture2D" uid="uid://vib3qggysvur" path="res://Assets 2D/Npcs/CCT/Feliz.cct.png" id="6_8gibp"]
 [ext_resource type="Script" uid="uid://wx7k30hgklwr" path="res://Scripts/Npcs/NPCs.gd" id="6_jdm6y"]
 [ext_resource type="Texture2D" uid="uid://dycnq7tf8awkh" path="res://Assets 2D/PlaceHolders/placeholder2.png" id="6_v7f1h"]
@@ -30,10 +30,10 @@
 [ext_resource type="Script" uid="uid://i7d3kdfoikpf" path="res://Cenas/dim.gd" id="12_f0k5d"]
 [ext_resource type="Script" uid="uid://ckylgk8gcpbaw" path="res://Scripts/Audio/volume_sfx.gd" id="13_j0rpt"]
 [ext_resource type="Script" uid="uid://d0tybdgcv8d6g" path="res://Scripts/Cameras/sens.gd" id="13_jdm6y"]
-[ext_resource type="Texture2D" uid="uid://b2o10448sn42s" path="res://Assets 2D/Npcs/RODRIGO/Feliz.Rodrigo.png" id="20_pj44w"]
 [ext_resource type="PackedScene" uid="uid://bys33r5tumdyt" path="res://Cenas/Computer.tscn" id="20_sjri2"]
-[ext_resource type="Texture2D" uid="uid://bmfgj6icpqw6x" path="res://Assets 2D/Npcs/RODRIGO/Neutro.Rodrigo.png" id="21_fnbj8"]
-[ext_resource type="Texture2D" uid="uid://dw08vwranjiuv" path="res://Assets 2D/Npcs/RODRIGO/Falando.Rodrigo.png" id="22_iuki7"]
+[ext_resource type="Texture2D" uid="uid://l2k3lquorgid" path="res://Assets 2D/Npcs/RODRIGO/Feliz.rodrigo.png" id="22_pj44w"]
+[ext_resource type="Texture2D" uid="uid://syw0t2s0wr8l" path="res://Assets 2D/Npcs/RODRIGO/Neutro.rodrigo.png" id="23_fnbj8"]
+[ext_resource type="Texture2D" uid="uid://snbscjpybt1s" path="res://Assets 2D/Npcs/RODRIGO/Falando.rodrigo.png" id="24_iuki7"]
 [ext_resource type="PackedScene" uid="uid://cl3a12t6jis1w" path="res://Cenas/minigame_pato_fred.tscn" id="28_pj44w"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_sn0t7"]
@@ -177,7 +177,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("20_pj44w")
+"texture": ExtResource("22_pj44w")
 }],
 "loop": 1,
 "name": &"RODRIGO-happy",
@@ -185,7 +185,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("21_fnbj8")
+"texture": ExtResource("23_fnbj8")
 }],
 "loop": 1,
 "name": &"RODRIGO-normal",
@@ -193,7 +193,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("22_iuki7")
+"texture": ExtResource("24_iuki7")
 }],
 "loop": 1,
 "name": &"RODRIGO-talk",
@@ -531,7 +531,7 @@ transform = Transform3D(-1.3113417e-08, 0, 0.3, 0, 0.3, 0, -0.3, 0, -1.3113417e-
 offset = Vector2(150, -10)
 modulate = Color(0, 0, 0, 0)
 sprite_frames = SubResource("SpriteFrames_bhunq")
-animation = &"RODRIGO-normal"
+animation = &"CCS-happy"
 script = ExtResource("6_jdm6y")
 camera_3d = NodePath("../Camera3D")
 area_3d = NodePath("../AreaClickNpc")
