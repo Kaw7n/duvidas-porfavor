@@ -1,0 +1,266 @@
+[gd_scene format=3 uid="uid://hjttdtnxb313"]
+
+[ext_resource type="Texture2D" uid="uid://7tscq1p7poia" path="res://Assets 2D/Balões/balao de pensamento1.png" id="1_n4aqp"]
+[ext_resource type="Script" uid="uid://od4a4xma1d48" path="res://Cenas/minigame_aluno_ccs.gd" id="1_ti6je"]
+[ext_resource type="Texture2D" uid="uid://du7871vdt8xm6" path="res://Assets 2D/Balões/balao de pensamento2.png" id="2_t12lv"]
+[ext_resource type="Texture2D" uid="uid://di5ug3adnehv2" path="res://Assets 2D/Balões/balao de pensamento3.png" id="3_ti6je"]
+[ext_resource type="Texture2D" uid="uid://dvtayr8jrht4u" path="res://Assets 2D/MinigamesSaude/Base Corpo.png" id="4_ock46"]
+[ext_resource type="Texture2D" uid="uid://bs6gpjdkk74ue" path="res://Assets 2D/MinigamesSaude/elemento falso 1 anatomia.png" id="5_ee40m"]
+[ext_resource type="Texture2D" uid="uid://85x61wrctq2p" path="res://Assets 2D/MinigamesSaude/elemento falso 2 anatomia.png" id="6_pqdmu"]
+[ext_resource type="Script" uid="uid://ck6ir6wqoul7w" path="res://Scripts/peca_arrastavel.gd" id="6_t12lv"]
+[ext_resource type="Texture2D" uid="uid://cknccj5iwh7yw" path="res://Assets 2D/MinigamesSaude/elemento falso 3 anatomia.png" id="7_s8pk4"]
+[ext_resource type="Texture2D" uid="uid://k6l31x5i4e3b" path="res://Assets 2D/MinigamesSaude/elemento falso 4 anatomia.png" id="8_b4a4h"]
+[ext_resource type="Texture2D" uid="uid://bqfg3r5srogh4" path="res://Assets 2D/MinigamesSaude/elemento real 1 anatomia.png" id="9_0wv2x"]
+[ext_resource type="Texture2D" uid="uid://b3yo537m0nfci" path="res://Assets 2D/MinigamesSaude/elemento real 2 anatomia.png" id="10_6xlfg"]
+[ext_resource type="Texture2D" uid="uid://qnyat0y740mg" path="res://Assets 2D/MinigamesSaude/elemento real 3 anatomia.png" id="11_ci5pf"]
+[ext_resource type="Texture2D" uid="uid://m7jl7s0bcglw" path="res://Assets 2D/MinigamesSaude/elemento real 4 anatomia.png" id="12_fpfl4"]
+[ext_resource type="FontFile" uid="uid://crg25q10e3iqb" path="res://Misc/Dico.ttf" id="14_ti6je"]
+[ext_resource type="AudioStream" uid="uid://bmixpgd6vd0hh" path="res://Audio/Audio minigame ccs.mp3" id="16_ee40m"]
+[ext_resource type="AudioStream" uid="uid://0dypik3hvmpi" path="res://Audio/SomCura.mp3" id="17_b4a4h"]
+[ext_resource type="AudioStream" uid="uid://bcv747umpkp0d" path="res://Audio/SomErro.mp3" id="17_pqdmu"]
+[ext_resource type="AudioStream" uid="uid://dxcixib3vh6pu" path="res://Audio/SomMorte.mp3" id="18_s8pk4"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g4v7s"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_n4aqp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_t12lv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_ti6je")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 4.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
+size = Vector2(175.31226, 88.47533)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3gngh"]
+radius = 56.930916
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fcnqv"]
+size = Vector2(107.49289, 79.09863)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7numd"]
+size = Vector2(118.83777, 72.13515)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_p1u0y"]
+radius = 34.62116
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wgxnn"]
+radius = 35.279144
+height = 76.082886
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_11l65"]
+size = Vector2(96.06238, 75.83874)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4dgpn"]
+size = Vector2(86.91498, 79.18921)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_g4v7s"]
+radius = 21.0
+
+[node name="Node2D" type="Node2D" unique_id=1834344179]
+script = ExtResource("1_ti6je")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1622885712]
+position = Vector2(552, 359)
+scale = Vector2(0.8055556, 0.8055556)
+sprite_frames = SubResource("SpriteFrames_g4v7s")
+autoplay = "default"
+frame = 1
+frame_progress = 0.31470674
+
+[node name="SilhuetaCorpo" type="Sprite2D" parent="." unique_id=649750070]
+position = Vector2(530, 358)
+scale = Vector2(0.6965664, 0.6965664)
+texture = ExtResource("4_ock46")
+
+[node name="Chapeu" type="Area2D" parent="." unique_id=1139259312 groups=["pecas_arrastaveis"]]
+position = Vector2(-238, 64)
+script = ExtResource("6_t12lv")
+
+[node name="Chapeu" type="Sprite2D" parent="Chapeu" unique_id=2030705104]
+position = Vector2(788, 351.99997)
+scale = Vector2(0.6103395, 0.6103396)
+texture = ExtResource("5_ee40m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Chapeu" unique_id=2053147055]
+position = Vector2(832.5, 223.00002)
+scale = Vector2(0.61033946, 0.6103396)
+shape = SubResource("RectangleShape2D_g4v7s")
+
+[node name="CoracaoFalso" type="Area2D" parent="." unique_id=270114095 groups=["pecas_arrastaveis"]]
+position = Vector2(-107, 106)
+script = ExtResource("6_t12lv")
+
+[node name="CoracaoFalso" type="Sprite2D" parent="CoracaoFalso" unique_id=562356488]
+position = Vector2(528, 417.00006)
+scale = Vector2(0.69598764, 0.69598764)
+texture = ExtResource("6_pqdmu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CoracaoFalso" unique_id=1429990131]
+position = Vector2(704, 268)
+scale = Vector2(0.69598764, 0.69598764)
+shape = SubResource("CircleShape2D_3gngh")
+
+[node name="Hamburguer" type="Area2D" parent="." unique_id=27239734 groups=["pecas_arrastaveis"]]
+position = Vector2(-65.99994, 48)
+scale = Vector2(0.99999994, 1)
+script = ExtResource("6_t12lv")
+
+[node name="Hamburguer2" type="Sprite2D" parent="Hamburguer" unique_id=1406748914]
+position = Vector2(682, 355)
+scale = Vector2(0.49305564, 0.49305555)
+texture = ExtResource("7_s8pk4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hamburguer" unique_id=694268340]
+position = Vector2(802.5001, 328.5)
+scale = Vector2(0.49305552, 0.4930554)
+shape = SubResource("RectangleShape2D_fcnqv")
+
+[node name="Laco" type="Area2D" parent="." unique_id=660295149 groups=["pecas_arrastaveis"]]
+position = Vector2(21.000061, -87)
+scale = Vector2(0.99999994, 1)
+script = ExtResource("6_t12lv")
+
+[node name="Laco" type="Sprite2D" parent="Laco" unique_id=714243086]
+position = Vector2(643.00006, 222)
+scale = Vector2(0.6851852, 0.68518513)
+texture = ExtResource("8_b4a4h")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Laco" unique_id=390001517]
+position = Vector2(715.28705, 378.28705)
+scale = Vector2(0.68518525, 0.6851852)
+shape = SubResource("RectangleShape2D_7numd")
+
+[node name="Olho" type="Area2D" parent="." unique_id=1109399443 groups=["pecas_arrastaveis"]]
+position = Vector2(392.99997, 321)
+script = ExtResource("6_t12lv")
+
+[node name="Olho" type="Sprite2D" parent="Olho" unique_id=1131676975]
+position = Vector2(301, 210)
+scale = Vector2(0.60725313, 0.60725313)
+texture = ExtResource("9_0wv2x")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Olho" unique_id=1059628051]
+position = Vector2(347, 170)
+scale = Vector2(0.60725313, 0.60725313)
+shape = SubResource("CircleShape2D_p1u0y")
+
+[node name="CoracaoVerdadeiro" type="Area2D" parent="." unique_id=227723910 groups=["pecas_arrastaveis"]]
+position = Vector2(274, -64)
+script = ExtResource("6_t12lv")
+
+[node name="CoracaoVerdadeiro" type="Sprite2D" parent="CoracaoVerdadeiro" unique_id=1486165825]
+position = Vector2(283, 206.00003)
+scale = Vector2(0.45447528, 0.45447528)
+texture = ExtResource("10_6xlfg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CoracaoVerdadeiro" unique_id=1749983652]
+position = Vector2(324, 252)
+rotation = 2.4713862
+scale = Vector2(0.6157407, 0.6157407)
+shape = SubResource("CapsuleShape2D_wgxnn")
+
+[node name="Pulmoes" type="Area2D" parent="." unique_id=1778205173 groups=["pecas_arrastaveis"]]
+position = Vector2(219, 181)
+script = ExtResource("6_t12lv")
+
+[node name="Pulmoes" type="Sprite2D" parent="Pulmoes" unique_id=1861824767]
+position = Vector2(246, 248)
+scale = Vector2(0.5178433, 0.51784337)
+texture = ExtResource("11_ci5pf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pulmoes" unique_id=1600100430]
+position = Vector2(377.49994, 306.5)
+scale = Vector2(0.5933642, 0.5933642)
+shape = SubResource("RectangleShape2D_11l65")
+
+[node name="Tripas" type="Area2D" parent="." unique_id=455439072 groups=["pecas_arrastaveis"]]
+position = Vector2(382.99997, -144)
+scale = Vector2(0.99999994, 1)
+script = ExtResource("6_t12lv")
+
+[node name="Tripas" type="Sprite2D" parent="Tripas" unique_id=1361236117]
+position = Vector2(245, 255.00002)
+scale = Vector2(0.41493067, 0.4149306)
+texture = ExtResource("12_fpfl4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tripas" unique_id=914348726]
+position = Vector2(354.50018, 352.5)
+scale = Vector2(0.51774704, 0.517747)
+shape = SubResource("RectangleShape2D_4dgpn")
+
+[node name="Label" type="Label" parent="." unique_id=1138933777]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 468.5
+offset_top = 21.5
+offset_right = 649.5
+offset_bottom = 90.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("14_ti6je")
+theme_override_font_sizes/font_size = 26
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TimerMemorizacao" type="Timer" parent="." unique_id=652867538]
+autostart = true
+
+[node name="CentroDoBalao" type="Marker2D" parent="." unique_id=1321325885]
+position = Vector2(591, 347)
+
+[node name="DropZoneOlho" type="Area2D" parent="." unique_id=1368321138 groups=["drop_zone"]]
+position = Vector2(-7, 59)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DropZoneOlho" unique_id=628668402]
+position = Vector2(343, 169)
+shape = SubResource("CircleShape2D_g4v7s")
+
+[node name="DropZoneCoracao" type="Area2D" parent="." unique_id=251414656 groups=["drop_zone"]]
+position = Vector2(-7, 59)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="DropZoneCoracao" unique_id=349183528]
+position = Vector2(375, 274)
+rotation = 2.4713862
+scale = Vector2(0.6157407, 0.6157407)
+shape = SubResource("CapsuleShape2D_wgxnn")
+
+[node name="DropZonePulmoes" type="Area2D" parent="." unique_id=1638683691 groups=["drop_zone"]]
+position = Vector2(-7, 59)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DropZonePulmoes" unique_id=775023074]
+position = Vector2(348.99997, 316)
+scale = Vector2(0.5933642, 0.5933642)
+shape = SubResource("RectangleShape2D_11l65")
+
+[node name="DropZoneTripas" type="Area2D" parent="." unique_id=830475436 groups=["drop_zone"]]
+position = Vector2(-7, 59)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DropZoneTripas" unique_id=1479676883]
+position = Vector2(349, 367)
+scale = Vector2(0.51774704, 0.517747)
+shape = SubResource("RectangleShape2D_4dgpn")
+
+[node name="MusicaFundo" type="AudioStreamPlayer" parent="." unique_id=148632381]
+stream = ExtResource("16_ee40m")
+
+[node name="SomAcerto" type="AudioStreamPlayer" parent="." unique_id=231545535]
+stream = ExtResource("17_b4a4h")
+
+[node name="SomErro" type="AudioStreamPlayer" parent="." unique_id=1451736434]
+stream = ExtResource("17_pqdmu")
+
+[node name="SomDerrota" type="AudioStreamPlayer" parent="." unique_id=638180187]
+stream = ExtResource("18_s8pk4")
