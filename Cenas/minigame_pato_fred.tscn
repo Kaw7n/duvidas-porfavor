@@ -15,6 +15,7 @@
 [ext_resource type="AudioStream" uid="uid://b0skimx2xi65t" path="res://Audio/Quack.mp3" id="10_8v7xh"]
 [ext_resource type="AudioStream" uid="uid://ctmnt0i6rirb8" path="res://Audio/SFX/MoemaFail.wav" id="11_pg5yy"]
 [ext_resource type="AudioStream" uid="uid://dhicbvxs53qct" path="res://Audio/SFX/DuvidaWin.mp3" id="12_ddw2e"]
+[ext_resource type="Texture2D" uid="uid://b8wn3b08oicnk" path="res://Assets 2D/Pato fred labirinto/Coração .png" id="13_c446p"]
 [ext_resource type="AudioStream" uid="uid://b5dr2n8crujf2" path="res://Audio/SFX/DuvidaFail.mp3" id="13_y1o5u"]
 [ext_resource type="AudioStream" uid="uid://bkb7e1vaq75v4" path="res://Audio/SFX/DucksFalling.wav" id="14_vb36g"]
 [ext_resource type="AudioStream" uid="uid://5kld4p51fv5g" path="res://Audio/SFX/PatoFredMusic.wav" id="15_weu0a"]
@@ -268,6 +269,42 @@ tracks/17/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [-10.0]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("../Heart:modulate")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("../Heart2:modulate")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/20/type = "value"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("../Heart3:modulate")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_vb36g"]
@@ -549,6 +586,42 @@ tracks/7/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("../Heart:modulate")
+tracks/8/interp = 2
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("../Heart2:modulate")
+tracks/9/interp = 2
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("../Heart3:modulate")
+tracks/10/interp = 2
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
 
 [sub_resource type="Animation" id="Animation_c446p"]
 resource_name = "Fade_out_music"
@@ -604,6 +677,42 @@ tracks/2/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../Heart:modulate")
+tracks/3/interp = 2
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../Heart2:modulate")
+tracks/4/interp = 2
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../Heart3:modulate")
+tracks/5/interp = 2
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_0u104"]
 _data = {
@@ -616,7 +725,7 @@ _data = {
 &"map_dim": SubResource("Animation_n0iqb")
 }
 
-[node name="MinigamePatoFred" type="Control" unique_id=759866613 node_paths=PackedStringArray("animation_player", "area_2d_ok_path", "area_2d_blocked_path_1", "area_2d_blocked_path_2", "mouse_begin", "area_2d_exit", "area_2d_white_duck", "area_2d_red_duck", "area_2d_yellow_duck", "area_2d_green_duck", "quack", "ducks_fail", "duvida_win", "duvida_fail", "ducks_fall", "patofred_music", "animated_sprite_2d", "mapa", "caminho", "blocos", "white_duck", "red_duck", "yellow_duck", "green_duck", "minigame_pato_fred")]
+[node name="MinigamePatoFred" type="Control" unique_id=759866613 node_paths=PackedStringArray("animation_player", "area_2d_ok_path", "area_2d_blocked_path_1", "area_2d_blocked_path_2", "mouse_begin", "area_2d_exit", "area_2d_white_duck", "area_2d_red_duck", "area_2d_yellow_duck", "area_2d_green_duck", "quack", "ducks_fail", "duvida_win", "duvida_fail", "ducks_fall", "patofred_music", "animated_sprite_2d", "mapa", "caminho", "blocos", "white_duck", "red_duck", "yellow_duck", "green_duck", "minigame_pato_fred", "heart", "heart_2", "heart_3")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -655,6 +764,9 @@ red_duck = NodePath("RedDuck")
 yellow_duck = NodePath("YellowDuck")
 green_duck = NodePath("GreenDuck")
 minigame_pato_fred = NodePath(".")
+heart = NodePath("Heart")
+heart_2 = NodePath("Heart2")
+heart_3 = NodePath("Heart3")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1034212121]
 modulate = Color(1, 1, 1, 0)
@@ -760,6 +872,24 @@ texture = ExtResource("9_qlroa")
 [node name="GreenDuckShape" type="CollisionShape2D" parent="GreenDuck/Area2DGreenDuck" unique_id=78438814]
 position = Vector2(-1, 1)
 shape = SubResource("RectangleShape2D_6f8o3")
+
+[node name="Heart" type="Sprite2D" parent="." unique_id=215026453]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(135, 67)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("13_c446p")
+
+[node name="Heart2" type="Sprite2D" parent="." unique_id=1569094262]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(136, 107)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("13_c446p")
+
+[node name="Heart3" type="Sprite2D" parent="." unique_id=375572884]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(135, 147)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("13_c446p")
 
 [node name="Quack" type="AudioStreamPlayer" parent="." unique_id=179880188]
 stream = ExtResource("10_8v7xh")

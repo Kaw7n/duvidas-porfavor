@@ -1,0 +1,766 @@
+[gd_scene format=3 uid="uid://2i8trwwcmcxo"]
+
+[ext_resource type="Script" uid="uid://5hf5auw7e5ti" path="res://Scripts/sala_de_aula.gd" id="1_pw2gw"]
+[ext_resource type="Script" uid="uid://c51d2mk6wi030" path="res://Scripts/Cameras/camera_3d.gd" id="2_pw2gw"]
+[ext_resource type="PackedScene" uid="uid://b8878qpop8c2s" path="res://Cenas/fade.tscn" id="3_eh8p8"]
+[ext_resource type="LightmapGIData" uid="uid://c5hbchpq1uqs0" path="res://Cenas/sala_de_aula.lmbake" id="4_0oxgf"]
+[ext_resource type="Texture2D" uid="uid://cuy3rrjy0uyul" path="res://Assets 2D/Npcs/CCS/Feliz.ccs.png" id="4_ge76m"]
+[ext_resource type="PackedScene" uid="uid://vbvb6pd62vm1" path="res://Assets 3D/SalaFinal/Room.glb" id="4_pj44w"]
+[ext_resource type="Texture2D" uid="uid://byyhehy05ggtw" path="res://Assets 2D/Npcs/CCT/Falando.cct.png" id="5_bvhle"]
+[ext_resource type="Texture2D" uid="uid://dbxyuy00t66ws" path="res://Assets 2D/Npcs/CCS/Neutro.ccs.png" id="5_k6lfj"]
+[ext_resource type="Texture2D" uid="uid://bexacxkjgsigb" path="res://Assets 2D/PlaceHolders/placeholder1.png" id="5_p3qhx"]
+[ext_resource type="Texture2D" uid="uid://cdt7w54burrky" path="res://Assets 2D/Npcs/CCS/Falando.ccs.png" id="6_0oxgf"]
+[ext_resource type="Texture2D" uid="uid://vib3qggysvur" path="res://Assets 2D/Npcs/CCT/Feliz.cct.png" id="6_8gibp"]
+[ext_resource type="Script" uid="uid://wx7k30hgklwr" path="res://Scripts/Npcs/NPCs.gd" id="6_jdm6y"]
+[ext_resource type="Texture2D" uid="uid://dycnq7tf8awkh" path="res://Assets 2D/PlaceHolders/placeholder2.png" id="6_v7f1h"]
+[ext_resource type="Texture2D" uid="uid://bi3mawtuu3cll" path="res://Assets 2D/PlaceHolders/placeholder3.png" id="7_sjri2"]
+[ext_resource type="Texture2D" uid="uid://c8ygjotllsnl6" path="res://Assets 2D/Npcs/CCT/Neutro.cct.png" id="7_vf5hu"]
+[ext_resource type="Texture2D" uid="uid://c14vp8hr6bgm1" path="res://Assets 2D/Npcs/PATOFRED/Feliz.png" id="8_71m6s"]
+[ext_resource type="Texture2D" uid="uid://dju85ynfy87k0" path="res://Assets 2D/PlaceHolders/placeholder4.png" id="8_f0k5d"]
+[ext_resource type="Texture2D" uid="uid://d16csv42rlvnb" path="res://Assets UI/menuConfig/Menu Config.png" id="8_j8kef"]
+[ext_resource type="Script" uid="uid://bcelyrojeuxth" path="res://Scripts/menu_config.gd" id="8_rljct"]
+[ext_resource type="Texture2D" uid="uid://e1erjd1uvl1r" path="res://Assets 2D/Npcs/PATOFRED/Neutro.png" id="9_audgn"]
+[ext_resource type="FontFile" uid="uid://bk6hhfl5m7l68" path="res://Assets UI/Menu/Holidays Homework.ttf" id="9_jdm6y"]
+[ext_resource type="Texture2D" uid="uid://dc3lka15rkg57" path="res://Assets 2D/PlaceHolders/placeholder5.png" id="9_oulm0"]
+[ext_resource type="Texture2D" uid="uid://cros4chv53lfg" path="res://Assets 2D/PlaceHolders/placeholder6.png" id="10_7awky"]
+[ext_resource type="Texture2D" uid="uid://co0c2nmdvb22f" path="res://Assets 2D/Npcs/PATOFRED/Falando.png" id="10_j46ms"]
+[ext_resource type="Texture2D" uid="uid://cj8vswvh3jrxr" path="res://Assets 2D/PlaceHolders/placeholder7.png" id="11_bvhle"]
+[ext_resource type="Script" uid="uid://dln3xy3tan4u6" path="res://Scripts/Audio/volume_main.gd" id="11_qf4tx"]
+[ext_resource type="Script" uid="uid://b8yha27ogs40w" path="res://Scripts/Audio/volume_bgm.gd" id="12_1cpuw"]
+[ext_resource type="Texture2D" uid="uid://cncm1m8by2b1w" path="res://Assets 2D/Npcs/MOEMA/Moema.fazendo.pose.png" id="12_2b1gk"]
+[ext_resource type="Script" uid="uid://i7d3kdfoikpf" path="res://Cenas/dim.gd" id="12_f0k5d"]
+[ext_resource type="Script" uid="uid://ckylgk8gcpbaw" path="res://Scripts/Audio/volume_sfx.gd" id="13_j0rpt"]
+[ext_resource type="Script" uid="uid://d0tybdgcv8d6g" path="res://Scripts/Cameras/sens.gd" id="13_jdm6y"]
+[ext_resource type="Texture2D" uid="uid://cmyxmjnbjfqjy" path="res://Assets 2D/Npcs/MOEMA/Moema.Neutro.png" id="13_pg371"]
+[ext_resource type="Texture2D" uid="uid://c4cj046f540ar" path="res://Assets 2D/Npcs/MOEMA/Moema.Falando.png" id="14_dffwd"]
+[ext_resource type="PackedScene" uid="uid://bys33r5tumdyt" path="res://Cenas/Computer.tscn" id="20_sjri2"]
+[ext_resource type="Texture2D" uid="uid://l2k3lquorgid" path="res://Assets 2D/Npcs/RODRIGO/Feliz.rodrigo.png" id="22_pj44w"]
+[ext_resource type="Texture2D" uid="uid://syw0t2s0wr8l" path="res://Assets 2D/Npcs/RODRIGO/Neutro.rodrigo.png" id="23_fnbj8"]
+[ext_resource type="Texture2D" uid="uid://snbscjpybt1s" path="res://Assets 2D/Npcs/RODRIGO/Falando.rodrigo.png" id="24_iuki7"]
+[ext_resource type="PackedScene" uid="uid://cl3a12t6jis1w" path="res://Cenas/minigame_pato_fred.tscn" id="28_pj44w"]
+[ext_resource type="PackedScene" uid="uid://hjttdtnxb313" path="res://Cenas/minigame_aluno_ccs.tscn" id="33_pg371"]
+[ext_resource type="PackedScene" uid="uid://5mru63u16iym" path="res://Cenas/balao_de_fala.tscn" id="36_fnbj8"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_sn0t7"]
+
+[sub_resource type="Sky" id="Sky_riqys"]
+sky_material = SubResource("ProceduralSkyMaterial_sn0t7")
+
+[sub_resource type="Environment" id="Environment_bhunq"]
+background_mode = 2
+sky = SubResource("Sky_riqys")
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bhunq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_ge76m")
+}],
+"loop": 1,
+"name": &"CCS-happy",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_k6lfj")
+}],
+"loop": 1,
+"name": &"CCS-normal",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_0oxgf")
+}],
+"loop": 1,
+"name": &"CCS-talk",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_8gibp")
+}],
+"loop": 1,
+"name": &"CCT-happy",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_vf5hu")
+}],
+"loop": 1,
+"name": &"CCT-normal",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_bvhle")
+}],
+"loop": 1,
+"name": &"CCT-talk",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_2b1gk")
+}],
+"loop": 1,
+"name": &"MOEMA-happy",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_pg371")
+}],
+"loop": 1,
+"name": &"MOEMA-normal",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_dffwd")
+}],
+"loop": 1,
+"name": &"MOEMA-talk",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_71m6s")
+}],
+"loop": 1,
+"name": &"PATOFRED-happy",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_audgn")
+}],
+"loop": 1,
+"name": &"PATOFRED-normal",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_j46ms")
+}],
+"loop": 1,
+"name": &"PATOFRED-talk",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_p3qhx")
+}],
+"loop": 1,
+"name": &"PlaceHolder-Npc1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_v7f1h")
+}],
+"loop": 1,
+"name": &"PlaceHolder-Npc2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_sjri2")
+}],
+"loop": 1,
+"name": &"PlaceHolder-Npc3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_f0k5d")
+}],
+"loop": 1,
+"name": &"PlaceHolder-Npc4",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_oulm0")
+}],
+"loop": 1,
+"name": &"PlaceHolder-Npc5",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_7awky")
+}],
+"loop": 1,
+"name": &"PlaceHolder-Npc6",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_bvhle")
+}],
+"loop": 1,
+"name": &"PlaceHolder-Npc7",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("22_pj44w")
+}],
+"loop": 1,
+"name": &"RODRIGO-happy",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("23_fnbj8")
+}],
+"loop": 1,
+"name": &"RODRIGO-normal",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("24_iuki7")
+}],
+"loop": 1,
+"name": &"RODRIGO-talk",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_ro5h3"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(150, -10)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 1.5707964, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_8f5j2"]
+resource_name = "npc_fade_in"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:offset")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.4951926),
+"transitions": PackedFloat32Array(0.59460354, 1.5157168),
+"update": 0,
+"values": [Vector2(250, -20), Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_tp12v"]
+resource_name = "npc_fade_out"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:offset")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(-250, -20)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_a2qpr"]
+resource_name = "npc_talk"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:offset")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 5), Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_mf2tv"]
+resource_name = "npc_talk_2"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 1.5707964, 0), Vector3(0, 4.712389, 0), Vector3(0, 1.5707964, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_vdja0"]
+resource_name = "npc_talk_3"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 1.5707964, 0), Vector3(0, 1.5707964, -0.06981317), Vector3(0, 1.5707964, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_tp12v"]
+_data = {
+&"RESET": SubResource("Animation_ro5h3"),
+&"npc_fade_in": SubResource("Animation_8f5j2"),
+&"npc_fade_out": SubResource("Animation_tp12v"),
+&"npc_talk_1": SubResource("Animation_a2qpr"),
+&"npc_talk_2": SubResource("Animation_mf2tv"),
+&"npc_talk_3": SubResource("Animation_vdja0")
+}
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_bhunq"]
+size = Vector3(0.53886604, 1.868042, 1.2168427)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_riqys"]
+size = Vector3(0.5449505, 0.27578735, 0.2103424)
+
+[sub_resource type="Animation" id="Animation_oulm0"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_7awky"]
+resource_name = "dim_in"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:color")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.51),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 0.5882353)]
+}
+
+[sub_resource type="Animation" id="Animation_bvhle"]
+resource_name = "dim_out"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:color")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0.5882353), Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8gibp"]
+_data = {
+&"RESET": SubResource("Animation_oulm0"),
+&"dim_in": SubResource("Animation_7awky"),
+&"dim_out": SubResource("Animation_bvhle")
+}
+
+[sub_resource type="Animation" id="Animation_f0k5d"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_8gibp"]
+resource_name = "fade_in"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_vf5hu"]
+resource_name = "fade_out_computer"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_oulm0"]
+_data = {
+&"RESET": SubResource("Animation_f0k5d"),
+&"fade_in_computer": SubResource("Animation_8gibp"),
+&"fade_out_computer": SubResource("Animation_vf5hu")
+}
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sjri2"]
+bg_color = Color(0.6044946, 0.460261, 0.16267654, 1)
+shadow_color = Color(0.3622378, 0.2328456, 0.004846045, 0.6)
+shadow_size = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f0k5d"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oulm0"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7awky"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_bvhle"]
+grow_begin = 0.0
+grow_end = 0.0
+thickness = 6
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_8gibp"]
+color = Color(1, 1, 1, 1)
+grow_begin = 0.0
+grow_end = 0.0
+thickness = 6
+
+[node name="Sala de Aula" type="Node3D" unique_id=1421979112]
+script = ExtResource("1_pw2gw")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=446686118]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -0.04561898, 0.0752902, 0)
+script = ExtResource("2_pw2gw")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=615835147]
+environment = SubResource("Environment_bhunq")
+
+[node name="Fade" parent="." unique_id=1383060492 instance=ExtResource("3_eh8p8")]
+mouse_filter = 2
+
+[node name="LightmapGI" type="LightmapGI" parent="." unique_id=233645378]
+interior = true
+texel_scale = 10.0
+light_data = ExtResource("4_0oxgf")
+
+[node name="Luz do Sol" type="OmniLight3D" parent="." unique_id=1710094617]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.685886, 0.6679988, 1.5408219)
+light_color = Color(0.5424673, 0.64144963, 0.6945635, 1)
+light_energy = 1.5
+light_size = 0.5
+light_specular = 0.0
+shadow_enabled = true
+distance_fade_enabled = true
+omni_range = 10.0
+omni_attenuation = -0.2
+
+[node name="Luz da Sala" type="OmniLight3D" parent="." unique_id=1254406195]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.8159956, 1.0918822, -0.06727409)
+light_color = Color(0.81309855, 0.78405416, 0.7886256, 1)
+light_energy = 2.619
+light_specular = 0.0
+shadow_enabled = true
+distance_fade_enabled = true
+omni_range = 10.751
+
+[node name="Room" parent="." unique_id=1118715749 instance=ExtResource("4_pj44w")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -0.078740954, -1.4429402, 0.015421808)
+
+[node name="NPCs" type="AnimatedSprite3D" parent="." unique_id=1061259584 node_paths=PackedStringArray("camera_3d", "area_3d", "npcs_animations", "balao_de_fala")]
+transform = Transform3D(-1.3113417e-08, 0, 0.3, 0, 0.3, 0, -0.3, 0, -1.3113417e-08, 1.5, 0, 0)
+offset = Vector2(150, -10)
+modulate = Color(0, 0, 0, 0)
+sprite_frames = SubResource("SpriteFrames_bhunq")
+animation = &"MOEMA-talk"
+script = ExtResource("6_jdm6y")
+camera_3d = NodePath("../Camera3D")
+area_3d = NodePath("../AreaClickNpc")
+npcs_animations = NodePath("NpcsAnimations")
+balao_de_fala = NodePath("../BalaoDeFala")
+
+[node name="NpcsAnimations" type="AnimationPlayer" parent="NPCs" unique_id=765308715]
+libraries/ = SubResource("AnimationLibrary_tp12v")
+
+[node name="AreaClickNpc" type="Area3D" parent="." unique_id=1897334752 groups=["npc"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5704832, 0, 0)
+
+[node name="CollisionShape3DNpc" type="CollisionShape3D" parent="AreaClickNpc" unique_id=79509214]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.13947129, 0.33035815, -0.0434494)
+shape = SubResource("BoxShape3D_bhunq")
+
+[node name="AreaClickComputer" type="Area3D" parent="." unique_id=783192016 groups=["computer"]]
+
+[node name="CollisionShape3DComputer" type="CollisionShape3D" parent="AreaClickComputer" unique_id=256719915]
+transform = Transform3D(0.43477648, 0, 0.9005384, 0, 1, 0, -0.9005384, 0, 0.43477648, 0.93158937, 0.013050042, 0.7418947)
+shape = SubResource("BoxShape3D_riqys")
+
+[node name="Dim" type="ColorRect" parent="." unique_id=240347224 node_paths=PackedStringArray("animation_player")]
+offset_right = 1153.0
+offset_bottom = 647.0
+mouse_filter = 2
+color = Color(0, 0, 0, 0)
+script = ExtResource("12_f0k5d")
+animation_player = NodePath("AnimationPlayer")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Dim" unique_id=416306550]
+libraries/ = SubResource("AnimationLibrary_8gibp")
+
+[node name="Computer" parent="." unique_id=90605145 node_paths=PackedStringArray("camera_3d", "area_click_computer", "animation_player") instance=ExtResource("20_sjri2")]
+modulate = Color(1, 1, 1, 0)
+camera_3d = NodePath("../Camera3D")
+area_click_computer = NodePath("../AreaClickComputer")
+animation_player = NodePath("AnimationPlayer")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Computer" unique_id=1293792405]
+libraries/ = SubResource("AnimationLibrary_oulm0")
+
+[node name="MinigamePatoFred" parent="." unique_id=759866613 instance=ExtResource("28_pj44w")]
+offset_top = 69.0
+offset_bottom = -9.0
+
+[node name="BalaoDeFala" parent="." unique_id=609631886 instance=ExtResource("36_fnbj8")]
+offset_left = 3.0
+offset_top = 113.0
+offset_right = 473.0
+offset_bottom = 246.0
+mouse_filter = 0
+
+[node name="Minigame_ccs" parent="." unique_id=1834344179 instance=ExtResource("33_pg371")]
+
+[node name="MenuConfig" type="Panel" parent="." unique_id=477531899 node_paths=PackedStringArray("computer")]
+offset_left = 245.0
+offset_top = 106.0
+offset_right = 945.0
+offset_bottom = 546.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_sjri2")
+script = ExtResource("8_rljct")
+computer = NodePath("../Computer")
+
+[node name="MenuConfigLousa" type="Sprite2D" parent="MenuConfig" unique_id=445458525]
+position = Vector2(350, 219.5)
+scale = Vector2(1, 1.0068182)
+texture = ExtResource("8_j8kef")
+
+[node name="MasterText" type="Label" parent="MenuConfig" unique_id=2076860041]
+layout_mode = 0
+offset_left = 90.0
+offset_top = 124.0
+offset_right = 230.0
+offset_bottom = 154.0
+theme_override_fonts/font = ExtResource("9_jdm6y")
+theme_override_font_sizes/font_size = 26
+text = "Master"
+
+[node name="BgmText" type="Label" parent="MenuConfig" unique_id=1115281742]
+layout_mode = 0
+offset_left = 90.0
+offset_top = 191.0
+offset_right = 230.0
+offset_bottom = 221.0
+theme_override_fonts/font = ExtResource("9_jdm6y")
+theme_override_font_sizes/font_size = 26
+text = "BGM"
+
+[node name="SFXText" type="Label" parent="MenuConfig" unique_id=882959874]
+layout_mode = 0
+offset_left = 90.0
+offset_top = 258.0
+offset_right = 230.0
+offset_bottom = 288.0
+theme_override_fonts/font = ExtResource("9_jdm6y")
+theme_override_font_sizes/font_size = 26
+text = "SFX"
+
+[node name="BgmText2" type="Label" parent="MenuConfig" unique_id=663150224]
+layout_mode = 0
+offset_left = 90.0
+offset_top = 325.0
+offset_right = 288.0
+offset_bottom = 355.0
+theme_override_fonts/font = ExtResource("9_jdm6y")
+theme_override_font_sizes/font_size = 26
+text = "Sensibilidade"
+
+[node name="ExitConfig" type="Button" parent="MenuConfig" unique_id=648165868]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 20.0
+offset_right = 67.0
+offset_bottom = 64.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.5002048, 0.49746454, 0.49000597, 1)
+theme_override_fonts/font = ExtResource("9_jdm6y")
+theme_override_styles/normal = SubResource("StyleBoxFlat_f0k5d")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_oulm0")
+theme_override_styles/hover = SubResource("StyleBoxFlat_7awky")
+text = "X"
+
+[node name="ExitGame" type="Button" parent="MenuConfig" unique_id=1856444728]
+layout_mode = 0
+offset_left = 254.0
+offset_top = 376.0
+offset_right = 445.0
+offset_bottom = 420.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.5002048, 0.49746454, 0.49000597, 1)
+theme_override_fonts/font = ExtResource("9_jdm6y")
+theme_override_styles/normal = SubResource("StyleBoxFlat_f0k5d")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_oulm0")
+theme_override_styles/hover = SubResource("StyleBoxFlat_7awky")
+text = "Encerrar Monitoria"
+
+[node name="VolumeMAIN" type="HSlider" parent="MenuConfig" unique_id=2054330607]
+layout_mode = 0
+offset_left = 300.0
+offset_top = 100.0
+offset_right = 599.9992
+offset_bottom = 176.0
+theme_override_styles/slider = SubResource("StyleBoxLine_bvhle")
+theme_override_styles/grabber_area = SubResource("StyleBoxLine_8gibp")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxLine_8gibp")
+max_value = 1.0
+step = 0.05
+value = 1.0
+script = ExtResource("11_qf4tx")
+audio_bus_name = "Master"
+
+[node name="VolumeBGM" type="HSlider" parent="MenuConfig" unique_id=1655486606]
+layout_mode = 0
+offset_left = 300.0
+offset_top = 167.0
+offset_right = 599.9992
+offset_bottom = 243.0
+theme_override_styles/slider = SubResource("StyleBoxLine_bvhle")
+theme_override_styles/grabber_area = SubResource("StyleBoxLine_8gibp")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxLine_8gibp")
+max_value = 1.0
+step = 0.05
+value = 1.0
+script = ExtResource("12_1cpuw")
+audio_bus_name = "BGM"
+
+[node name="VolumeSFX" type="HSlider" parent="MenuConfig" unique_id=2055789104]
+layout_mode = 0
+offset_left = 300.0
+offset_top = 234.0
+offset_right = 599.9992
+offset_bottom = 310.0
+theme_override_styles/slider = SubResource("StyleBoxLine_bvhle")
+theme_override_styles/grabber_area = SubResource("StyleBoxLine_8gibp")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxLine_8gibp")
+max_value = 1.0
+step = 0.05
+value = 1.0
+script = ExtResource("13_j0rpt")
+audio_bus_name = "SFX"
+
+[node name="Sensibilidade" type="HSlider" parent="MenuConfig" unique_id=803895026]
+layout_mode = 0
+offset_left = 300.0
+offset_top = 301.0
+offset_right = 599.9992
+offset_bottom = 377.0
+theme_override_styles/slider = SubResource("StyleBoxLine_bvhle")
+theme_override_styles/grabber_area = SubResource("StyleBoxLine_8gibp")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxLine_8gibp")
+max_value = 0.5
+step = 0.01
+script = ExtResource("13_jdm6y")
+
+[connection signal="pressed" from="MenuConfig/ExitConfig" to="MenuConfig" method="_on_exit_config_pressed"]
+[connection signal="pressed" from="MenuConfig/ExitGame" to="MenuConfig" method="_on_exit_game_pressed"]
+[connection signal="value_changed" from="MenuConfig/VolumeMAIN" to="MenuConfig/VolumeMAIN" method="_on_value_changed"]
+[connection signal="value_changed" from="MenuConfig/VolumeBGM" to="MenuConfig/VolumeBGM" method="_on_value_changed"]
+[connection signal="value_changed" from="MenuConfig/VolumeSFX" to="MenuConfig/VolumeSFX" method="_on_value_changed"]
+[connection signal="value_changed" from="MenuConfig/Sensibilidade" to="MenuConfig/Sensibilidade" method="_on_value_changed"]

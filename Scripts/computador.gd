@@ -79,7 +79,7 @@ func switchComputer():
 	if changing == true:
 		return
 		
-	if computador.visible == false:
+	if computador.visible == false and Global.duvida_tutorial == true or Global.duvida_cct == true:
 		changing = true;
 		Global.dim_in.emit()
 		animation_player.play('fade_in_computer')
@@ -134,8 +134,10 @@ func tutorial():
 	loading.visible = false;
 	final.visible = true; 
 	duvida_win.play()
-	Global.pass_level.emit()
+	await get_tree().create_timer(2).timeout
 	Global.duvida_tutorial = false; 
+	await switchComputer()
+	Global.pass_level.emit()
 	
 func duvida_cct():
 	await get_tree().create_timer(1).timeout
@@ -246,7 +248,7 @@ func game_over():
 	cct_music.stop()
 	#caso seja derrota
 	if lifes <= 0:
-		Global.lives-=1
+		Global.lives -= 1
 		cct_fail.visible = true
 		duvida_fail.play()
 		Global.duvida_status = false

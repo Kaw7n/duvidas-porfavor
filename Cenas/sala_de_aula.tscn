@@ -8,33 +8,43 @@
 [ext_resource type="PackedScene" uid="uid://vbvb6pd62vm1" path="res://Assets 3D/SalaFinal/Room.glb" id="4_pj44w"]
 [ext_resource type="Texture2D" uid="uid://byyhehy05ggtw" path="res://Assets 2D/Npcs/CCT/Falando.cct.png" id="5_bvhle"]
 [ext_resource type="Texture2D" uid="uid://dbxyuy00t66ws" path="res://Assets 2D/Npcs/CCS/Neutro.ccs.png" id="5_k6lfj"]
-[ext_resource type="Texture2D" uid="uid://bexacxkjgsigb" path="res://Assets 2D/PlaceHolders/placeholder1.png" id="5_p3qhx"]
 [ext_resource type="Texture2D" uid="uid://cdt7w54burrky" path="res://Assets 2D/Npcs/CCS/Falando.ccs.png" id="6_0oxgf"]
 [ext_resource type="Texture2D" uid="uid://vib3qggysvur" path="res://Assets 2D/Npcs/CCT/Feliz.cct.png" id="6_8gibp"]
+[ext_resource type="Texture2D" uid="uid://d1dhoc7tht4x3" path="res://Assets 2D/Npcs/CCG/Feliz.CCG.png" id="6_fnbj8"]
 [ext_resource type="Script" uid="uid://wx7k30hgklwr" path="res://Scripts/Npcs/NPCs.gd" id="6_jdm6y"]
-[ext_resource type="Texture2D" uid="uid://dycnq7tf8awkh" path="res://Assets 2D/PlaceHolders/placeholder2.png" id="6_v7f1h"]
-[ext_resource type="Texture2D" uid="uid://bi3mawtuu3cll" path="res://Assets 2D/PlaceHolders/placeholder3.png" id="7_sjri2"]
+[ext_resource type="Texture2D" uid="uid://du32nhb6b2o0p" path="res://Assets 2D/Npcs/CCG/Neutro.CCG.png" id="7_iuki7"]
 [ext_resource type="Texture2D" uid="uid://c8ygjotllsnl6" path="res://Assets 2D/Npcs/CCT/Neutro.cct.png" id="7_vf5hu"]
 [ext_resource type="Texture2D" uid="uid://c14vp8hr6bgm1" path="res://Assets 2D/Npcs/PATOFRED/Feliz.png" id="8_71m6s"]
-[ext_resource type="Texture2D" uid="uid://dju85ynfy87k0" path="res://Assets 2D/PlaceHolders/placeholder4.png" id="8_f0k5d"]
 [ext_resource type="Texture2D" uid="uid://d16csv42rlvnb" path="res://Assets UI/menuConfig/Menu Config.png" id="8_j8kef"]
+[ext_resource type="Texture2D" uid="uid://ql65llhhl6ha" path="res://Assets 2D/Npcs/CCG/Falando.CCG.png" id="8_mc7e5"]
 [ext_resource type="Script" uid="uid://bcelyrojeuxth" path="res://Scripts/menu_config.gd" id="8_rljct"]
 [ext_resource type="Texture2D" uid="uid://e1erjd1uvl1r" path="res://Assets 2D/Npcs/PATOFRED/Neutro.png" id="9_audgn"]
 [ext_resource type="FontFile" uid="uid://bk6hhfl5m7l68" path="res://Assets UI/Menu/Holidays Homework.ttf" id="9_jdm6y"]
-[ext_resource type="Texture2D" uid="uid://dc3lka15rkg57" path="res://Assets 2D/PlaceHolders/placeholder5.png" id="9_oulm0"]
-[ext_resource type="Texture2D" uid="uid://cros4chv53lfg" path="res://Assets 2D/PlaceHolders/placeholder6.png" id="10_7awky"]
 [ext_resource type="Texture2D" uid="uid://co0c2nmdvb22f" path="res://Assets 2D/Npcs/PATOFRED/Falando.png" id="10_j46ms"]
-[ext_resource type="Texture2D" uid="uid://cj8vswvh3jrxr" path="res://Assets 2D/PlaceHolders/placeholder7.png" id="11_bvhle"]
 [ext_resource type="Script" uid="uid://dln3xy3tan4u6" path="res://Scripts/Audio/volume_main.gd" id="11_qf4tx"]
 [ext_resource type="Script" uid="uid://b8yha27ogs40w" path="res://Scripts/Audio/volume_bgm.gd" id="12_1cpuw"]
+[ext_resource type="Texture2D" uid="uid://cncm1m8by2b1w" path="res://Assets 2D/Npcs/MOEMA/Moema.fazendo.pose.png" id="12_2b1gk"]
 [ext_resource type="Script" uid="uid://i7d3kdfoikpf" path="res://Cenas/dim.gd" id="12_f0k5d"]
 [ext_resource type="Script" uid="uid://ckylgk8gcpbaw" path="res://Scripts/Audio/volume_sfx.gd" id="13_j0rpt"]
 [ext_resource type="Script" uid="uid://d0tybdgcv8d6g" path="res://Scripts/Cameras/sens.gd" id="13_jdm6y"]
+[ext_resource type="Texture2D" uid="uid://cmyxmjnbjfqjy" path="res://Assets 2D/Npcs/MOEMA/Moema.Neutro.png" id="13_pg371"]
+[ext_resource type="Texture2D" uid="uid://c4cj046f540ar" path="res://Assets 2D/Npcs/MOEMA/Moema.Falando.png" id="14_dffwd"]
 [ext_resource type="PackedScene" uid="uid://bys33r5tumdyt" path="res://Cenas/Computer.tscn" id="20_sjri2"]
 [ext_resource type="Texture2D" uid="uid://l2k3lquorgid" path="res://Assets 2D/Npcs/RODRIGO/Feliz.rodrigo.png" id="22_pj44w"]
 [ext_resource type="Texture2D" uid="uid://syw0t2s0wr8l" path="res://Assets 2D/Npcs/RODRIGO/Neutro.rodrigo.png" id="23_fnbj8"]
 [ext_resource type="Texture2D" uid="uid://snbscjpybt1s" path="res://Assets 2D/Npcs/RODRIGO/Falando.rodrigo.png" id="24_iuki7"]
+[ext_resource type="Texture2D" uid="uid://xk3jyypfd108" path="res://Assets 2D/Cutscenes/Cutscene final atualizada.png" id="26_dffwd"]
+[ext_resource type="Texture2D" uid="uid://48vglg6ybi1q" path="res://Assets 2D/MinigamesComputador/PastaMoema/Sprite Moema falsa em pé 2.png" id="26_fnynf"]
+[ext_resource type="Texture2D" uid="uid://dxiepqjbx7e0j" path="res://Assets 2D/Cutscenes/cutscene bad ending.png" id="27_x74nr"]
 [ext_resource type="PackedScene" uid="uid://cl3a12t6jis1w" path="res://Cenas/minigame_pato_fred.tscn" id="28_pj44w"]
+[ext_resource type="PackedScene" uid="uid://dfbe8e1vx7r72" path="res://Cenas/balao_de_cutscene.tscn" id="29_iuki7"]
+[ext_resource type="Texture2D" uid="uid://dh4pk42cp0e6p" path="res://Assets 2D/Cutscenes/Cenário.dentro.bloco.png" id="31_2b1gk"]
+[ext_resource type="Texture2D" uid="uid://c3yokceukmkr0" path="res://Assets 2D/Cutscenes/Figura.em.cenario.CC.png" id="32_pg371"]
+[ext_resource type="PackedScene" uid="uid://hjttdtnxb313" path="res://Cenas/minigame_aluno_ccs.tscn" id="33_pg371"]
+[ext_resource type="PackedScene" uid="uid://5mru63u16iym" path="res://Cenas/balao_de_fala.tscn" id="36_fnbj8"]
+[ext_resource type="AudioStream" uid="uid://df8w5jhta0p12" path="res://Audio/CameraFlash.wav" id="42_x74nr"]
+[ext_resource type="AudioStream" uid="uid://byvqufq2etx2c" path="res://Audio/GameOver.wav" id="43_46o8u"]
+[ext_resource type="AudioStream" uid="uid://307edq4fucr3" path="res://Audio/Notification Sound.ogg" id="44_fnynf"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_sn0t7"]
 
@@ -47,6 +57,30 @@ sky = SubResource("Sky_riqys")
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_bhunq"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_fnbj8")
+}],
+"loop": 1,
+"name": &"CCG-happy",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_iuki7")
+}],
+"loop": 1,
+"name": &"CCG-normal",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_mc7e5")
+}],
+"loop": 1,
+"name": &"CCG-talk",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("4_ge76m")
@@ -97,6 +131,30 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("12_2b1gk")
+}],
+"loop": 1,
+"name": &"MOEMA-happy",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_pg371")
+}],
+"loop": 1,
+"name": &"MOEMA-normal",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_dffwd")
+}],
+"loop": 1,
+"name": &"MOEMA-talk",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": ExtResource("8_71m6s")
 }],
 "loop": 1,
@@ -117,62 +175,6 @@ animations = [{
 }],
 "loop": 1,
 "name": &"PATOFRED-talk",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("5_p3qhx")
-}],
-"loop": 1,
-"name": &"PlaceHolder-Npc1",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("6_v7f1h")
-}],
-"loop": 1,
-"name": &"PlaceHolder-Npc2",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("7_sjri2")
-}],
-"loop": 1,
-"name": &"PlaceHolder-Npc3",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("8_f0k5d")
-}],
-"loop": 1,
-"name": &"PlaceHolder-Npc4",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("9_oulm0")
-}],
-"loop": 1,
-"name": &"PlaceHolder-Npc5",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("10_7awky")
-}],
-"loop": 1,
-"name": &"PlaceHolder-Npc6",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("11_bvhle")
-}],
-"loop": 1,
-"name": &"PlaceHolder-Npc7",
 "speed": 5.0
 }, {
 "frames": [{
@@ -485,6 +487,320 @@ grow_begin = 0.0
 grow_end = 0.0
 thickness = 6
 
+[sub_resource type="Animation" id="Animation_dffwd"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Cutscene_Being_1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(675, 325)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Cutscene_Being_1:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../Cutscene_Being_2:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(475, 325)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../Cutscene_Being_2:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../Cutscene_Good_Ending:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.08726646]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../Cutscene_Good_Ending:scale")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1.2, 1.2)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("../Flash:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("../Cutscene_Bad_Ending:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("../Cutscene_Good_Ending:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("../Moema_Antiga:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_tgoao"]
+resource_name = "bad_ending"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Cutscene_Bad_Ending:modulate")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_x74nr"]
+resource_name = "cutscene_blackout"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Cutscene_Being_2:modulate")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_pf8ni"]
+resource_name = "cutscene_being_move"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Cutscene_Being_1:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(675, 325), Vector2(475, 325)]
+}
+
+[sub_resource type="Animation" id="Animation_46o8u"]
+resource_name = "cutscene_being_move_2"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Cutscene_Being_2:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(475, 325), Vector2(675, 325)]
+}
+
+[sub_resource type="Animation" id="Animation_fnynf"]
+resource_name = "cutscene_being_out_1"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Cutscene_Being_1:modulate")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_rowrm"]
+resource_name = "cutscene_being_out_21"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Cutscene_Being_2:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_hrwhd"]
+resource_name = "Fim"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Cutscene_Good_Ending:rotation")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-0.08726646, 0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Cutscene_Good_Ending:scale")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1.2, 1.2), Vector2(1.01, 1.01)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../Flash:modulate")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../Cutscene_Good_Ending:modulate")
+tracks/3/interp = 2
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.24000001),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_th4vb"]
+resource_name = "moema_antiga_in"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Moema_Antiga:modulate")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.7, 0.35, 0.35, 0), Color(0.7, 0.35, 0.35, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_3eeau"]
+resource_name = "moema_antiga_out"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Moema_Antiga:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.7, 0.35000002, 0.35000002, 1), Color(0.7, 0.35, 0.35, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_hrwhd"]
+_data = {
+&"RESET": SubResource("Animation_dffwd"),
+&"bad_ending": SubResource("Animation_tgoao"),
+&"cutscene_being_blackout": SubResource("Animation_x74nr"),
+&"cutscene_being_move_1": SubResource("Animation_pf8ni"),
+&"cutscene_being_move_2": SubResource("Animation_46o8u"),
+&"cutscene_being_out_1": SubResource("Animation_fnynf"),
+&"cutscene_being_out_2": SubResource("Animation_rowrm"),
+&"good_ending": SubResource("Animation_hrwhd"),
+&"moema_antiga_in": SubResource("Animation_th4vb"),
+&"moema_antiga_out": SubResource("Animation_3eeau")
+}
+
 [node name="Sala de Aula" type="Node3D" unique_id=1421979112]
 script = ExtResource("1_pw2gw")
 
@@ -494,9 +810,6 @@ script = ExtResource("2_pw2gw")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=615835147]
 environment = SubResource("Environment_bhunq")
-
-[node name="Fade" parent="." unique_id=1383060492 instance=ExtResource("3_eh8p8")]
-mouse_filter = 2
 
 [node name="LightmapGI" type="LightmapGI" parent="." unique_id=233645378]
 interior = true
@@ -526,16 +839,27 @@ omni_range = 10.751
 [node name="Room" parent="." unique_id=1118715749 instance=ExtResource("4_pj44w")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -0.078740954, -1.4429402, 0.015421808)
 
-[node name="NPCs" type="AnimatedSprite3D" parent="." unique_id=1061259584 node_paths=PackedStringArray("camera_3d", "area_3d", "npcs_animations")]
+[node name="NPCs" type="AnimatedSprite3D" parent="." unique_id=1061259584 node_paths=PackedStringArray("camera_3d", "area_3d", "npcs_animations", "balao_de_fala", "balao_de_cutscene", "animation_player", "cutscene_being_2", "cutscene_being_1", "cutscene_good_ending", "cutscene_bad_ending", "camera_flash", "game_over", "computer_notification", "moema_antiga")]
 transform = Transform3D(-1.3113417e-08, 0, 0.3, 0, 0.3, 0, -0.3, 0, -1.3113417e-08, 1.5, 0, 0)
 offset = Vector2(150, -10)
 modulate = Color(0, 0, 0, 0)
 sprite_frames = SubResource("SpriteFrames_bhunq")
-animation = &"CCS-happy"
+animation = &"CCG-happy"
 script = ExtResource("6_jdm6y")
 camera_3d = NodePath("../Camera3D")
 area_3d = NodePath("../AreaClickNpc")
 npcs_animations = NodePath("NpcsAnimations")
+balao_de_fala = NodePath("../BalaoDeFala")
+balao_de_cutscene = NodePath("../BalaoDeCutscene")
+animation_player = NodePath("../AnimationPlayer")
+cutscene_being_2 = NodePath("../Cutscene_Being_2")
+cutscene_being_1 = NodePath("../Cutscene_Being_1")
+cutscene_good_ending = NodePath("../Cutscene_Good_Ending")
+cutscene_bad_ending = NodePath("../Cutscene_Bad_Ending")
+camera_flash = NodePath("../CameraFlash")
+game_over = NodePath("../GameOver")
+computer_notification = NodePath("../ComputerNotification")
+moema_antiga = NodePath("../Moema_Antiga")
 
 [node name="NpcsAnimations" type="AnimationPlayer" parent="NPCs" unique_id=765308715]
 libraries/ = SubResource("AnimationLibrary_tp12v")
@@ -553,9 +877,20 @@ shape = SubResource("BoxShape3D_bhunq")
 transform = Transform3D(0.43477648, 0, 0.9005384, 0, 1, 0, -0.9005384, 0, 0.43477648, 0.93158937, 0.013050042, 0.7418947)
 shape = SubResource("BoxShape3D_riqys")
 
+[node name="Cutscene_Being_2" type="Sprite2D" parent="." unique_id=164394011]
+position = Vector2(475, 325)
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("31_2b1gk")
+
+[node name="Cutscene_Being_1" type="Sprite2D" parent="." unique_id=1534940453]
+position = Vector2(675, 325)
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("32_pg371")
+
 [node name="Dim" type="ColorRect" parent="." unique_id=240347224 node_paths=PackedStringArray("animation_player")]
-offset_right = 1153.0
-offset_bottom = 647.0
+offset_right = 1067.2727
+offset_bottom = 590.0
+scale = Vector2(1.1, 1.1)
 mouse_filter = 2
 color = Color(0, 0, 0, 0)
 script = ExtResource("12_f0k5d")
@@ -563,6 +898,31 @@ animation_player = NodePath("AnimationPlayer")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Dim" unique_id=416306550]
 libraries/ = SubResource("AnimationLibrary_8gibp")
+
+[node name="Cutscene_Good_Ending" type="Sprite2D" parent="." unique_id=1887104721]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(575.515, 323.545)
+rotation = -0.08726646
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("26_dffwd")
+
+[node name="Cutscene_Bad_Ending" type="Sprite2D" parent="." unique_id=179796924]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(579, 321)
+texture = ExtResource("27_x74nr")
+
+[node name="Flash" type="ColorRect" parent="." unique_id=649555522]
+modulate = Color(1, 1, 1, 0)
+offset_left = -1.0
+offset_right = 1157.0
+offset_bottom = 644.0
+mouse_filter = 2
+
+[node name="Moema_Antiga" type="Sprite2D" parent="." unique_id=1658136418]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(582, 489)
+scale = Vector2(2, 2)
+texture = ExtResource("26_fnynf")
 
 [node name="Computer" parent="." unique_id=90605145 node_paths=PackedStringArray("camera_3d", "area_click_computer", "animation_player") instance=ExtResource("20_sjri2")]
 modulate = Color(1, 1, 1, 0)
@@ -577,8 +937,25 @@ libraries/ = SubResource("AnimationLibrary_oulm0")
 offset_top = 69.0
 offset_bottom = -9.0
 
+[node name="BalaoDeFala" parent="." unique_id=609631886 instance=ExtResource("36_fnbj8")]
+offset_left = 3.0
+offset_top = 113.0
+offset_right = 473.0
+offset_bottom = 246.0
+mouse_filter = 0
+
+[node name="BalaoDeCutscene" parent="." unique_id=1654269695 instance=ExtResource("29_iuki7")]
+offset_left = 0.0
+offset_top = 150.0
+offset_right = -14.0
+offset_bottom = 150.0
+
+[node name="Minigame_ccs" parent="." unique_id=1834344179 instance=ExtResource("33_pg371")]
+
+[node name="Fade" parent="." unique_id=1383060492 instance=ExtResource("3_eh8p8")]
+mouse_filter = 2
+
 [node name="MenuConfig" type="Panel" parent="." unique_id=477531899 node_paths=PackedStringArray("computer")]
-visible = false
 offset_left = 245.0
 offset_top = 106.0
 offset_right = 945.0
@@ -719,6 +1096,19 @@ theme_override_styles/grabber_area_highlight = SubResource("StyleBoxLine_8gibp")
 max_value = 0.5
 step = 0.01
 script = ExtResource("13_jdm6y")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1782645040]
+root_node = NodePath("../BalaoDeFala")
+libraries/ = SubResource("AnimationLibrary_hrwhd")
+
+[node name="CameraFlash" type="AudioStreamPlayer" parent="." unique_id=752385698]
+stream = ExtResource("42_x74nr")
+
+[node name="GameOver" type="AudioStreamPlayer" parent="." unique_id=516001434]
+stream = ExtResource("43_46o8u")
+
+[node name="ComputerNotification" type="AudioStreamPlayer" parent="." unique_id=1068173644]
+stream = ExtResource("44_fnynf")
 
 [connection signal="pressed" from="MenuConfig/ExitConfig" to="MenuConfig" method="_on_exit_config_pressed"]
 [connection signal="pressed" from="MenuConfig/ExitGame" to="MenuConfig" method="_on_exit_game_pressed"]

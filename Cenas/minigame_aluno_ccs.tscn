@@ -65,11 +65,389 @@ size = Vector2(86.91498, 79.18921)
 [sub_resource type="CircleShape2D" id="CircleShape2D_g4v7s"]
 radius = 21.0
 
-[node name="Node2D" type="Node2D" unique_id=1834344179]
+[sub_resource type="Animation" id="Animation_b4a4h"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(560, 1000)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SilhuetaCorpo:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(530, 358)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("SilhuetaCorpo:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Chapeu:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("CoracaoFalso:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Hamburguer:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Laco:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Olho:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("CoracaoVerdadeiro:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Pulmoes:modulate")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Tripas:modulate")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath(".:modulate")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("MusicaFundo:volume_db")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_0wv2x"]
+resource_name = "bubble_dim"
+length = 2.5000000000000004
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(560, 1000), Vector2(560, 350)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:modulate")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_6xlfg"]
+resource_name = "corpse_in"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SilhuetaCorpo:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(530, 250), Vector2(530, 358)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SilhuetaCorpo:modulate")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_ci5pf"]
+resource_name = "minigame_out"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_fpfl4"]
+resource_name = "music_fade_out"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MusicaFundo:volume_db")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, -80.0]
+}
+
+[sub_resource type="Animation" id="Animation_h72jv"]
+resource_name = "organs_in"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Chapeu:modulate")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CoracaoFalso:modulate")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Hamburguer:modulate")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Laco:modulate")
+tracks/3/interp = 2
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Olho:modulate")
+tracks/4/interp = 2
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("CoracaoVerdadeiro:modulate")
+tracks/5/interp = 2
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Pulmoes:modulate")
+tracks/6/interp = 2
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Tripas:modulate")
+tracks/7/interp = 2
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_frdt3"]
+_data = {
+&"RESET": SubResource("Animation_b4a4h"),
+&"bubble_dim": SubResource("Animation_0wv2x"),
+&"corpse_in": SubResource("Animation_6xlfg"),
+&"minigame_out": SubResource("Animation_ci5pf"),
+&"music_fade_out": SubResource("Animation_fpfl4"),
+&"organs_in": SubResource("Animation_h72jv")
+}
+
+[node name="Minigame_ccs" type="Node2D" unique_id=1834344179 node_paths=PackedStringArray("animated_sprite_2d", "silhueta_corpo", "chapeu", "coracao_falso", "hamburguer", "laco", "olho", "coracao_verdadeiro", "pulmoes", "tripas", "animation_player")]
 script = ExtResource("1_ti6je")
+animated_sprite_2d = NodePath("AnimatedSprite2D")
+silhueta_corpo = NodePath("SilhuetaCorpo")
+chapeu = NodePath("Chapeu")
+coracao_falso = NodePath("CoracaoFalso")
+hamburguer = NodePath("Hamburguer")
+laco = NodePath("Laco")
+olho = NodePath("Olho")
+coracao_verdadeiro = NodePath("CoracaoVerdadeiro")
+pulmoes = NodePath("Pulmoes")
+tripas = NodePath("Tripas")
+animation_player = NodePath("AnimationPlayer")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1622885712]
-position = Vector2(552, 359)
+modulate = Color(1, 1, 1, 0)
+position = Vector2(560, 1000)
 scale = Vector2(0.8055556, 0.8055556)
 sprite_frames = SubResource("SpriteFrames_g4v7s")
 autoplay = "default"
@@ -77,11 +455,13 @@ frame = 1
 frame_progress = 0.31470674
 
 [node name="SilhuetaCorpo" type="Sprite2D" parent="." unique_id=649750070]
+modulate = Color(1, 1, 1, 0)
 position = Vector2(530, 358)
 scale = Vector2(0.6965664, 0.6965664)
 texture = ExtResource("4_ock46")
 
 [node name="Chapeu" type="Area2D" parent="." unique_id=1139259312 groups=["pecas_arrastaveis"]]
+modulate = Color(1, 1, 1, 0)
 position = Vector2(-238, 64)
 script = ExtResource("6_t12lv")
 
@@ -96,6 +476,7 @@ scale = Vector2(0.61033946, 0.6103396)
 shape = SubResource("RectangleShape2D_g4v7s")
 
 [node name="CoracaoFalso" type="Area2D" parent="." unique_id=270114095 groups=["pecas_arrastaveis"]]
+modulate = Color(1, 1, 1, 0)
 position = Vector2(-107, 106)
 script = ExtResource("6_t12lv")
 
@@ -110,6 +491,7 @@ scale = Vector2(0.69598764, 0.69598764)
 shape = SubResource("CircleShape2D_3gngh")
 
 [node name="Hamburguer" type="Area2D" parent="." unique_id=27239734 groups=["pecas_arrastaveis"]]
+modulate = Color(1, 1, 1, 0)
 position = Vector2(-65.99994, 48)
 scale = Vector2(0.99999994, 1)
 script = ExtResource("6_t12lv")
@@ -125,6 +507,7 @@ scale = Vector2(0.49305552, 0.4930554)
 shape = SubResource("RectangleShape2D_fcnqv")
 
 [node name="Laco" type="Area2D" parent="." unique_id=660295149 groups=["pecas_arrastaveis"]]
+modulate = Color(1, 1, 1, 0)
 position = Vector2(21.000061, -87)
 scale = Vector2(0.99999994, 1)
 script = ExtResource("6_t12lv")
@@ -140,6 +523,7 @@ scale = Vector2(0.68518525, 0.6851852)
 shape = SubResource("RectangleShape2D_7numd")
 
 [node name="Olho" type="Area2D" parent="." unique_id=1109399443 groups=["pecas_arrastaveis"]]
+modulate = Color(1, 1, 1, 0)
 position = Vector2(392.99997, 321)
 script = ExtResource("6_t12lv")
 
@@ -154,6 +538,7 @@ scale = Vector2(0.60725313, 0.60725313)
 shape = SubResource("CircleShape2D_p1u0y")
 
 [node name="CoracaoVerdadeiro" type="Area2D" parent="." unique_id=227723910 groups=["pecas_arrastaveis"]]
+modulate = Color(1, 1, 1, 0)
 position = Vector2(274, -64)
 script = ExtResource("6_t12lv")
 
@@ -169,6 +554,7 @@ scale = Vector2(0.6157407, 0.6157407)
 shape = SubResource("CapsuleShape2D_wgxnn")
 
 [node name="Pulmoes" type="Area2D" parent="." unique_id=1778205173 groups=["pecas_arrastaveis"]]
+modulate = Color(1, 1, 1, 0)
 position = Vector2(219, 181)
 script = ExtResource("6_t12lv")
 
@@ -183,6 +569,7 @@ scale = Vector2(0.5933642, 0.5933642)
 shape = SubResource("RectangleShape2D_11l65")
 
 [node name="Tripas" type="Area2D" parent="." unique_id=455439072 groups=["pecas_arrastaveis"]]
+modulate = Color(1, 1, 1, 0)
 position = Vector2(382.99997, -144)
 scale = Vector2(0.99999994, 1)
 script = ExtResource("6_t12lv")
@@ -264,3 +651,6 @@ stream = ExtResource("17_pqdmu")
 
 [node name="SomDerrota" type="AudioStreamPlayer" parent="." unique_id=638180187]
 stream = ExtResource("18_s8pk4")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=2016829544]
+libraries/ = SubResource("AnimationLibrary_frdt3")

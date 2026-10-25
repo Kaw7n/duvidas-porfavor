@@ -1,21 +1,183 @@
 {
-  "aluno_tutorial": {
+  "Rodrigo_falas_1": {
 	"falas": [
-	  "Oii monitor! Eu sou o aluno que está aqui para um tutorial!!!",
-	  "Aqui é a segunda linha do balão de fala, gostou?!",
-      "Se você tá lendo essa frase é porque deu certoooo!"
+	  "Finalmente encontrei sua sala!",
+	  "Está uma loucura lá fora, já estão formando uma fila para entrar!",
+      "Eu nem me apresentei direito, né!"
 	]
   },
-  "aluno_duvida_1": {
+  "Rodrigo_falas_2": {
 	"falas": [
-	  "Monitor, estou com uma dúvida sobre a realidade quântica.",
-      "Monitor, pode me ajudar a solucionar meus problemas?"
+	  "Bom dia, eu sou o Professor Rodrigo, supervisor do programa de monitoria do CCT",
+	  "Como você ficou ciente, aparentemente a Moema Antiga capturou e escondeu todos os outros monitores antes de você chegar!",
+	  "E por isso, só agora, a gente tem meia dúzia de alunos na porta da coordenação, desesperados por conta das AV3, que estão chegando",
+      "E o pior, todos eles são de CURSOS DIFERENTES"
 	]
   },
-  "moema": {
+  "Rodrigo_falas_3": {
 	"falas": [
-		"Oii eu sou a moema, eu como coisinhas",
-		"E aí, que tal me ajudar em uma missão?"
+	  "A gente tá fazendo o máximo para achar os monitores que desapareceram, A gente só pede alguns minutos",
+	  "Sim, só isso! Mas, enquanto isso, você precisa ajudar esses alunos",
+      "Infelizmente, se 3 alunos forem à coordenação reclamar, vamos te mandar um e-mail pedindo para você descansar por hoje"
 	]
-}
+  },
+  "Rodrigo_falas_4": {
+	"falas": [
+	  "Mas não tenha medo! Tenho certeza de que você consegue dar conta!",
+      "Vamos só ajustar algumas coisas..."
+	]
+  },
+  "Rodrigo_falas_5": {
+	"falas": [
+	  "Imagine que eu sou um aluno com dúvida de como entrar no AVA",
+	  "A matrícula já está preenchida, só preciso que você coloque a senha que está colada na tela do computador",
+      "Clique no computador para tirá-lo do modo de suspensão e fazer o login!"
+	]
+  },
+  "Rodrigo_falas_6": {
+	"falas": [
+	  "Isso! Perfeito!",
+      "Bom trabalho, monitor! Agora é só continuar assim até a gente achar os outros monitores"
+	]
+  },
+  "aluno_ccs_falas_1": {
+	"falas": [
+      "Bom dia! Eu sou o aluno do CCS"
+	]
+  },
+  "aluno_ccs_falas_2": {
+	"falas": [
+      "Muito obrigado por responder minha dúvida!"
+	]
+  },
+  "aluno_ccg_falas_1": {
+	"falas": [
+      "Bom dia! Eu sou o aluno do CCG"
+	]
+  },
+  "aluno_ccg_falas_2": {
+	"falas": [
+      "Muito obrigado por responder minha dúvida!"
+	]
+  },
+  "pato_fred_falas_1": {
+	"falas": [
+	  "Alô, alô? Você é o novo monitor né?… Ahhh, que legal!…",
+      "..."
+	]
+  },
+  "pato_fred_falas_2": {
+	"falas": [
+	  "O quê? Minha dúvida? Uh, uh... ah, sim! Eu perdi todos os meus amigos",
+      "Íamos fazer uma festa na lagoa, mas todos sumiram"
+	]
+  },
+  "pato_fred_falas_3": {
+	"falas": [
+	  "Por favor, você pode me ajudar a achá-los?",
+      "Todos foram para os blocos da Unifor, mas o único que eu sei de cor é o Ç!!"
+	]
+  },
+  "pato_fred_falas_4": {
+	"falas": [
+	  "Isso não é um bloco?...",
+	  "Enfim! Por favor, você pode me dizer as direções para os blocos em que eles estão?",
+      "E me ajude a guiá-los de volta à lagoa"
+	]
+  },
+  "pato_fred_falas_5": {
+	"falas": [
+	  "Só tenha cuidado porque eu acabei de fazer minha “paticure” e não posso pisar na grama",
+	  "Eu só posso passar por cima dos caminhos da Unifor",
+	  "Me guie com seu mouse para achar meus amigos e depois me leve ao lago",
+      "Não esqueça de ninguém: todo mundo é necessário para a festa!"
+	]
+  },
+  "pato_fred_falas_6A": {
+	"falas": [
+	  "Perfeito! Perfeito! Muito obrigado mesmo!!!",
+      "Essa festa vai ser incrível!"
+	]
+  },
+  "pato_fred_falas_6B": {
+	"falas": [
+	  "Poxa, não foi dessa vez",
+      "Outro dia a gente tenta de novo..."
+	]
+  },
+  "aluno_cct_falas_1": {
+	"falas": [
+      "Bom dia! Eu sou o aluno do CCT"
+	]
+  },
+  "aluno_cct_falas_2": {
+	"falas": [
+      "Estou com um problema no computador"
+	]
+  },
+  "aluno_cct_falas_3A": {
+	"falas": [
+      "Muito obrigado por responder minha dúvida!"
+	]
+  },
+  "aluno_cct_falas_3B": {
+	"falas": [
+      "Poxa, deixa para a próxima."
+	]
+  },
+  "moema_falas_1": {
+	"falas": [
+      "Oi eu sou a Moema"
+	]
+  },
+  "moema_falas_2": {
+	"falas": [
+      "Tchau eu sou a Moema"
+	]
+  },
+ "cutscene_1": {
+	"falas": [
+      "Que belo dia para seu primeiro dia de monitoria! depois de tanta luta você finalmente conseguiu virar um aluno monitor da Unifor!"
+	]
+  },
+ "cutscene_2": {
+	"falas": [
+      "Você está indo para sua sala quando percebe uma grande muvuca incomum pelo os corredores do campus"
+	]
+  },
+"cutscene_3": {
+	"falas": [
+	 "e Investigando logo você descobre oque está acontecendo..", 
+	"e é uma notícia… assustadora"
+	]
+  },
+"cutscene_4": {
+	"falas": [
+      "A Moema antiga acabou de capturar e esconder TODOS os outros monitores da unifor, e apenas você restou"
+	]
+  },
+"cutscene_5": {
+	"falas": [
+      "Hoje, Vai ser um longo dia…"
+	]
+  },
+"cutscene_6": {
+	"falas": [
+	"Comandos:",
+	"Clique no centro da sala com seu cursor para chamar o próximo aluno e progredir nos diálogos",
+	"Use seu Mouse para olhar em volta",
+	"e Aperte Q para dar Zoom",
+	"Boa Sorte!"
+	]
+  },
+"good_ending": {
+	"falas": [
+	"Esse é o Good ending"
+	]
+  },
+"bad_ending": {
+	"falas": [
+	"Esse é o bad_ending"
+	]
+  }
 }

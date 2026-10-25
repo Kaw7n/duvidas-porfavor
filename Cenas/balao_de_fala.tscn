@@ -1,7 +1,15 @@
 [gd_scene format=3 uid="uid://5mru63u16iym"]
 
 [ext_resource type="Script" uid="uid://comgwshu3sdps" path="res://Scripts/Npcs/balao_de_fala.gd" id="1_osuna"]
-[ext_resource type="Texture2D" uid="uid://pq0xfibn5ffk" path="res://Assets 2D/Balões/balao de fala1.png" id="2_osuna"]
+[ext_resource type="Texture2D" uid="uid://conxshlulfvk7" path="res://Assets 2D/Balões/Balão de fala.png" id="2_ijbk1"]
+[ext_resource type="FontFile" uid="uid://ip1mpyutngtt" path="res://Misc/Datafont.ttf" id="3_pp3wt"]
+[ext_resource type="AudioStream" uid="uid://bucwnntfi4lx5" path="res://Audio/Dublagem/VozRodrigo.wav" id="4_1xbjv"]
+[ext_resource type="AudioStream" uid="uid://can3qidw6v8hf" path="res://Audio/Dublagem/VozPatoFred.wav" id="5_ijbk1"]
+[ext_resource type="AudioStream" uid="uid://dy6b3slh71kgl" path="res://Audio/Dublagem/VozMoema.wav" id="6_rqokl"]
+[ext_resource type="AudioStream" uid="uid://gi8kksf5ut13" path="res://Audio/Dublagem/VozCCT.wav" id="7_2juoc"]
+[ext_resource type="AudioStream" uid="uid://civ0t0t624fde" path="res://Audio/Dublagem/VozCCS.ogg" id="8_sfkor"]
+[ext_resource type="AudioStream" uid="uid://dnfedx2ihb4s1" path="res://Audio/Dublagem/VozCCG.wav" id="9_sowof"]
+[ext_resource type="AudioStream" uid="uid://fa4t041kwenn" path="res://Audio/PensamentoVoz.wav" id="10_rqokl"]
 
 [sub_resource type="Animation" id="Animation_osuna"]
 length = 0.001
@@ -48,7 +56,7 @@ anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = -3.0
-offset_right = -3.0
+offset_right = -17.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 1
@@ -61,23 +69,47 @@ libraries/ = SubResource("AnimationLibrary_w2ux0")
 layout_mode = 0
 offset_left = 1.0
 offset_top = 1.0
-offset_right = 193.0
-offset_bottom = 114.664
-texture = ExtResource("2_osuna")
+offset_right = 1105.0
+offset_bottom = 556.0
+texture = ExtResource("2_ijbk1")
 
 [node name="MarginContainer" type="MarginContainer" parent="NinePatchRect" unique_id=339789886]
 layout_mode = 0
-offset_left = 23.0
-offset_top = 73.0
-offset_right = 169.0
-offset_bottom = 108.0
+offset_left = 92.0
+offset_top = 380.0
+offset_right = 1007.0
+offset_bottom = 466.0
 
 [node name="Label" type="Label" parent="NinePatchRect/MarginContainer" unique_id=480074987]
 custom_minimum_size = Vector2(69, 0)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 5
+theme_override_fonts/font = ExtResource("3_pp3wt")
+theme_override_font_sizes/font_size = 35
 text = "Oi, tudo bem?"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
+
+[node name="VozRodrigo" type="AudioStreamPlayer" parent="." unique_id=829025541]
+stream = ExtResource("4_1xbjv")
+
+[node name="VozPatoFred" type="AudioStreamPlayer" parent="." unique_id=612981988]
+stream = ExtResource("5_ijbk1")
+
+[node name="VozMoema" type="AudioStreamPlayer" parent="." unique_id=2037811177]
+stream = ExtResource("6_rqokl")
+
+[node name="VozCCT" type="AudioStreamPlayer" parent="." unique_id=730617167]
+stream = ExtResource("7_2juoc")
+
+[node name="VozCCS" type="AudioStreamPlayer" parent="." unique_id=844927047]
+stream = ExtResource("8_sfkor")
+
+[node name="VozCCG" type="AudioStreamPlayer" parent="." unique_id=2039600781]
+stream = ExtResource("9_sowof")
+
+[node name="VozPensamento" type="AudioStreamPlayer" parent="." unique_id=1075074435]
+stream = ExtResource("10_rqokl")
+volume_db = -20.0
+pitch_scale = 0.67
