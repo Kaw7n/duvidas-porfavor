@@ -7,6 +7,18 @@ extends Node2D
 @onready var som_erro: AudioStreamPlayer = $SomErro
 @onready var som_derrota: AudioStreamPlayer = $SomDerrota
 
+@export var animated_sprite_2d: AnimatedSprite2D
+@export var silhueta_corpo: Sprite2D
+@export var chapeu: Area2D
+@export var coracao_falso: Area2D
+@export var hamburguer: Area2D
+@export var laco: Area2D
+@export var olho: Area2D
+@export var coracao_verdadeiro: Area2D
+@export var pulmoes: Area2D
+@export var tripas: Area2D
+@export var animation_player: AnimationPlayer
+
 var tempo_restante: int = 3
 var fase_atual: int = 0 
 var pontuacao: int = 0
@@ -19,36 +31,124 @@ var jogo_ativo: bool = false
 var timer_jogo: Timer
 
 func _ready() -> void:
+	Global.signal_aluno_ccs.connect(switchCCS)
 	mudar_estado_pecas(false)
 	conectar_sinal_pecas(self)
-	
-	
+
 	if som_erro:
-		som_erro.volume_db = -4.0 
+		som_erro.volume_db = -4.0
 	if som_derrota:
-		som_derrota.volume_db = -3.0 
-	
-	
-	if musica_fundo:
-		musica_fundo.play()
-	
-	
+		som_derrota.volume_db = -3.0
+
 	timer_jogo = Timer.new()
 	timer_jogo.wait_time = 1.0
 	timer_jogo.one_shot = false
 	timer_jogo.timeout.connect(_on_tempo_jogo_timeout)
 	add_child(timer_jogo)
-	
-	if label_status:
-		label_status.text = "ACERTE A POSIÇÃO DOS ÓRGÃOS!"
-	
+
 	if timer_memorizacao:
-		timer_memorizacao.wait_time = 2.5
 		timer_memorizacao.one_shot = false
 		if not timer_memorizacao.timeout.is_connected(_on_timer_timeout):
 			timer_memorizacao.timeout.connect(_on_timer_timeout)
-		timer_memorizacao.start()
+			
+	animated_sprite_2d.visible = false
+	silhueta_corpo.visible = false
+	chapeu.visible = false
+	coracao_falso.visible = false
+	hamburguer.visible = false
+	laco.visible = false
+	olho.visible = false
+	coracao_verdadeiro.visible = false
+	pulmoes.visible = false
+	tripas.visible = false
+	
+	if label_status:
+		label_status.text = ""
+		label_status.visible = false
 
+	if timer_memorizacao:
+		timer_memorizacao.stop()
+		
+var changing = false;
+
+func switchCCS():
+
+	if changing == true:
+		return
+		
+		# Ligar
+	if Global.duvida_ccs == true: 
+		changing = true;
+		Global.dim_in.emit()
+		
+		Global.click_switch = false;
+		Global.move_switch = false;
+		Global.zoom_switch = false;
+		
+		animated_sprite_2d.visible = true
+		silhueta_corpo.visible = true
+		chapeu.visible = true
+		coracao_falso.visible = true
+		hamburguer.visible = true
+		laco.visible = true
+		olho.visible = true
+		coracao_verdadeiro.visible = true
+		pulmoes.visible = true
+		tripas.visible = true
+		
+		animation_player.play('bubble_dim')
+		await animation_player.animation_finished
+		animation_player.play('corpse_in')
+		await animation_player.animation_finished
+		animation_player.play('organs_in')
+		await animation_player.animation_finished
+		changing = false
+		
+		being_ccs()
+		
+		# Desligar
+	elif Global.duvida_ccs == false: 
+		changing = true;
+		
+		animation_player.play('minigame_out')
+		await animation_player.animation_finished
+		
+		animated_sprite_2d.visible = false
+		silhueta_corpo.visible = false
+		chapeu.visible = false
+		coracao_falso.visible = false
+		hamburguer.visible = false
+		laco.visible = false
+		olho.visible = false
+		coracao_verdadeiro.visible = false
+		pulmoes.visible = false
+		tripas.visible = false
+
+		Global.click_switch = true;
+		Global.move_switch = true;
+		Global.zoom_switch = true;
+		
+		if label_status:
+			label_status.text = ""
+			label_status.visible = false
+		
+		animation_player.play('music_fade_out')
+		Global.dim_out.emit()
+		await animation_player.animation_finished
+		musica_fundo.stop()
+		changing = false;
+
+func being_ccs() -> void:
+	if label_status:
+		label_status.visible = true
+		label_status.text = "ACERTE A POSIÇÃO DOS ÓRGÃOS!"
+
+	if musica_fundo:
+		musica_fundo.play()
+
+	if timer_memorizacao:
+		timer_memorizacao.wait_time = 2.5
+		timer_memorizacao.start()
 
 func _on_timer_timeout() -> void:
 	if fase_atual == 0:
@@ -92,8 +192,6 @@ func executar_contagem() -> void:
 		label_status.text = str(tempo_restante)
 	tempo_restante -= 1
 
-
-
 func _on_tempo_jogo_timeout() -> void:
 	if not jogo_ativo:
 		return
@@ -106,7 +204,7 @@ func _on_tempo_jogo_timeout() -> void:
 		jogo_ativo = false
 		timer_jogo.stop()
 		if label_status:
-			label_status.text = "TEMPO ESGOTADO! TENTE NOVAMENTE"
+			label_status.text = "TEMPO ESGOTADO!"
 		
 		
 		if musica_fundo:
@@ -115,8 +213,14 @@ func _on_tempo_jogo_timeout() -> void:
 		
 		if som_derrota:
 			som_derrota.play()
-			
 		mudar_estado_pecas(false)
+		await get_tree().create_timer(6).timeout
+		Global.duvida_ccs = false
+		Global.duvida_status = false;
+		Global.pass_level.emit()
+		Global.lives -= 1
+		switchCCS()
+		
 
 
 func conectar_sinal_pecas(no_atual: Node) -> void:
@@ -167,6 +271,11 @@ func _on_item_solto(item_node: Node, posicao_solta: Vector2) -> void:
 						if label_status:
 							label_status.text = "PARABÉNS! VOCÊ ACERTOU TUDO!"
 						mudar_estado_pecas(false)
+						await get_tree().create_timer(2).timeout
+						Global.duvida_ccs = false
+						Global.duvida_status = true;
+						Global.pass_level.emit()
+						switchCCS()
 					break
 					
 	

@@ -1,0 +1,115 @@
+[gd_scene format=3 uid="uid://dfbe8e1vx7r72"]
+
+[ext_resource type="Script" uid="uid://comgwshu3sdps" path="res://Scripts/Npcs/balao_de_fala.gd" id="1_drpvg"]
+[ext_resource type="Texture2D" uid="uid://bb3v154eq8g3u" path="res://Assets 2D/Balões/Balão escuro retangular transparente1.png" id="2_ad3bb"]
+[ext_resource type="FontFile" uid="uid://ip1mpyutngtt" path="res://Misc/Datafont.ttf" id="3_7lg0c"]
+[ext_resource type="AudioStream" uid="uid://bucwnntfi4lx5" path="res://Audio/Dublagem/VozRodrigo.wav" id="4_whaxy"]
+[ext_resource type="AudioStream" uid="uid://can3qidw6v8hf" path="res://Audio/Dublagem/VozPatoFred.wav" id="5_eglk6"]
+[ext_resource type="AudioStream" uid="uid://dy6b3slh71kgl" path="res://Audio/Dublagem/VozMoema.wav" id="6_8t2qe"]
+[ext_resource type="AudioStream" uid="uid://gi8kksf5ut13" path="res://Audio/Dublagem/VozCCT.wav" id="7_uqjx4"]
+[ext_resource type="AudioStream" uid="uid://civ0t0t624fde" path="res://Audio/Dublagem/VozCCS.ogg" id="8_k4unw"]
+[ext_resource type="AudioStream" uid="uid://dnfedx2ihb4s1" path="res://Audio/Dublagem/VozCCG.wav" id="9_t5vyn"]
+[ext_resource type="AudioStream" uid="uid://fa4t041kwenn" path="res://Audio/PensamentoVoz.wav" id="10_7lg0c"]
+
+[sub_resource type="Animation" id="Animation_osuna"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("NinePatchRect:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_pj7b1"]
+resource_name = "flutuar"
+length = 1.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("NinePatchRect:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.75, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1, -2), Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_w2ux0"]
+_data = {
+&"RESET": SubResource("Animation_osuna"),
+&"flutuar": SubResource("Animation_pj7b1")
+}
+
+[node name="BalaoDeCutscene" type="Control" unique_id=609631886]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -3.0
+offset_right = -17.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+script = ExtResource("1_drpvg")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1067282296]
+libraries/ = SubResource("AnimationLibrary_w2ux0")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=1367028794]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 1105.0
+offset_bottom = 484.0
+texture = ExtResource("2_ad3bb")
+
+[node name="MarginContainer" type="MarginContainer" parent="NinePatchRect" unique_id=339789886]
+layout_mode = 0
+offset_left = 89.0
+offset_top = 293.0
+offset_right = 1004.0
+offset_bottom = 451.0
+
+[node name="Label" type="Label" parent="NinePatchRect/MarginContainer" unique_id=480074987]
+custom_minimum_size = Vector2(69, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_7lg0c")
+theme_override_font_sizes/font_size = 35
+text = "Oi, tudo bem?"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="VozRodrigo" type="AudioStreamPlayer" parent="." unique_id=829025541]
+stream = ExtResource("4_whaxy")
+
+[node name="VozPatoFred" type="AudioStreamPlayer" parent="." unique_id=612981988]
+stream = ExtResource("5_eglk6")
+
+[node name="VozMoema" type="AudioStreamPlayer" parent="." unique_id=2037811177]
+stream = ExtResource("6_8t2qe")
+
+[node name="VozCCT" type="AudioStreamPlayer" parent="." unique_id=730617167]
+stream = ExtResource("7_uqjx4")
+
+[node name="VozCCS" type="AudioStreamPlayer" parent="." unique_id=844927047]
+stream = ExtResource("8_k4unw")
+
+[node name="VozCCG" type="AudioStreamPlayer" parent="." unique_id=2039600781]
+stream = ExtResource("9_t5vyn")
+
+[node name="VozPensamento" type="AudioStreamPlayer" parent="." unique_id=845127187]
+stream = ExtResource("10_7lg0c")
+volume_db = -20.0
+pitch_scale = 0.67

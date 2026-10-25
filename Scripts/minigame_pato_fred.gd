@@ -31,6 +31,9 @@ extends Control
 @export var yellow_duck: Sprite2D
 @export var green_duck: Sprite2D
 @export var minigame_pato_fred: Control
+@export var heart: Sprite2D
+@export var heart_2: Sprite2D
+@export var heart_3: Sprite2D
 
 var maze = false
 var maze_fail = false  
@@ -50,6 +53,9 @@ func _ready() -> void:
 	red_duck.visible = false
 	yellow_duck.visible = false
 	green_duck.visible = false
+	heart.visible = false
+	heart_2.visible = false
+	heart_3.visible = false
 
 var changing = false; 
 	
@@ -58,7 +64,7 @@ func switchComputer():
 	if changing == true:
 		return
 		# Ligar
-	if Global.duvida_pato_fred == true: #computador.visible == false:
+	if Global.duvida_pato_fred == true: 
 		changing = true;
 		Global.dim_in.emit()
 		
@@ -75,6 +81,9 @@ func switchComputer():
 		red_duck.visible = true
 		yellow_duck.visible = true
 		green_duck.visible = true
+		heart.visible = true
+		heart_2.visible = true
+		heart_3.visible = true
 		animation_player.play('bubble_dim')
 		await animation_player.animation_finished
 		animation_player.play('map_dim')
@@ -88,7 +97,7 @@ func switchComputer():
 		maze_start()
 		
 		# Desligar
-	elif Global.duvida_pato_fred == false: #true and Global.duvida_tutorial == false and Global.duvida_cct == false:
+	elif Global.duvida_pato_fred == false: 
 		changing = true;
 		
 		maze = false
@@ -110,6 +119,9 @@ func switchComputer():
 		red_duck.visible = false
 		yellow_duck.visible = false
 		green_duck.visible = false
+		heart.visible = false
+		heart_2.visible = false
+		heart_3.visible = false
 		minigame_pato_fred.visible = false
 		animation_player.play('fade_out_music')
 		Global.dim_out.emit()
@@ -133,6 +145,7 @@ func maze_reset():
 		Global.duvida_pato_fred = false
 		Global.duvida_status = false;
 		Global.pass_level.emit()
+		Global.lives -= 1
 		switchComputer()
 	else:
 		teleport_mouse()
@@ -149,6 +162,12 @@ func fail():
 	maze_fail = true
 	maze = false
 	maze_lifes -= 1
+	if maze_lifes == 2:
+		heart_3.visible = false
+	elif maze_lifes == 1:
+		heart_2.visible = false
+	elif maze_lifes == 0:
+		heart.visible = false
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	ducks_fail.play()
 	await get_tree().create_timer(0.3).timeout
