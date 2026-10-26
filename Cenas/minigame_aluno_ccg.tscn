@@ -1,0 +1,799 @@
+[gd_scene format=3 uid="uid://c8ln8hr2rmu8p"]
+
+[ext_resource type="Script" uid="uid://cplwx838cyvnn" path="res://Cenas/minigame_aluno_ccg.gd" id="1_jcycq"]
+[ext_resource type="Texture2D" uid="uid://slb5r1upltbp" path="res://Assets 2D/MinigameCCG/papel1.png" id="2_s4ldr"]
+[ext_resource type="FontFile" uid="uid://crg25q10e3iqb" path="res://Misc/Dico.ttf" id="3_s4ldr"]
+[ext_resource type="Texture2D" uid="uid://dwkotcnrcxqwr" path="res://Assets 2D/MinigameCCG/certo.png" id="4_lky8y"]
+[ext_resource type="Texture2D" uid="uid://dq7pifw1hjs5g" path="res://Assets 2D/MinigameCCG/errado.png" id="5_qv2gg"]
+[ext_resource type="Texture2D" uid="uid://b4emlamln1wq3" path="res://Assets 2D/MinigameCCG/resposta.png" id="6_nsyqp"]
+[ext_resource type="Texture2D" uid="uid://cqlekf7slbto3" path="res://Assets 2D/MinigameCCG/avancar.png" id="7_coh3w"]
+[ext_resource type="AudioStream" uid="uid://gn25bwa4p7ee" path="res://Audio/realizacao_correcao.mp3" id="9_lky8y"]
+[ext_resource type="AudioStream" uid="uid://b4lkdlxvggrfc" path="res://Audio/som_folha_virando.mp3" id="9_s4ldr"]
+[ext_resource type="AudioStream" uid="uid://csphr6b7a7um8" path="res://Audio/som_vitoria.wav" id="10_qv2gg"]
+[ext_resource type="AudioStream" uid="uid://raf8xvfn3sdd" path="res://Audio/som_derrota.wav" id="11_nsyqp"]
+
+[node name="Node2D" type="Node2D" unique_id=1994313783]
+script = ExtResource("1_jcycq")
+
+[node name="questao1" type="Sprite2D" parent="." unique_id=1840135149]
+visible = false
+position = Vector2(614, 342.5)
+scale = Vector2(0.9552471, 0.9552471)
+texture = ExtResource("2_s4ldr")
+
+[node name="Questao" type="Label" parent="questao1" unique_id=1731124349]
+offset_left = -235.5412
+offset_top = -288.4071
+offset_right = -11.541199
+offset_bottom = -226.4071
+theme_override_colors/font_color = Color(0.10189872, 0.11977533, 0.28442967, 1)
+theme_override_fonts/font = ExtResource("3_s4ldr")
+theme_override_font_sizes/font_size = 46
+text = "Questao 1:"
+
+[node name="Enunciado" type="Label" parent="questao1" unique_id=1743144830]
+offset_left = -232.85672
+offset_top = -233.37302
+offset_right = 203.45874
+offset_bottom = -115.25104
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.20874763, 0.25605226, 0.426158, 1)
+theme_override_fonts/font = ExtResource("3_s4ldr")
+theme_override_font_sizes/font_size = 25
+text = "Se eu como um pedaço de bolo em 1 hora, quanto tempo eu demoro pra comer 15 pedaços?"
+autowrap_mode = 2
+
+[node name="itemA" type="Label" parent="questao1" unique_id=347537524]
+offset_left = -222.54141
+offset_top = -102.45892
+offset_right = 1.4585876
+offset_bottom = -40.458923
+theme_override_colors/font_color = Color(0.15341792, 0.19120544, 0.33048913, 1)
+theme_override_fonts/font = ExtResource("3_s4ldr")
+theme_override_font_sizes/font_size = 24
+text = "a)  7 Minutos"
+
+[node name="itemB" type="Label" parent="questao1" unique_id=352833609]
+offset_left = -222.54138
+offset_top = -62.190125
+offset_right = 171.45862
+offset_bottom = -0.19015503
+theme_override_colors/font_color = Color(0.15341792, 0.19120544, 0.33048913, 1)
+theme_override_fonts/font = ExtResource("3_s4ldr")
+theme_override_font_sizes/font_size = 24
+text = "B) Depende do sabor do bolo"
+
+[node name="itemC" type="Label" parent="questao1" unique_id=358612854]
+offset_left = -222.54141
+offset_top = -15.209808
+offset_right = 1.4585876
+offset_bottom = 46.79019
+theme_override_colors/font_color = Color(0.15341792, 0.19120544, 0.33048913, 1)
+theme_override_fonts/font = ExtResource("3_s4ldr")
+theme_override_font_sizes/font_size = 24
+text = "C) 15 horas
+"
+
+[node name="itemD" type="Label" parent="questao1" unique_id=1827492824]
+offset_left = -222.54147
+offset_top = 29.085754
+offset_right = 1.4585266
+offset_bottom = 91.085754
+theme_override_colors/font_color = Color(0.15341792, 0.19120544, 0.33048913, 1)
+theme_override_fonts/font = ExtResource("3_s4ldr")
+theme_override_font_sizes/font_size = 24
+text = "D) O suficiente.
+"
+
+[node name="Correcao" type="Label" parent="questao1" unique_id=2031607429]
+offset_left = -206.01077
+offset_top = 129.04666
+offset_right = 17.989227
+offset_bottom = 191.04666
+theme_override_colors/font_color = Color(0.15341792, 0.19120544, 0.33048913, 1)
+theme_override_fonts/font = ExtResource("3_s4ldr")
+theme_override_font_sizes/font_size = 28
+text = "O aluno acertou
+ou errou?"
+
+[node name="certo2" type="Label" parent="questao1" unique_id=2076270218]
+offset_left = 41.474976
+offset_top = 80.72403
+offset_right = 265.47495
+offset_bottom = 142.72403
+theme_override_colors/font_color = Color(0.15341792, 0.19120544, 0.33048913, 1)
+theme_override_fonts/font = ExtResource("3_s4ldr")
+theme_override_font_sizes/font_size = 28
+text = "certo"
+
+[node name="errado2" type="Label" parent="questao1" unique_id=1968349826]
+offset_left = 125.70459
+offset_top = 82.066315
+offset_right = 349.70462
+offset_bottom = 144.06631
+theme_override_colors/font_color = Color(0.15341792, 0.19120544, 0.33048913, 1)
+theme_override_fonts/font = ExtResource("3_s4ldr")
+theme_override_font_sizes/font_size = 28
+text = "errado"
+
+[node name="resposta" type="Sprite2D" parent="questao1" unique_id=1826124803]
+position = Vector2(-211.54126, -7.4070435)
+scale = Vector2(0.8977071, 0.89770716)
+texture = ExtResource("6_nsyqp")
+
+[node name="certo" type="TextureButton" parent="questao1" unique_id=711230078]
+offset_left = 32.917725
+offset_top = 111.59683
+offset_right = 321.91776
+offset_bottom = 374.5968
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("4_lky8y")
+
+[node name="errado" type="TextureButton" parent="questao1" unique_id=981452254]
+offset_left = 126.57019
+offset_top = 108.93912
+offset_right = 415.57022
+offset_bottom = 371.9391
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("5_qv2gg")
+
+[node name="avancar" type="TextureButton" parent="questao1" unique_id=1784183123]
+offset_left = 87.95184
+offset_top = 174.29568
+offset_right = 376.9518
+offset_bottom = 437.29575
+scale = Vector2(0.8, 0.8)
+texture_normal = ExtResource("7_coh3w")
+
+[node name="questao2" type="Sprite2D" parent="." unique_id=1642989070]
+visible = false
+position = Vector2(613.8462, 337.50003)
+scale = Vector2(0.93981504, 0.9398148)
+texture = ExtResource("2_s4ldr")
+
+[node name="Questao" type="Label" parent="questao2" unique_id=2076704131]
+offset_left = -237.66046
+offset_top = -283.9167
+offset_right = -1.6604614
+offset_bottom = -221.91669
+theme_override_colors/font_color = Color(0.10189872, 0.11977533, 0.28442967, 1)
+theme_override_fonts/font = ExtResource("3_s4ldr")
+theme_override_font_sizes/font_size = 42
+text = "Questao 2:"
+
+[node name="Enunciado" type="Label" parent="questao2" unique_id=22517066]
+offset_left = -233.14978
+offset_top = -202.58762
+offset_right = 164.67633
+offset_bottom = -40.587616
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.20874763, 0.25605226, 0.426158, 1)
+theme_override_fonts/font = ExtResource("3_s4ldr")
+theme_override_font_sizes/font_size = 29
+text = "Quais as duas linguagens mais faladas do mundo?
+
+"
+autowrap_mode = 2
+
+[node name="itemA" type="Label" parent="questao2" unique_id=1759377152]
+offset_left = -237.66052
+offset_top = -114.31328
+offset_right = 154.33948
+offset_bottom = -13.313278
+theme_override_colors/font_color = Color(0.15341792, 0.19120544, 0.33048913, 1)
+theme_override_fonts/font = ExtResource("3_s4ldr")
+theme_override_font_sizes/font_size = 22
+text = "A) Inglês e mandarim chinês
+
+"
+
+[node name="itemB" type="Label" parent="questao2" unique_id=807347135]
+offset_left = -237.66046
+offset_top = -74.04445
+offset_right = 74.33954
+offset_bottom = 15.955582
+theme_override_colors/font_color = Color(0.15341792, 0.19120544, 0.33048913, 1)
+theme_override_fonts/font = ExtResource("3_s4ldr")
+theme_override_font_sizes/font_size = 22
+text = "B) Python e Javascript
+
+"
+
+[node name="itemC" type="Label" parent="questao2" unique_id=1157939689]
+offset_left = -239.01129
+offset_top = -43.27324
+offset_right = 313.9887
+offset_bottom = 57.72676
+theme_override_colors/font_color = Color(0.15341792, 0.19120544, 0.33048913, 1)
+theme_override_fonts/font = ExtResource("3_s4ldr")
+theme_override_font_sizes/font_size = 22
+text = "C) Atos de serviço e tempo de qualidade
+
+"
+
+[node name="itemD" type="Label" parent="questao2" unique_id=704750137]
+offset_left = -237.66064
+offset_top = 5.0746613
+offset_right = -13.660645
+offset_bottom = 95.07466
+theme_override_colors/font_color = Color(0.15341792, 0.19120544, 0.33048913, 1)
+theme_override_fonts/font = ExtResource("3_s4ldr")
+theme_override_font_sizes/font_size = 22
+text = "D) Norma ABNT
+
+"
+
+[node name="certo" type="TextureButton" parent="questao2" unique_id=919746204]
+offset_left = 5.0908203
+offset_top = 65.49417
+offset_right = 294.09082
+offset_bottom = 328.49417
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("4_lky8y")
+
+[node name="errado" type="TextureButton" parent="questao2" unique_id=427723333]
+offset_left = 135.71872
+offset_top = 65.7724
+offset_right = 424.71872
+offset_bottom = 328.7724
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("5_qv2gg")
+
+[node name="avancar" type="TextureButton" parent="questao2" unique_id=1375941846]
+offset_left = 59.060898
+offset_top = 169.12909
+offset_right = 348.0609
+offset_bottom = 432.1291
+scale = Vector2(0.8, 0.8)
+texture_normal = ExtResource("7_coh3w")
+
+[node name="Correcao" type="Label" parent="questao2" unique_id=126797654]
+offset_left = -234.90169
+offset_top = 81.87995
+offset_right = -10.901688
+offset_bottom = 143.87994
+theme_override_colors/font_color = Color(0.15341792, 0.19120544, 0.33048913, 1)
+theme_override_fonts/font = ExtResource("3_s4ldr")
+theme_override_font_sizes/font_size = 28
+text = "O aluno acertou
+ou errou?"
+
+[node name="resposta" type="Sprite2D" parent="questao2" unique_id=197647799]
+position = Vector2(-227.508, -67.57797)
+scale = Vector2(0.7422465, 0.74224657)
+texture = ExtResource("6_nsyqp")
+
+[node name="questao3" type="Sprite2D" parent="." unique_id=882767443]
+visible = false
+position = Vector2(612.8153, 338.28796)
+scale = Vector2(0.93738264, 0.93738276)
+texture = ExtResource("2_s4ldr")
+
+[node name="Questao" type="Label" parent="questao3" unique_id=1320399677]
+offset_left = -237.54947
+offset_top = -287.29193
+offset_right = -1.549469
+offset_bottom = -225.29193
+theme_override_colors/font_color = Color(0.10189872, 0.11977533, 0.28442967, 1)
+theme_override_fonts/font = ExtResource("3_s4ldr")
+theme_override_font_sizes/font_size = 46
+text = "Questao 3:"
+
+[node name="Enunciado" type="Label" parent="questao3" unique_id=2005196068]
+offset_left = -235.93176
+offset_top = -220.82266
+offset_right = 215.69064
+offset_bottom = -91.82266
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.20874763, 0.25605226, 0.426158, 1)
+theme_override_fonts/font = ExtResource("3_s4ldr")
+theme_override_font_sizes/font_size = 29
+text = "Depois do futebol, qual é o maior esporte do Brasil?
+"
+autowrap_mode = 2
+
+[node name="itemA" type="Label" parent="questao3" unique_id=2126351614]
+offset_left = -236.48282
+offset_top = -122.01376
+offset_right = -12.482819
+offset_bottom = -52.013763
+theme_override_colors/font_color = Color(0.15341792, 0.19120544, 0.33048913, 1)
+theme_override_fonts/font = ExtResource("3_s4ldr")
+theme_override_font_sizes/font_size = 24
+text = "A) Vôlei
+"
+
+[node name="itemB" type="Label" parent="questao3" unique_id=956483393]
+offset_left = -236.48267
+offset_top = -81.74492
+offset_right = -12.482666
+offset_bottom = 8.255081
+theme_override_colors/font_color = Color(0.15341792, 0.19120544, 0.33048913, 1)
+theme_override_fonts/font = ExtResource("3_s4ldr")
+theme_override_font_sizes/font_size = 24
+text = "B) Damas
+
+"
+
+[node name="itemC" type="Label" parent="questao3" unique_id=1440668721]
+offset_left = -237.83356
+offset_top = -50.97377
+offset_right = 315.16644
+offset_bottom = 101.02623
+theme_override_colors/font_color = Color(0.15341792, 0.19120544, 0.33048913, 1)
+theme_override_fonts/font = ExtResource("3_s4ldr")
+theme_override_font_sizes/font_size = 24
+text = "C) Briga de dedo
+
+
+
+"
+
+[node name="itemD" type="Label" parent="questao3" unique_id=708739142]
+offset_left = -236.48291
+offset_top = -2.6258698
+offset_right = -12.48291
+offset_bottom = 87.37413
+theme_override_colors/font_color = Color(0.15341792, 0.19120544, 0.33048913, 1)
+theme_override_fonts/font = ExtResource("3_s4ldr")
+theme_override_font_sizes/font_size = 24
+text = "D) Stop
+
+"
+
+[node name="certo" type="TextureButton" parent="questao3" unique_id=534316581]
+offset_left = 4.026764
+offset_top = 64.43012
+offset_right = 293.02676
+offset_bottom = 327.4301
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("4_lky8y")
+
+[node name="errado" type="TextureButton" parent="questao3" unique_id=833896011]
+offset_left = 151.67929
+offset_top = 65.7724
+offset_right = 440.6793
+offset_bottom = 328.7724
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("5_qv2gg")
+
+[node name="avancar" type="TextureButton" parent="questao3" unique_id=433044850]
+offset_left = 59.060898
+offset_top = 169.12909
+offset_right = 348.0609
+offset_bottom = 432.1291
+scale = Vector2(0.8, 0.8)
+texture_normal = ExtResource("7_coh3w")
+
+[node name="Correcao" type="Label" parent="questao3" unique_id=1289680103]
+offset_left = -234.90169
+offset_top = 81.87995
+offset_right = -10.901688
+offset_bottom = 143.87994
+theme_override_colors/font_color = Color(0.15341792, 0.19120544, 0.33048913, 1)
+theme_override_fonts/font = ExtResource("3_s4ldr")
+theme_override_font_sizes/font_size = 28
+text = "O aluno acertou
+ou errou?"
+
+[node name="resposta" type="Sprite2D" parent="questao3" unique_id=1932253399]
+position = Vector2(-225.48233, 2.9955597)
+scale = Vector2(0.80973655, 0.8097366)
+texture = ExtResource("6_nsyqp")
+
+[node name="questao4" type="Sprite2D" parent="." unique_id=1404045831]
+visible = false
+position = Vector2(603.90216, 343.69492)
+scale = Vector2(0.9608183, 0.9608182)
+texture = ExtResource("2_s4ldr")
+
+[node name="Questao" type="Label" parent="questao4" unique_id=721264766]
+offset_left = -224.84073
+offset_top = -281.58496
+offset_right = 8.159271
+offset_bottom = -219.58496
+theme_override_colors/font_color = Color(0.10189872, 0.11977533, 0.28442967, 1)
+theme_override_fonts/font = ExtResource("3_s4ldr")
+theme_override_font_sizes/font_size = 46
+text = "Questao 4:"
+
+[node name="Enunciado" type="Label" parent="questao4" unique_id=924315882]
+offset_left = -226.31921
+offset_top = -211.31693
+offset_right = 307.91418
+offset_bottom = -82.316925
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.20874763, 0.25605226, 0.426158, 1)
+theme_override_fonts/font = ExtResource("3_s4ldr")
+theme_override_font_sizes/font_size = 29
+text = "Qual o som a raposa faz?
+
+
+"
+autowrap_mode = 2
+
+[node name="itemA" type="Label" parent="questao4" unique_id=586592830]
+offset_left = -223.79999
+offset_top = -132.30879
+offset_right = 88.20001
+offset_bottom = -70.30879
+theme_override_colors/font_color = Color(0.15341792, 0.19120544, 0.33048913, 1)
+theme_override_fonts/font = ExtResource("3_s4ldr")
+theme_override_font_sizes/font_size = 24
+text = "A) Ring-ding-ding-ding
+"
+
+[node name="itemB" type="Label" parent="questao4" unique_id=1707444855]
+offset_left = -223.79993
+offset_top = -92.03995
+offset_right = 130.20007
+offset_bottom = -2.0399475
+theme_override_colors/font_color = Color(0.15341792, 0.19120544, 0.33048913, 1)
+theme_override_fonts/font = ExtResource("3_s4ldr")
+theme_override_font_sizes/font_size = 24
+text = "B) Wa-pa-pa-pa-pa-pa-pow
+
+"
+
+[node name="itemC" type="Label" parent="questao4" unique_id=1319960734]
+offset_left = -225.15076
+offset_top = -55.908386
+offset_right = 327.84924
+offset_bottom = 96.09161
+theme_override_colors/font_color = Color(0.15341792, 0.19120544, 0.33048913, 1)
+theme_override_fonts/font = ExtResource("3_s4ldr")
+theme_override_font_sizes/font_size = 24
+text = "C) Hatee-hatee-hatee-ho!
+
+
+
+"
+
+[node name="itemD" type="Label" parent="questao4" unique_id=1830643761]
+offset_left = -225.1402
+offset_top = -29.001892
+offset_right = 260.8598
+offset_bottom = 71.99811
+theme_override_colors/font_color = Color(0.15341792, 0.19120544, 0.33048913, 1)
+theme_override_fonts/font = ExtResource("3_s4ldr")
+theme_override_font_sizes/font_size = 24
+text = "D) Nenhuma das opções anteriores.
+
+"
+
+[node name="certo" type="TextureButton" parent="questao4" unique_id=562512020]
+offset_left = 4.026764
+offset_top = 64.43012
+offset_right = 293.02676
+offset_bottom = 327.4301
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("4_lky8y")
+
+[node name="errado" type="TextureButton" parent="questao4" unique_id=2138868365]
+offset_left = 151.67929
+offset_top = 65.7724
+offset_right = 440.6793
+offset_bottom = 328.7724
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("5_qv2gg")
+
+[node name="avancar" type="TextureButton" parent="questao4" unique_id=439965760]
+offset_left = 59.060898
+offset_top = 169.12909
+offset_right = 348.0609
+offset_bottom = 432.1291
+scale = Vector2(0.8, 0.8)
+texture_normal = ExtResource("7_coh3w")
+
+[node name="Correcao" type="Label" parent="questao4" unique_id=1756145986]
+offset_left = -234.90169
+offset_top = 81.87995
+offset_right = -10.901688
+offset_bottom = 143.87994
+theme_override_colors/font_color = Color(0.15341792, 0.19120544, 0.33048913, 1)
+theme_override_fonts/font = ExtResource("3_s4ldr")
+theme_override_font_sizes/font_size = 28
+text = "O aluno acertou
+ou errou?"
+
+[node name="resposta" type="Sprite2D" parent="questao4" unique_id=1624059973]
+position = Vector2(-214.51727, -14.045776)
+scale = Vector2(0.7154141, 0.71541417)
+texture = ExtResource("6_nsyqp")
+
+[node name="questao5" type="Sprite2D" parent="." unique_id=887732078]
+visible = false
+position = Vector2(603.7714, 355.0562)
+scale = Vector2(0.98130846, 0.981308)
+texture = ExtResource("2_s4ldr")
+
+[node name="Questao" type="Label" parent="questao5" unique_id=951589316]
+offset_left = -220.90994
+offset_top = -278.8277
+offset_right = 12.090057
+offset_bottom = -216.8277
+theme_override_colors/font_color = Color(0.10189872, 0.11977533, 0.28442967, 1)
+theme_override_fonts/font = ExtResource("3_s4ldr")
+theme_override_font_sizes/font_size = 46
+text = "Questao 5:"
+
+[node name="Enunciado" type="Label" parent="questao5" unique_id=116082065]
+offset_left = -228.41592
+offset_top = -206.48192
+offset_right = 305.81747
+offset_bottom = -77.48192
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.20874763, 0.25605226, 0.426158, 1)
+theme_override_fonts/font = ExtResource("3_s4ldr")
+theme_override_font_sizes/font_size = 29
+text = "Quantos continentes existem?
+
+"
+autowrap_mode = 2
+
+[node name="itemA" type="Label" parent="questao5" unique_id=1333434953]
+offset_left = -226.00534
+offset_top = -127.641495
+offset_right = 0.9946594
+offset_bottom = -65.641495
+theme_override_colors/font_color = Color(0.15341792, 0.19120544, 0.33048913, 1)
+theme_override_fonts/font = ExtResource("3_s4ldr")
+theme_override_font_sizes/font_size = 25
+text = "A) 6 Continentes
+"
+
+[node name="itemB" type="Label" parent="questao5" unique_id=1534525975]
+offset_left = -227.33994
+offset_top = -90.04184
+offset_right = 289.1658
+offset_bottom = 103.95816
+theme_override_colors/font_color = Color(0.15341792, 0.19120544, 0.33048913, 1)
+theme_override_fonts/font = ExtResource("3_s4ldr")
+theme_override_font_sizes/font_size = 25
+text = "B) Aqui em Fortaleza tem o Cocó e a Messejana
+
+
+
+"
+autowrap_mode = 2
+
+[node name="itemC" type="Label" parent="questao5" unique_id=1183843839]
+offset_left = -229.99646
+offset_top = 4.132477
+offset_right = 323.00354
+offset_bottom = 156.13248
+theme_override_colors/font_color = Color(0.15341792, 0.19120544, 0.33048913, 1)
+theme_override_fonts/font = ExtResource("3_s4ldr")
+theme_override_font_sizes/font_size = 25
+text = "C) No sistema solar temos 8 planetas
+
+
+
+"
+
+[node name="itemD" type="Label" parent="questao5" unique_id=2102407692]
+offset_left = -228.66202
+offset_top = 62.855286
+offset_right = 257.33798
+offset_bottom = 163.85529
+theme_override_colors/font_color = Color(0.15341792, 0.19120544, 0.33048913, 1)
+theme_override_fonts/font = ExtResource("3_s4ldr")
+theme_override_font_sizes/font_size = 25
+text = "D) 3 Continentes
+"
+
+[node name="certo" type="TextureButton" parent="questao5" unique_id=1751645532]
+offset_left = 4.0267944
+offset_top = 153.84888
+offset_right = 293.0268
+offset_bottom = 416.84888
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("4_lky8y")
+
+[node name="errado" type="TextureButton" parent="questao5" unique_id=1692017155]
+offset_left = 151.67926
+offset_top = 155.19116
+offset_right = 440.67926
+offset_bottom = 418.19116
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("5_qv2gg")
+
+[node name="avancar" type="TextureButton" parent="questao5" unique_id=2045209795]
+offset_left = 59.060898
+offset_top = 169.12909
+offset_right = 348.0609
+offset_bottom = 432.1291
+scale = Vector2(0.8, 0.8)
+texture_normal = ExtResource("7_coh3w")
+
+[node name="Correcao" type="Label" parent="questao5" unique_id=634510593]
+offset_left = -234.90167
+offset_top = 171.2987
+offset_right = -10.901672
+offset_bottom = 233.2987
+theme_override_colors/font_color = Color(0.15341792, 0.19120544, 0.33048913, 1)
+theme_override_fonts/font = ExtResource("3_s4ldr")
+theme_override_font_sizes/font_size = 28
+text = "O aluno acertou
+ou errou?"
+
+[node name="resposta" type="Sprite2D" parent="questao5" unique_id=1848185821]
+position = Vector2(-216.5994, 10.659111)
+scale = Vector2(0.7492991, 0.7492992)
+texture = ExtResource("6_nsyqp")
+
+[node name="questao6" type="Sprite2D" parent="." unique_id=1584102642]
+visible = false
+position = Vector2(605.3814, 343.50003)
+scale = Vector2(0.96759295, 0.9675926)
+texture = ExtResource("2_s4ldr")
+
+[node name="Questao" type="Label" parent="questao6" unique_id=1403225973]
+offset_left = -241.22351
+offset_top = -306.14307
+offset_right = -5.2235107
+offset_bottom = -244.14307
+theme_override_colors/font_color = Color(0.10189872, 0.11977533, 0.28442967, 1)
+theme_override_fonts/font = ExtResource("3_s4ldr")
+theme_override_font_sizes/font_size = 46
+text = "Questao 6:"
+
+[node name="Enunciado" type="Label" parent="questao6" unique_id=157075674]
+offset_left = -236.03046
+offset_top = -241.32062
+offset_right = 217.67279
+offset_bottom = 43.4281
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.20874763, 0.25605226, 0.426158, 1)
+theme_override_fonts/font = ExtResource("3_s4ldr")
+theme_override_font_sizes/font_size = 19
+text = "O princípio da incerteza de Heisenberg estabelece um limite para a precisão com que podemos conhecer simultaneamente determinadas propriedades de uma partícula, como posição e momento. Considerando esse princípio, quanto é 350 dividido por 2?"
+autowrap_mode = 2
+
+[node name="itemA" type="Label" parent="questao6" unique_id=2013161747]
+offset_left = -234.37616
+offset_top = -43.120667
+offset_right = 77.62384
+offset_bottom = 18.879333
+theme_override_colors/font_color = Color(0.15341792, 0.19120544, 0.33048913, 1)
+theme_override_fonts/font = ExtResource("3_s4ldr")
+theme_override_font_sizes/font_size = 22
+text = "A) 175
+"
+
+[node name="itemB" type="Label" parent="questao6" unique_id=1309536396]
+offset_left = -234.37598
+offset_top = 4.1393433
+offset_right = 163.62402
+offset_bottom = 116.13934
+theme_override_colors/font_color = Color(0.15341792, 0.19120544, 0.33048913, 1)
+theme_override_fonts/font = ExtResource("3_s4ldr")
+theme_override_font_sizes/font_size = 22
+text = "B) A mecânica quântica não explica
+a bola de bilhar
+
+"
+
+[node name="itemC" type="Label" parent="questao6" unique_id=808066334]
+offset_left = -231.82135
+offset_top = 92.27289
+offset_right = 321.17865
+offset_bottom = 244.27286
+theme_override_colors/font_color = Color(0.15341792, 0.19120544, 0.33048913, 1)
+theme_override_fonts/font = ExtResource("3_s4ldr")
+theme_override_font_sizes/font_size = 22
+text = "C) 25
+
+
+
+"
+
+[node name="itemD" type="Label" parent="questao6" unique_id=981801415]
+offset_left = -230.544
+offset_top = 136.97803
+offset_right = 255.456
+offset_bottom = 237.97803
+theme_override_colors/font_color = Color(0.15341792, 0.19120544, 0.33048913, 1)
+theme_override_fonts/font = ExtResource("3_s4ldr")
+theme_override_font_sizes/font_size = 22
+text = "D) ax + by + c = 1/2|D[x]|
+
+"
+
+[node name="certo" type="TextureButton" parent="questao6" unique_id=44978854]
+offset_left = 4.0267944
+offset_top = 189.85983
+offset_right = 293.0268
+offset_bottom = 452.85983
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("4_lky8y")
+
+[node name="errado" type="TextureButton" parent="questao6" unique_id=1786738056]
+offset_left = 151.67926
+offset_top = 191.20212
+offset_right = 440.67926
+offset_bottom = 454.20212
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("5_qv2gg")
+
+[node name="avancar" type="TextureButton" parent="questao6" unique_id=1822539550]
+offset_left = 59.060913
+offset_top = 146.39224
+offset_right = 348.0609
+offset_bottom = 409.39224
+scale = Vector2(0.8, 0.8)
+texture_normal = ExtResource("7_coh3w")
+
+[node name="Correcao" type="Label" parent="questao6" unique_id=1533339066]
+offset_left = -234.90167
+offset_top = 201.1087
+offset_right = -10.901672
+offset_bottom = 263.1087
+theme_override_colors/font_color = Color(0.15341792, 0.19120544, 0.33048913, 1)
+theme_override_fonts/font = ExtResource("3_s4ldr")
+theme_override_font_sizes/font_size = 28
+text = "O aluno acertou
+ou errou?"
+
+[node name="resposta" type="Sprite2D" parent="questao6" unique_id=1774896469]
+position = Vector2(-225.69556, -35.65555)
+scale = Vector2(0.8434152, 0.8434153)
+texture = ExtResource("6_nsyqp")
+
+[node name="resultado" type="Sprite2D" parent="." unique_id=569349742]
+position = Vector2(604, 317.00003)
+scale = Vector2(0.99531734, 0.99531734)
+texture = ExtResource("2_s4ldr")
+
+[node name="aviso" type="Label" parent="resultado" unique_id=954771039]
+offset_left = -215.00677
+offset_top = -286.34094
+offset_right = 269.99323
+offset_bottom = -159.34094
+theme_override_colors/font_color = Color(0.10189872, 0.11977533, 0.28442967, 1)
+theme_override_fonts/font = ExtResource("3_s4ldr")
+theme_override_font_sizes/font_size = 33
+text = "Monitor, sua correçao
+está..."
+metadata/_edit_use_anchors_ = true
+
+[node name="acertos" type="Label" parent="resultado" unique_id=8407522]
+offset_left = -139.4701
+offset_top = -145.1761
+offset_right = 126.52991
+offset_bottom = -102.1761
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.101960786, 0.12156863, 0.28627452, 1)
+theme_override_fonts/font = ExtResource("3_s4ldr")
+theme_override_font_sizes/font_size = 38
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="resultadoFinal" type="Label" parent="resultado" unique_id=434778073]
+custom_minimum_size = Vector2(350, 0)
+offset_left = -175.82333
+offset_top = 33.155243
+offset_right = 174.17667
+offset_bottom = 76.15527
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.101960786, 0.12156863, 0.28627452, 1)
+theme_override_fonts/font = ExtResource("3_s4ldr")
+theme_override_font_sizes/font_size = 42
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="SomVirarPagina" type="AudioStreamPlayer" parent="." unique_id=1937965851]
+stream = ExtResource("9_s4ldr")
+
+[node name="MusicaFundo" type="AudioStreamPlayer" parent="." unique_id=1255354187]
+stream = ExtResource("9_lky8y")
+autoplay = true
+
+[node name="SomVitoria" type="AudioStreamPlayer" parent="." unique_id=527400831]
+stream = ExtResource("10_qv2gg")
+
+[node name="SomDerrota" type="AudioStreamPlayer" parent="." unique_id=468225018]
+stream = ExtResource("11_nsyqp")

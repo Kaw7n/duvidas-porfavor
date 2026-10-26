@@ -16,7 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://m7jl7s0bcglw" path="res://Assets 2D/MinigamesSaude/elemento real 4 anatomia.png" id="12_fpfl4"]
 [ext_resource type="FontFile" uid="uid://crg25q10e3iqb" path="res://Misc/Dico.ttf" id="14_ti6je"]
 [ext_resource type="AudioStream" uid="uid://bmixpgd6vd0hh" path="res://Audio/Audio minigame ccs.mp3" id="16_ee40m"]
-[ext_resource type="AudioStream" uid="uid://0dypik3hvmpi" path="res://Audio/SomCura.mp3" id="17_b4a4h"]
+[ext_resource type="AudioStream" uid="uid://l3fq4wa1n3bu" path="res://Audio/coracao.mp3" id="17_b4a4h"]
 [ext_resource type="AudioStream" uid="uid://bcv747umpkp0d" path="res://Audio/SomErro.mp3" id="17_pqdmu"]
 [ext_resource type="AudioStream" uid="uid://dxcixib3vh6pu" path="res://Audio/SomMorte.mp3" id="18_s8pk4"]
 
