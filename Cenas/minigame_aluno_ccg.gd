@@ -1,4 +1,6 @@
-extends Node2D
+extends Control
+
+@export var animation_player: AnimationPlayer
 
 # Lista com todas as 6 questões da prova
 @onready var lista_questoes = [
@@ -39,10 +41,62 @@ var respondido_nesta_questao: bool = false
 
 
 func _ready() -> void:
-	iniciar_minigame()
+	visible = false
+	Global.signal_aluno_ccg.connect(switchCCG)
+	pass
 
+var changing = false;
 
-func iniciar_minigame() -> void:
+func switchCCG():
+
+	if changing == true:
+		return
+		
+		# Ligar
+	if Global.duvida_ccg == true: 
+		changing = true;
+		Global.dim_in.emit()
+		
+		Global.click_switch = false;
+		Global.move_switch = false;
+		Global.zoom_switch = false;
+		
+		visible = true
+		
+		animation_player.play('minigame_in')
+		await animation_player.animation_finished
+		animation_player.play('minigame_idle')
+		musica_fundo.play()
+		changing = false
+		
+		indice_atual = 0
+		acertos_jogador = 0
+		respondido_nesta_questao = false
+
+		iniciar_ccg()
+		
+		# Desligar
+	elif Global.duvida_ccg == false: 
+		changing = true;
+		
+		animation_player.play('minigame_out')
+		await animation_player.animation_finished
+
+		Global.click_switch = true;
+		Global.move_switch = true;
+		Global.zoom_switch = true;
+		
+		visible = false
+		
+		animation_player.play('music_fade_out')
+		Global.dim_out.emit()
+		await animation_player.animation_finished
+		musica_fundo.stop()
+		changing = false;
+		
+		Global.pass_level.emit()
+
+func iniciar_ccg() -> void:
 	indice_atual = 0
 	acertos_jogador = 0
 
@@ -218,7 +272,17 @@ func mostrar_resultado_final() -> void:
 			node_resultado.get_node("resultadoFinal").text = "Parabéns! Você passou no teste da correção!"
 			if som_vitoria:
 				som_vitoria.play()
+				await get_tree().create_timer(5).timeout
+				Global.duvida_ccg = false
+				Global.duvida_status = true;
+				switchCCG()
 		else:
-			node_resultado.get_node("resultadoFinal").text = "Reprovado! Tente novamente."
+			node_resultado.get_node("resultadoFinal").text = "Errada! Sinto Muito..."
 			if som_derrota:
 				som_derrota.play()
+				await get_tree().create_timer(5).timeout
+				Global.duvida_ccg = false
+				Global.duvida_status = false;
+				switchCCG()
+				
+				

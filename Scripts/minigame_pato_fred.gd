@@ -94,7 +94,12 @@ func switchComputer():
 		await animation_player.animation_finished
 		animation_player.play('ducks_dance')
 		changing = false;
+		maze = false
+		maze_fail = false  
+		ducks = 4;
+		maze_lifes = 3;
 		maze_start()
+		
 		
 		# Desligar
 	elif Global.duvida_pato_fred == false: 

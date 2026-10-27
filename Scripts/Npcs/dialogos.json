@@ -42,22 +42,78 @@
   },
   "aluno_ccs_falas_1": {
 	"falas": [
-      "Bom dia! Eu sou o aluno do CCS"
+      "Bom dia, é o monitor?"
 	]
   },
   "aluno_ccs_falas_2": {
 	"falas": [
-      "Muito obrigado por responder minha dúvida!"
+      "Esplêndido! Posso contar com sua ajuda? É de extrema importância."
+	]
+  },
+  "aluno_ccs_falas_3": {
+	"falas": [
+	  "Bem, sou do CCS, minha AV3 está próxima e, bem…",
+      "Eu não sei nada de anatomia"
+	]
+  },
+  "aluno_ccs_falas_4": {
+	"falas": [
+      "Sim, é o fim do semestre, eu deveria saber! Mas eu tenho medo de órgãos…"
+	]
+  },
+  "aluno_ccs_falas_5": {
+	"falas": [
+	  "Mas, enfim, você, por obséquio, poderia me ajudar a aprender anatomia?",
+	  "Coloque todos os órgãos corretos no seu devido lugar! Só cuidado: eu não sei como alguns se parecem",
+      "então tenha certeza de que escolheu os órgãos que são anatomicamente corretos!"
+	]
+  },
+  "aluno_ccs_falas_6A": {
+	"falas": [
+	  "Ah! Pensando desse jeito, não é tão assustador! Eu entendi tudo!",
+      "Muito obrigado, talvez eu consiga passar desta cadeira mesmo!"
+	]
+  },
+  "aluno_ccs_falas_6B": {
+	"falas": [
+	  "É desse jeito mesmo? Certeza?",
+	  "…Eu não sei tanto do conteúdo, mas sinto que isso não tá certo.",
+      "Bem, talvez na próxima eu consiga… Agradeço…"
 	]
   },
   "aluno_ccg_falas_1": {
 	"falas": [
-      "Bom dia! Eu sou o aluno do CCG"
+      "Ah! Um grandíssimo bom dia para vossa senhoria!"
 	]
   },
   "aluno_ccg_falas_2": {
 	"falas": [
-      "Muito obrigado por responder minha dúvida!"
+      "Ou melhor seria vossa monitoria?…"
+	]
+  },
+  "aluno_ccg_falas_3": {
+	"falas": [
+	  "sou o aluno do CCG e tenho uma dúvida a seu dispor!",
+      "Esta minha atividade precisa de correção, Poderia me agraciar com sua ajuda?"
+	]
+  },
+  "aluno_ccg_falas_4": {
+	"falas": [
+	  "Monitor da minha disciplina fez pra mim! Estava um arraso",
+      "Diga se eu fiz a escolha correta nas questões!"
+	]
+  },
+  "aluno_ccg_falas_5A": {
+	"falas": [
+	  "Ah! Absolutamente fabuloso! Muito obrigado!",
+      "Agora sei tudo sobre este conteúdo! Que boa vontade a sua!"
+	]
+  },
+  "aluno_ccg_falas_5B": {
+	"falas": [
+	  "Ah… bem, não sei se isso está certo…",
+	  "O que importa é a intenção, não é mesmo?",
+      "Obrigado mesmo assim, campeão!"
 	]
   },
   "pato_fred_falas_1": {
@@ -107,77 +163,121 @@
   },
   "aluno_cct_falas_1": {
 	"falas": [
-      "Bom dia! Eu sou o aluno do CCT"
+	  "Oi! Você é, tipo, o monitor, sim?",
+      "Preciso da sua ajuda"
 	]
   },
   "aluno_cct_falas_2": {
 	"falas": [
-      "Estou com um problema no computador"
+      "Eu e meus colegas do CCT, tipo, encontramos uma falha no sistema do AVA"
 	]
   },
-  "aluno_cct_falas_3A": {
+  "aluno_cct_falas_3": {
 	"falas": [
-      "Muito obrigado por responder minha dúvida!"
+	  "É uma falha crítica! Pode destruir todos os dados dos alunos",
+      "Se prepare para este vírus terrível:"
 	]
   },
-  "aluno_cct_falas_3B": {
+  "aluno_cct_falas_4": {
 	"falas": [
-      "Poxa, deixa para a próxima."
+      "Moemas com o design antigo invadiram a interface do site"
+	]
+  },
+  "aluno_cct_falas_5": {
+	"falas": [
+      "…Mas se você me ajudar a identificar as Moemas falsas, consigo me livrar deste malware!"
+	]
+  },
+  "aluno_cct_falas_6": {
+	"falas": [
+	  "Por favor! Ao Iniciar o programa clique em todas as Moemas antigas, para que o AVA volte ao ar!",
+      "Clique no Computador para começar a limpeza!"
+	]
+  },
+  "aluno_cct_falas_7A": {
+	"falas": [
+	  "Ahh, nossa! Muito obrigada!",
+      "Você, tipo, salvou todos os alunos do EAD agora!"
+	]
+  },
+  "aluno_cct_falas_7B": {
+	"falas": [
+	  "Ah, não, pera, você, tipo, escolheu as Moemas erradas",
+	  "Uh, eu acho que o AVA vai ser dominado pra sempre agora",
+      "A gente tenta de novo outra hora então. Tá de boa, eu acho..."
 	]
   },
   "moema_falas_1": {
 	"falas": [
-      "Oi eu sou a Moema"
+	  "Olá! É você, não é mesmo?",
+      "O monitor que não foi capturado pela Moema antiga!"
 	]
   },
   "moema_falas_2": {
 	"falas": [
-      "Tchau eu sou a Moema"
+      "Haha, que bom que você conseguiu aguentar toda essa carga! É difícil tirar as dúvidas de tantos cursos diferentes, né?"
 	]
   },
- "cutscene_1": {
+  "moema_falas_3": {
 	"falas": [
-      "Que belo dia para seu primeiro dia de monitoria! depois de tanta luta você finalmente conseguiu virar um aluno monitor da Unifor!"
+	  "Como estou aqui? Ha! Acha mesmo que a Moema antiga ia ganhar de mim?",
+      "Brincadeira, eu conversei com ela! No fim, ela estava apenas com saudade dos velhos amigos. Consegui trazer todos eles de volta!"
 	]
   },
- "cutscene_2": {
+  "moema_falas_4": {
 	"falas": [
-      "Você está indo para sua sala quando percebe uma grande muvuca incomum pelo os corredores do campus"
+	  "Muito obrigada pelo seu trabalho árduo, todos os alunos são muito gratos a você!",
+      "Por isso trouxe essa câmera. Você poderia me fazer um último favor?"
 	]
   },
-"cutscene_3": {
+  "moema_falas_5": {
 	"falas": [
-	 "e Investigando logo você descobre oque está acontecendo..", 
-	"e é uma notícia… assustadora"
+      "Bata uma foto linda minha!"
 	]
   },
-"cutscene_4": {
+  "cutscene_1": {
 	"falas": [
-      "A Moema antiga acabou de capturar e esconder TODOS os outros monitores da unifor, e apenas você restou"
+      "Que belo dia para o seu primeiro dia de monitoria! Depois de tanta luta, você finalmente conseguiu virar aluno monitor da Unifor!"
 	]
   },
-"cutscene_5": {
+  "cutscene_2": {
 	"falas": [
-      "Hoje, Vai ser um longo dia…"
+      "Você está indo para a sua sala quando percebe uma grande muvuca incomum pelos corredores do campus"
 	]
   },
-"cutscene_6": {
+  "cutscene_3": {
 	"falas": [
-	"Comandos:",
-	"Clique no centro da sala com seu cursor para chamar o próximo aluno e progredir nos diálogos",
-	"Use seu Mouse para olhar em volta",
-	"e Aperte Q para dar Zoom",
-	"Boa Sorte!"
+	  "E, investigando, logo você descobre o que está acontecendo...",
+      "E é uma notícia… assustadora."
 	]
   },
-"good_ending": {
+  "cutscene_4": {
 	"falas": [
-	"Esse é o Good ending"
+      "A Moema antiga acabou de capturar e esconder TODOS os outros monitores da Unifor, e apenas você restou"
 	]
   },
-"bad_ending": {
+  "cutscene_5": {
 	"falas": [
-	"Esse é o bad_ending"
+      "Hoje vai ser um longo dia…"
+	]
+  },
+  "cutscene_6": {
+	"falas": [
+	  "Comandos:",
+	  "Clique no centro da sala com o seu cursor para chamar o próximo aluno e progredir nos diálogos",
+	  "Use o seu mouse para olhar em volta",
+	  "Aperte Q para dar zoom",
+      "Boa sorte!"
+	]
+  },
+  "good_ending": {
+	"falas": [
+      "Esse é o Good ending."
+	]
+  },
+  "bad_ending": {
+	"falas": [
+      "Esse é o bad_ending."
 	]
   }
 }

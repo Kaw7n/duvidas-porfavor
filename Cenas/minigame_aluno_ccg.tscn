@@ -12,13 +12,153 @@
 [ext_resource type="AudioStream" uid="uid://csphr6b7a7um8" path="res://Audio/som_vitoria.wav" id="10_qv2gg"]
 [ext_resource type="AudioStream" uid="uid://raf8xvfn3sdd" path="res://Audio/som_derrota.wav" id="11_nsyqp"]
 
-[node name="Node2D" type="Node2D" unique_id=1994313783]
+[sub_resource type="Animation" id="Animation_qv2gg"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../../MusicaFundo:volume_db")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../..:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-1000, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../..:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_g8bny"]
+resource_name = "new_animation"
+length = 4.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../..:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2, 2.99, 4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [Vector2(0, 0), Vector2(2, 0), Vector2(0, 0), Vector2(-2, 0), Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_coh3w"]
+resource_name = "minigame_in"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../..:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-1000, 0), Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../..:modulate")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_khgmd"]
+resource_name = "minigame_out"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../..:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.0000002),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(1000, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../..:modulate")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_nsyqp"]
+resource_name = "musica_fade_out"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../../MusicaFundo:volume_db")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, -80.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_coh3w"]
+_data = {
+&"RESET": SubResource("Animation_qv2gg"),
+&"minigame_idle": SubResource("Animation_g8bny"),
+&"minigame_in": SubResource("Animation_coh3w"),
+&"minigame_out": SubResource("Animation_khgmd"),
+&"music_fade_out": SubResource("Animation_nsyqp")
+}
+
+[node name="minigameCCG" type="Control" unique_id=143222278 node_paths=PackedStringArray("animation_player")]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 3
+anchors_preset = 0
+offset_left = -1000.0
+offset_right = -1000.0
 script = ExtResource("1_jcycq")
+animation_player = NodePath("AnimationPlayer")
 
 [node name="questao1" type="Sprite2D" parent="." unique_id=1840135149]
-visible = false
-position = Vector2(614, 342.5)
-scale = Vector2(0.9552471, 0.9552471)
+position = Vector2(575, 320)
 texture = ExtResource("2_s4ldr")
 
 [node name="Questao" type="Label" parent="questao1" unique_id=1731124349]
@@ -138,6 +278,7 @@ scale = Vector2(0.5, 0.5)
 texture_normal = ExtResource("5_qv2gg")
 
 [node name="avancar" type="TextureButton" parent="questao1" unique_id=1784183123]
+visible = false
 offset_left = 87.95184
 offset_top = 174.29568
 offset_right = 376.9518
@@ -147,8 +288,7 @@ texture_normal = ExtResource("7_coh3w")
 
 [node name="questao2" type="Sprite2D" parent="." unique_id=1642989070]
 visible = false
-position = Vector2(613.8462, 337.50003)
-scale = Vector2(0.93981504, 0.9398148)
+position = Vector2(575, 320)
 texture = ExtResource("2_s4ldr")
 
 [node name="Questao" type="Label" parent="questao2" unique_id=2076704131]
@@ -265,8 +405,7 @@ texture = ExtResource("6_nsyqp")
 
 [node name="questao3" type="Sprite2D" parent="." unique_id=882767443]
 visible = false
-position = Vector2(612.8153, 338.28796)
-scale = Vector2(0.93738264, 0.93738276)
+position = Vector2(575, 320)
 texture = ExtResource("2_s4ldr")
 
 [node name="Questao" type="Label" parent="questao3" unique_id=1320399677]
@@ -383,8 +522,7 @@ texture = ExtResource("6_nsyqp")
 
 [node name="questao4" type="Sprite2D" parent="." unique_id=1404045831]
 visible = false
-position = Vector2(603.90216, 343.69492)
-scale = Vector2(0.9608183, 0.9608182)
+position = Vector2(575, 320)
 texture = ExtResource("2_s4ldr")
 
 [node name="Questao" type="Label" parent="questao4" unique_id=721264766]
@@ -503,8 +641,7 @@ texture = ExtResource("6_nsyqp")
 
 [node name="questao5" type="Sprite2D" parent="." unique_id=887732078]
 visible = false
-position = Vector2(603.7714, 355.0562)
-scale = Vector2(0.98130846, 0.981308)
+position = Vector2(575, 320)
 texture = ExtResource("2_s4ldr")
 
 [node name="Questao" type="Label" parent="questao5" unique_id=951589316]
@@ -624,15 +761,14 @@ texture = ExtResource("6_nsyqp")
 
 [node name="questao6" type="Sprite2D" parent="." unique_id=1584102642]
 visible = false
-position = Vector2(605.3814, 343.50003)
-scale = Vector2(0.96759295, 0.9675926)
+position = Vector2(575, 320)
 texture = ExtResource("2_s4ldr")
 
 [node name="Questao" type="Label" parent="questao6" unique_id=1403225973]
-offset_left = -241.22351
-offset_top = -306.14307
-offset_right = -5.2235107
-offset_bottom = -244.14307
+offset_left = -241.0
+offset_top = -289.0
+offset_right = -5.0
+offset_bottom = -227.0
 theme_override_colors/font_color = Color(0.10189872, 0.11977533, 0.28442967, 1)
 theme_override_fonts/font = ExtResource("3_s4ldr")
 theme_override_font_sizes/font_size = 46
@@ -741,8 +877,8 @@ scale = Vector2(0.8434152, 0.8434153)
 texture = ExtResource("6_nsyqp")
 
 [node name="resultado" type="Sprite2D" parent="." unique_id=569349742]
-position = Vector2(604, 317.00003)
-scale = Vector2(0.99531734, 0.99531734)
+visible = false
+position = Vector2(575, 320)
 texture = ExtResource("2_s4ldr")
 
 [node name="aviso" type="Label" parent="resultado" unique_id=954771039]
@@ -790,10 +926,13 @@ stream = ExtResource("9_s4ldr")
 
 [node name="MusicaFundo" type="AudioStreamPlayer" parent="." unique_id=1255354187]
 stream = ExtResource("9_lky8y")
-autoplay = true
 
 [node name="SomVitoria" type="AudioStreamPlayer" parent="." unique_id=527400831]
 stream = ExtResource("10_qv2gg")
 
 [node name="SomDerrota" type="AudioStreamPlayer" parent="." unique_id=468225018]
 stream = ExtResource("11_nsyqp")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=617962176]
+root_node = NodePath("../resultado/resultadoFinal")
+libraries/ = SubResource("AnimationLibrary_coh3w")

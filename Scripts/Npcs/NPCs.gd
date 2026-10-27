@@ -105,12 +105,10 @@ func cutscene_inicial():
 	Global.level+=1 
 		
 func level_tutorial():
-	# Mudança de Sprite
-	play("RODRIGO-happy")
 	
 	# Ativa a Sequencia de Animações -> entrar -> falar
 	Global.npcs_animations_sequence = ["npc_fade_in"]
-	await play_seq()
+	await play_seq("RODRIGO-happy")
 
 	await talk("Rodrigo_falas_1", "RODRIGO-talk", "VozRodrigo")
 	Global.npcs_animations_sequence = ["npc_talk_1"]
@@ -133,52 +131,81 @@ func level_tutorial():
 	await play_seq()
 	
 	#Passa um level
-	Global.level+=1 
+	Global.level+=1
 
 func level_ccs(): # Desativado
-	play("CCS-normal")
 	Global.npcs_animations_sequence = ["npc_fade_in"]
-	await play_seq()
+	await play_seq("CCS-normal")
 
 	await talk("aluno_ccs_falas_1", "CCS-talk", "VozCCS")
-	Global.npcs_animations_sequence = ["npc_talk_1"]
-	await play_seq()
+	await talk("aluno_ccs_falas_2", "CCS-happy", "VozCCS")
+	await talk("aluno_ccs_falas_3", "CCS-normal", "VozCCS")
+	await talk("aluno_ccs_falas_4", "CCS-talk", "VozCCS")
+	await talk("aluno_ccs_falas_5", "CCS-normal", "VozCCS")
 	
 	Global.duvida_ccs = true; 
 	Global.signal_aluno_ccs.emit()
 	await Global.pass_level;
 	
 	await get_tree().create_timer(2).timeout
-	await talk("aluno_ccs_falas_2", "CCS-happy", "VozCCS")
+	if Global.duvida_status == true:
+		Global.npcs_animations_sequence = ["npc_talk_1"]
+		play_seq()
+		await talk("aluno_ccs_falas_6A", "CCS-happy", "VozCCS")
+	elif Global.duvida_status == false:
+		Global.npcs_animations_sequence = ["npc_talk_1"]
+		play_seq()
+		await talk("aluno_ccs_falas_6B", "CCS-normal", "VozCCS")
+	
+	
 	Global.npcs_animations_sequence = ["npc_fade_out"]
 	await play_seq()
 	Global.level+=1 
 
 func level_ccg(): # Desativado
-	play("CCG-normal")
 	Global.npcs_animations_sequence = ["npc_fade_in"]
-	await play_seq()
+	await play_seq("CCG-normal")
 
-	await talk("aluno_ccg_falas_1", "CCG-talk", "VozCCG")
 	Global.npcs_animations_sequence = ["npc_talk_1"]
-	await play_seq()
-	
+	play_seq()
+	await talk("aluno_ccg_falas_1", "CCG-talk", "VozCCG")
+	Global.npcs_animations_sequence = ["npc_talk_2"]
+	play_seq()
 	await talk("aluno_ccg_falas_2", "CCG-happy", "VozCCG")
+	Global.npcs_animations_sequence = ["npc_talk_1"]
+	play_seq()
+	await talk("aluno_ccg_falas_3", "CCG-talk", "VozCCG")
+	Global.npcs_animations_sequence = ["npc_talk_2"]
+	play_seq()
+	await talk("aluno_ccg_falas_4", "CCG-normal", "VozCCG")
+	
+	Global.duvida_ccg = true; 
+	Global.signal_aluno_ccg.emit()
+	await Global.pass_level;
+	
+	if Global.duvida_status == true:
+		Global.npcs_animations_sequence = ["npc_talk_2"]
+		play_seq()
+		await talk("aluno_ccg_falas_5A", "CCG-happy", "VozCCG")
+	elif Global.duvida_status == false:
+		Global.npcs_animations_sequence = ["npc_talk_1"]
+		play_seq()
+		await talk("aluno_ccg_falas_5B", "CCG-normal", "VozCCG")
+		
 	Global.npcs_animations_sequence = ["npc_fade_out"]
 	await play_seq()
 	Global.level+=1 
 
 func level_pato_fred():
-	play("PATOFRED-normal")
 	Global.npcs_animations_sequence = ["npc_fade_in"]
-	await play_seq()
+	await play_seq("PATOFRED-normal")
 	
 	await talk("pato_fred_falas_1", "PATOFRED-happy", "VozPatoFred")
 	Global.npcs_animations_sequence = ["npc_talk_2"]
 	play_seq()
 	await talk("pato_fred_falas_2", "PATOFRED-talk", "VozPatoFred")
 	await talk("pato_fred_falas_3", "PATOFRED-normal", "VozPatoFred")
-	Global.npcs_animations_sequence = ["npc_talk_3"]
+	Global.npcs_animations_sequence = ["npc_talk_1"]
 	play_seq()
 	await talk("pato_fred_falas_4", "PATOFRED-talk", "VozPatoFred")
 	await talk("pato_fred_falas_5", "PATOFRED-normal", "VozPatoFred")
@@ -187,13 +214,14 @@ func level_pato_fred():
 	Global.signal_pato_fred.emit()
 	await Global.pass_level;
 	
+	await get_tree().create_timer(2).timeout
 	if Global.duvida_status == true:
 		Global.npcs_animations_sequence = ["npc_talk_1"]
-		await play_seq("PATOFRED-happy")
+		play_seq()
 		await talk("pato_fred_falas_6A", "PATOFRED-happy", "VozPatoFred")
 	elif Global.duvida_status == false:
 		Global.npcs_animations_sequence = ["npc_talk_1"]
-		await play_seq("PATOFRED-normal")
+		play_seq()
 		await talk("pato_fred_falas_6B", "PATOFRED-normal", "VozPatoFred")
 		
 	Global.npcs_animations_sequence = ["npc_fade_out"]
@@ -201,40 +229,45 @@ func level_pato_fred():
 	Global.level+=1 
 
 func level_cct():
-	play("CCT-normal")
 	Global.npcs_animations_sequence = ["npc_fade_in"]
-	await play_seq()
+	await play_seq("CCT-normal")
 	
 	await talk("aluno_cct_falas_1", "CCT-talk", "VozCCT")
+	await talk("aluno_cct_falas_2", "CCT-normal", "VozCCT")
+	Global.npcs_animations_sequence = ["npc_talk_2"]
+	play_seq()
+	await talk("aluno_cct_falas_3", "CCT-talk", "VozCCT")
+	await talk("aluno_cct_falas_4", "CCT-normal", "VozCCT")
 	Global.npcs_animations_sequence = ["npc_talk_1"]
-	await play_seq()
-	
+	await talk("aluno_cct_falas_5", "CCT-happy", "VozCCT")
+	await talk("aluno_cct_falas_6", "CCT-normal", "VozCCT")
 	Global.duvida_cct = true; 
 	await Global.pass_level
 	
+	await get_tree().create_timer(1).timeout
 	if Global.duvida_status == true:
 		Global.npcs_animations_sequence = ["npc_talk_1"]
-		await play_seq("CCT-happy")
-		await talk("aluno_cct_falas_3A", "CCT-happy", "VozCCT")
+		await talk("aluno_cct_falas_7A", "CCT-happy", "VozCCT")
 	elif Global.duvida_status == false:
 		Global.npcs_animations_sequence = ["npc_talk_1"]
-		await play_seq("CCT-normal")
-		await talk("aluno_cct_falas_3B", "CCT-talk", "VozCCT")
+		await talk("aluno_cct_falas_7B", "CCT-talk", "VozCCT")
 		
 	Global.npcs_animations_sequence = ["npc_fade_out"]
 	await play_seq()
 	Global.level+=1 
 
 func level_moema():
-		play("MOEMA-normal")
 		Global.npcs_animations_sequence = ["npc_fade_in"]
-		await play_seq()
+		await play_seq("MOEMA-normal")
 
 		await talk("moema_falas_1", "MOEMA-talk", "VozMoema")
 		Global.npcs_animations_sequence = ["npc_talk_1"]
-		await play_seq()
+		play_seq()
+		await talk("moema_falas_2", "MOEMA-normal", "VozMoema")
+		await talk("moema_falas_3", "MOEMA-talk", "VozMoema")
+		await talk("moema_falas_4", "MOEMA-normal", "VozMoema")
+		await talk("moema_falas_5", "MOEMA-talk", "VozMoema")
 	
-		await talk("moema_falas_2", "MOEMA-happy", "VozMoema")
 		cutscene_good_ending.visible = true 
 		animation_player.play('good_ending')
 		camera_flash.play()
@@ -244,6 +277,7 @@ func level_moema():
 		Global.zoom_switch = false;
 		await think('good_ending')
 		Global.level += 1
+		get_tree().change_scene_to_file("res://Cenas/mainMenu.tscn")
 	
 
 func level_game_over():
@@ -261,7 +295,7 @@ func level_game_over():
 	await get_tree().create_timer(1).timeout
 	await think('bad_ending')
 	Global.level += 1
-	
+	get_tree().change_scene_to_file("res://Cenas/mainMenu.tscn")
 	
 
 signal seq_end
@@ -270,20 +304,26 @@ var sprite_toggle := ""
 
 func play_seq(sprite: String = ""):
 	Global.i = 0
+	playing = false
 	sprite_toggle = sprite
 	await seq_end
 
-func _on_click_npc(_collider):
-	if npcs_animations.is_playing() or Global.i >= Global.npcs_animations_sequence.size():
-		return
+var playing = false; 
 
+func _on_click_npc(_collider):
+	if playing == true or npcs_animations.is_playing() or Global.i >= Global.npcs_animations_sequence.size():
+		return
+		
+	playing = true
+	
 	if sprite_toggle != "":
 		play(sprite_toggle)
 		sprite_toggle = ""
 
 	npcs_animations.play(Global.npcs_animations_sequence[Global.i])
 	Global.i += 1
+	await npcs_animations.animation_finished
+	playing = false
 
 	if Global.i >= Global.npcs_animations_sequence.size():
-		await npcs_animations.animation_finished
 		seq_end.emit()

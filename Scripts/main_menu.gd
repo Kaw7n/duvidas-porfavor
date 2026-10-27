@@ -37,4 +37,11 @@ func _on_texture_button_3_pressed() -> void: # Botão de quitar
 
 # Fade in para Fade Out
 func _on_timer_timeout() -> void:
+	Global.lives = 3; 
+	Global.level = 0;
+	Global.duvida_tutorial = false;
+	Global.duvida_cct = false;
+	Global.duvida_pato_fred = false;
+	Global.duvida_ccs = false;
+	Global.duvida_ccg = false;
 	get_tree().change_scene_to_file("res://Cenas/sala_de_aula.tscn")

@@ -1,12 +1,10 @@
 [gd_scene format=4 uid="uid://bys33r5tumdyt"]
 
-[ext_resource type="Texture2D" uid="uid://btspsgv6ha52c" path="res://Assets 2D/MinigamesComputador/TelaLogin.png" id="1_ke8cg"]
 [ext_resource type="Script" uid="uid://dj5p3c3y20ly1" path="res://Scripts/computador.gd" id="1_npykp"]
-[ext_resource type="Texture2D" uid="uid://b4wltnjvbgcbr" path="res://Assets 2D/MinigamesComputador/TelaCarregando.png" id="2_pcuh1"]
+[ext_resource type="Texture2D" uid="uid://bdwt3lna24jtw" path="res://Assets 2D/MinigamesComputador/TelaMinhasDisciplinasFinal.png" id="2_kthoi"]
 [ext_resource type="Texture2D" uid="uid://ow41lxoeahnf" path="res://Assets 2D/MinigamesComputador/Blackout.png" id="2_u27gc"]
 [ext_resource type="Texture2D" uid="uid://br2rhvux5rodt" path="res://Assets 2D/MinigamesComputador/computador transparente.png" id="2_y4h44"]
 [ext_resource type="Texture2D" uid="uid://cfv10npxui2wk" path="res://Assets 2D/MinigamesComputador/PastaMoema/Sprite Moema cabeça 1.png" id="3_5lp86"]
-[ext_resource type="Texture2D" uid="uid://hfio5axqlo2c" path="res://Assets 2D/MinigamesComputador/TelaFinal.png" id="3_8so1n"]
 [ext_resource type="Texture2D" uid="uid://cs8lri51yc5ay" path="res://Assets 2D/MinigamesComputador/ContagemUm.png" id="3_pkwbt"]
 [ext_resource type="FontFile" uid="uid://crg25q10e3iqb" path="res://Misc/Dico.ttf" id="3_y4h44"]
 [ext_resource type="Texture2D" uid="uid://be7bhq3a8ikbs" path="res://Assets 2D/MinigamesComputador/ContagemDois.png" id="4_8n3u2"]
@@ -26,7 +24,10 @@
 [ext_resource type="AudioStream" uid="uid://c1twpryba0mx8" path="res://Audio/Som de Pc Iniciando.mp3" id="10_35514"]
 [ext_resource type="Texture2D" uid="uid://bc5h7ewvaspl3" path="res://Assets 2D/MinigamesComputador/cct_fail.png" id="16_41kec"]
 [ext_resource type="Texture2D" uid="uid://jgsbf2c84bcr" path="res://Assets 2D/MinigamesComputador/cct_win.png" id="17_kthoi"]
+[ext_resource type="Texture2D" uid="uid://h7kseteuknec" path="res://Assets 2D/MinigamesComputador/TelaCarregandoFinal.png" id="20_nywf0"]
+[ext_resource type="Texture2D" uid="uid://bf8k6iwgoum3r" path="res://Assets 2D/MinigamesComputador/TelaLoginFinal.png" id="21_kthoi"]
 [ext_resource type="Texture2D" uid="uid://c8lddfovsj6gu" path="res://Assets 2D/MinigamesComputador/PastaMoema/Codes.png" id="25_hxbug"]
+[ext_resource type="AudioStream" uid="uid://bekwqlk0vadb2" path="res://Audio/tictac.wav" id="25_nywf0"]
 [ext_resource type="AudioStream" uid="uid://b5dr2n8crujf2" path="res://Audio/SFX/DuvidaFail.mp3" id="26_t7jtf"]
 [ext_resource type="AudioStream" uid="uid://dhicbvxs53qct" path="res://Audio/SFX/DuvidaWin.mp3" id="27_tgs3b"]
 [ext_resource type="AudioStream" uid="uid://ctmnt0i6rirb8" path="res://Audio/SFX/MoemaFail.wav" id="28_41kec"]
@@ -987,7 +988,7 @@ bg_color = Color(0.6, 0.6, 0.6, 0)
 bg_color = Color(0.6, 0.6, 0.6, 0)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bhunq"]
-bg_color = Color(0.082945846, 0.32457557, 0.9980058, 1)
+bg_color = Color(0.14901961, 0.29411766, 0.5137255, 1)
 corner_radius_top_left = 10
 corner_radius_top_right = 10
 corner_radius_bottom_right = 10
@@ -1230,7 +1231,7 @@ _data = {
 &"screen_turning_on": SubResource("Animation_cp5h6")
 }
 
-[node name="Computer" type="Control" unique_id=90605145 node_paths=PackedStringArray("login", "normal", "loading", "final", "pc_melody", "cct_minigame", "blackout", "counter", "computer_animations", "computador", "password", "access_button", "animation_player", "click_sound", "computer_melody", "computer_on", "incorret_password", "cct_music", "true_moema_1", "true_moema_2", "true_moema_3", "true_moema_4", "true_moema_5", "false_moema", "moema_animations", "timer_moema", "computer_codes", "duvida_fail", "duvida_win", "moema_fail", "moema_right", "cct_fail", "cct_win")]
+[node name="Computer" type="Control" unique_id=90605145 node_paths=PackedStringArray("login", "normal", "loading", "final", "pc_melody", "cct_minigame", "blackout", "counter", "computer_animations", "computador", "password", "access_button", "animation_player", "click_sound", "computer_melody", "computer_on", "incorret_password", "cct_music", "timer", "true_moema_1", "true_moema_2", "true_moema_3", "true_moema_4", "true_moema_5", "false_moema", "moema_animations", "timer_moema", "computer_codes", "duvida_fail", "duvida_win", "moema_fail", "moema_right", "cct_fail", "cct_win")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -1262,6 +1263,7 @@ computer_melody = NodePath("ComputerMelody")
 computer_on = NodePath("ComputerOn")
 incorret_password = NodePath("IncorretPassword")
 cct_music = NodePath("CCTMusic")
+timer = NodePath("Timer")
 true_moema_1 = NodePath("TrueMoema1")
 true_moema_2 = NodePath("TrueMoema2")
 true_moema_3 = NodePath("TrueMoema3")
@@ -1280,7 +1282,7 @@ cct_win = NodePath("CctWin")
 
 [node name="Final" type="Sprite2D" parent="." unique_id=934432101]
 position = Vector2(574, 370)
-texture = ExtResource("3_8so1n")
+texture = ExtResource("2_kthoi")
 
 [node name="TrueMoema1" type="AnimatedSprite2D" parent="." unique_id=1300836918]
 position = Vector2(555, 324)
@@ -1411,28 +1413,29 @@ text = "INICIAR LIMPEZA"
 
 [node name="Loading" type="Sprite2D" parent="." unique_id=303232213]
 position = Vector2(574, 370)
-texture = ExtResource("2_pcuh1")
+scale = Vector2(0.86, 0.86)
+texture = ExtResource("20_nywf0")
 
 [node name="Login" type="Sprite2D" parent="." unique_id=858851875]
-position = Vector2(574.5454, 370.9091)
-texture = ExtResource("1_ke8cg")
+position = Vector2(577.885, 370.909)
+texture = ExtResource("21_kthoi")
 
 [node name="Password" type="LineEdit" parent="Login" unique_id=1964315777]
-offset_left = 52.727234
-offset_top = 9.9999695
-offset_right = 168.18176
-offset_bottom = 40.99997
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+offset_left = 56.159573
+offset_top = 10.909163
+offset_right = 208.88687
+offset_bottom = 36.363663
+theme_override_colors/font_color = Color(0.14901961, 0.29411766, 0.5137255, 1)
 theme_override_fonts/font = ExtResource("3_y4h44")
 theme_override_styles/normal = SubResource("StyleBoxFlat_ke8cg")
 theme_override_styles/read_only = SubResource("StyleBoxFlat_rhoyl")
 theme_override_styles/focus = SubResource("StyleBoxFlat_nktf8")
 
 [node name="AccessButton" type="Button" parent="Login" unique_id=703498048]
-offset_left = 45.45453
-offset_top = 71.81818
-offset_right = 341.81818
-offset_bottom = 100.0
+offset_left = 52.52319
+offset_top = 69.09099
+offset_right = 340.70496
+offset_bottom = 97.27281
 theme_override_font_sizes/font_size = 12
 theme_override_styles/normal = SubResource("StyleBoxFlat_bhunq")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_2djfb")
@@ -1452,6 +1455,7 @@ position = Vector2(574, 370)
 texture = ExtResource("2_y4h44")
 
 [node name="ExitConfig" type="Button" parent="." unique_id=1557880155]
+visible = false
 layout_mode = 0
 offset_left = 144.54546
 offset_top = 100.0
@@ -1465,6 +1469,9 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_npykp")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_pcuh1")
 theme_override_styles/hover = SubResource("StyleBoxFlat_8so1n")
 text = "X"
+
+[node name="Timer" type="AudioStreamPlayer" parent="." unique_id=1107679046]
+stream = ExtResource("25_nywf0")
 
 [node name="ClickSound" type="AudioStreamPlayer" parent="." unique_id=186544889]
 stream = ExtResource("8_i7crr")

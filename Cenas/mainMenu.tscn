@@ -1,10 +1,8 @@
 [gd_scene format=3 uid="uid://ccd0bo7oecr6i"]
 
 [ext_resource type="Script" uid="uid://cgvgq6hhg483h" path="res://Scripts/main_menu.gd" id="1_j6ip4"]
-[ext_resource type="Texture2D" uid="uid://xqcdlpt2sbe" path="res://Assets UI/Menu/mmenuMesa.png" id="2_cvjuc"]
-[ext_resource type="Texture2D" uid="uid://b6dt1atgv5v8b" path="res://Assets UI/Menu/mmenuCaderno.png" id="3_bocn1"]
+[ext_resource type="Texture2D" uid="uid://l2ettrc8j7ar" path="res://Assets UI/Menu/Menu.png" id="2_cvjuc"]
 [ext_resource type="Script" uid="uid://b7lijytg10hv2" path="res://Scripts/Cameras/camera_2d.gd" id="4_l0j11"]
-[ext_resource type="Texture2D" uid="uid://cy1b73nuoxdrc" path="res://Assets UI/Menu/Logo PlaceHolder.png" id="5_h5isk"]
 [ext_resource type="Texture2D" uid="uid://3q6j76ji1rtj" path="res://Assets UI/Butões/1.png" id="6_evydy"]
 [ext_resource type="Texture2D" uid="uid://c3vwv5j0l32kj" path="res://Assets UI/Butões/3.png" id="7_cvjuc"]
 [ext_resource type="Texture2D" uid="uid://bpogl5i77ccwp" path="res://Assets UI/Butões/2.png" id="8_bocn1"]
@@ -109,13 +107,8 @@ texture = SubResource("GradientTexture2D_ml7fk")
 
 [node name="Mesa de Fundo" type="Sprite2D" parent="." unique_id=476997413]
 position = Vector2(577.00024, 323)
-scale = Vector2(0.5994792, 0.59351856)
+scale = Vector2(1, 0.992)
 texture = ExtResource("2_cvjuc")
-
-[node name="Caderno(Menu)" type="Sprite2D" parent="." unique_id=1288367719]
-position = Vector2(651, 324)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("3_bocn1")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=2097106382]
 position = Vector2(24, 0)
@@ -123,19 +116,14 @@ offset = Vector2(574.425, 322.75)
 zoom = Vector2(1.25, 1.25)
 script = ExtResource("4_l0j11")
 
-[node name="Logo PlaceHolder" type="Sprite2D" parent="." unique_id=2014925057]
-position = Vector2(588.915, 198.47997)
-rotation = 0.08901179
-scale = Vector2(0.22330438, 0.25298297)
-texture = ExtResource("5_h5isk")
-
 [node name="BotaoIniciar" type="TextureButton" parent="." unique_id=2141046020]
 layout_mode = 0
-offset_left = 447.00003
-offset_top = 281.00003
-offset_right = 720.1853
-offset_bottom = 323.40442
-rotation = 0.116937056
+offset_left = 382.265
+offset_top = 271.975
+offset_right = 682.26514
+offset_bottom = 321.975
+rotation = 0.08726646
+scale = Vector2(1.2, 1.2)
 texture_normal = ExtResource("6_evydy")
 texture_pressed = ExtResource("7_cvjuc")
 texture_hover = ExtResource("8_bocn1")
@@ -144,11 +132,12 @@ stretch_mode = 3
 
 [node name="BotaoConfig" type="TextureButton" parent="." unique_id=615470740]
 layout_mode = 0
-offset_left = 458.00003
-offset_top = 369.00003
-offset_right = 672.0178
-offset_bottom = 411.40442
-rotation = 0.116937056
+offset_left = 429.785
+offset_top = 364.56
+offset_right = 629.7849
+offset_bottom = 414.56
+rotation = 0.08726646
+scale = Vector2(1.2, 1.2)
 texture_normal = ExtResource("9_h5isk")
 texture_pressed = ExtResource("10_xmwsq")
 texture_hover = ExtResource("11_fi82c")
@@ -157,11 +146,12 @@ stretch_mode = 3
 
 [node name="BotaoSair" type="TextureButton" parent="." unique_id=996526146]
 layout_mode = 0
-offset_left = 508.00003
-offset_top = 467.00006
-offset_right = 602.9772
-offset_bottom = 509.40442
+offset_left = 470.23
+offset_top = 468.1
+offset_right = 570.2304
+offset_bottom = 518.1
 rotation = 0.116937056
+scale = Vector2(1.2, 1.2)
 texture_normal = ExtResource("12_okv4r")
 texture_pressed = ExtResource("13_bn6jt")
 texture_hover = ExtResource("14_4iy1a")
@@ -193,6 +183,7 @@ bus = &"SFX"
 script = SubResource("GDScript_2rfsq")
 
 [node name="MenuConfig" type="Panel" parent="." unique_id=672158535]
+visible = false
 layout_mode = 0
 offset_left = 245.0
 offset_top = 106.0

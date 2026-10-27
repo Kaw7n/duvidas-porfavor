@@ -26,6 +26,7 @@ extends Control
 @export var incorret_password: AudioStreamPlayer
 @export var musica_orquestralde_vitoria_place_holder: AudioStreamPlayer
 @export var cct_music: AudioStreamPlayer
+@export var timer: AudioStreamPlayer
 
 #Minigames Moema
 @export var true_moema_1: AnimatedSprite2D
@@ -139,7 +140,21 @@ func tutorial():
 	await switchComputer()
 	Global.pass_level.emit()
 	
+	
+#Duvidas CCT
+var lifes = 3
+var active_round = false
+var round_moema = 1;
+var mouse_on_false_moema = 0
+var mouse_on_true_moema = 0
+	
 func duvida_cct():
+	lifes = 3
+	active_round = false
+	round_moema = 1;
+	mouse_on_false_moema = 0
+	mouse_on_true_moema = 0
+	
 	await get_tree().create_timer(1).timeout
 	cct_music.play()
 	cct_minigame.visible = true
@@ -193,15 +208,9 @@ func _on_access_button_pressed() -> void:
 func _on_cct_begin_pressed() -> void:
 	cct_button.emit()
 
-# Mini game moema ///////////////////////////
-var lifes = 3
-var active_round = false
-var round_moema = 1;
-var mouse_on_false_moema = 0
-var mouse_on_true_moema = 0
-
 func being_round():
 	active_round = true
+	timer.play()
 	timer_moema.start()
 
 func _on_timer_moema_timeout() -> void:
@@ -211,6 +220,7 @@ func _on_timer_moema_timeout() -> void:
 func moema_falsa_hit():
 	active_round = false
 	timer_moema.stop()
+	timer.stop()
 	moema_right.play()
 	round_moema +=1
 	moema_next_round()
@@ -218,6 +228,7 @@ func moema_falsa_hit():
 func moema_verdadeira_hit():
 	active_round = false
 	timer_moema.stop()
+	timer.stop()
 	moema_fail.play()
 	lifes -= 1
 	round_moema +=1
@@ -246,16 +257,23 @@ func moema_next_round():
 
 func game_over():
 	cct_music.stop()
+	timer.stop()
 	#caso seja derrota
 	if lifes <= 0:
-		Global.lives -= 1
 		cct_fail.visible = true
+		Global.lives -= 1
 		duvida_fail.play()
 		Global.duvida_status = false
+		await get_tree().create_timer(3).timeout
+		Global.duvida_cct = false
+		switchComputer()
 	else:
 		cct_win.visible = true
 		duvida_win.play()
 		Global.duvida_status = true
+		await get_tree().create_timer(3).timeout
+		Global.duvida_cct = false
+		switchComputer()
 		
 	Global.duvida_cct = false; 
 	Global.pass_level.emit()
