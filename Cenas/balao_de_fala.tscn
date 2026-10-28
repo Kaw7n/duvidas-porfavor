@@ -93,24 +93,31 @@ autowrap_mode = 2
 
 [node name="VozRodrigo" type="AudioStreamPlayer" parent="." unique_id=829025541]
 stream = ExtResource("4_1xbjv")
+bus = &"SFX"
 
 [node name="VozPatoFred" type="AudioStreamPlayer" parent="." unique_id=612981988]
 stream = ExtResource("5_ijbk1")
+bus = &"SFX"
 
 [node name="VozMoema" type="AudioStreamPlayer" parent="." unique_id=2037811177]
 stream = ExtResource("6_rqokl")
+bus = &"SFX"
 
 [node name="VozCCT" type="AudioStreamPlayer" parent="." unique_id=730617167]
 stream = ExtResource("7_2juoc")
+bus = &"SFX"
 
 [node name="VozCCS" type="AudioStreamPlayer" parent="." unique_id=844927047]
 stream = ExtResource("8_sfkor")
+bus = &"SFX"
 
 [node name="VozCCG" type="AudioStreamPlayer" parent="." unique_id=2039600781]
 stream = ExtResource("9_sowof")
 volume_db = -10.0
+bus = &"SFX"
 
 [node name="VozPensamento" type="AudioStreamPlayer" parent="." unique_id=1075074435]
 stream = ExtResource("10_rqokl")
 volume_db = -20.0
 pitch_scale = 0.67
+bus = &"SFX"

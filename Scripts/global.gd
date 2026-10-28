@@ -38,3 +38,5 @@ signal dim_in
 signal dim_out
 @warning_ignore("unused_signal")
 signal pass_level
+@warning_ignore("unused_signal")
+signal the_end

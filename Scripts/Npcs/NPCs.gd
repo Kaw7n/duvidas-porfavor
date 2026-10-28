@@ -1,6 +1,5 @@
 extends AnimatedSprite3D
 
-
 @export var camera_3d: Camera3D
 @export var area_3d: Area3D
 @export var npcs_animations: AnimationPlayer
@@ -15,6 +14,7 @@ extends AnimatedSprite3D
 @export var game_over: AudioStreamPlayer
 @export var computer_notification: AudioStreamPlayer
 @export var moema_antiga: Sprite2D
+@export var main_bmg: AudioStreamPlayer
 
 
 
@@ -125,6 +125,7 @@ func level_tutorial():
 
 	 # Espera o sinal pass_level.emit
 	await Global.pass_level
+	
 	#Ativa a sequencia de animações -> sair
 	await talk("Rodrigo_falas_6", "RODRIGO-happy", "VozRodrigo")
 	Global.npcs_animations_sequence = ["npc_fade_out"]
@@ -144,8 +145,10 @@ func level_ccs(): # Desativado
 	await talk("aluno_ccs_falas_5", "CCS-normal", "VozCCS")
 	
 	Global.duvida_ccs = true; 
+	animation_player.play("main_bmg_out")
 	Global.signal_aluno_ccs.emit()
 	await Global.pass_level;
+	animation_player.play("main_bmg_in")
 	
 	await get_tree().create_timer(2).timeout
 	if Global.duvida_status == true:
@@ -179,9 +182,11 @@ func level_ccg(): # Desativado
 	play_seq()
 	await talk("aluno_ccg_falas_4", "CCG-normal", "VozCCG")
 	
-	Global.duvida_ccg = true; 
+	Global.duvida_ccg = true;
+	animation_player.play("main_bmg_out")
 	Global.signal_aluno_ccg.emit()
 	await Global.pass_level;
+	animation_player.play("main_bmg_in")
 	
 	if Global.duvida_status == true:
 		Global.npcs_animations_sequence = ["npc_talk_2"]
@@ -211,8 +216,10 @@ func level_pato_fred():
 	await talk("pato_fred_falas_5", "PATOFRED-normal", "VozPatoFred")
 	
 	Global.duvida_pato_fred = true; 
+	animation_player.play("main_bmg_out")
 	Global.signal_pato_fred.emit()
 	await Global.pass_level;
+	animation_player.play("main_bmg_in")
 	
 	await get_tree().create_timer(2).timeout
 	if Global.duvida_status == true:
@@ -241,8 +248,10 @@ func level_cct():
 	Global.npcs_animations_sequence = ["npc_talk_1"]
 	await talk("aluno_cct_falas_5", "CCT-happy", "VozCCT")
 	await talk("aluno_cct_falas_6", "CCT-normal", "VozCCT")
+	
 	Global.duvida_cct = true; 
 	await Global.pass_level
+	animation_player.play("main_bmg_in")
 	
 	await get_tree().create_timer(1).timeout
 	if Global.duvida_status == true:
@@ -277,7 +286,8 @@ func level_moema():
 		Global.zoom_switch = false;
 		await think('good_ending')
 		Global.level += 1
-		get_tree().change_scene_to_file("res://Cenas/mainMenu.tscn")
+		Global.the_end.emit()
+
 	
 
 func level_game_over():
@@ -295,7 +305,7 @@ func level_game_over():
 	await get_tree().create_timer(1).timeout
 	await think('bad_ending')
 	Global.level += 1
-	get_tree().change_scene_to_file("res://Cenas/mainMenu.tscn")
+	Global.the_end.emit()
 	
 
 signal seq_end

@@ -1,7 +1,7 @@
 extends Camera2D
 
 
-const Dead_Zone = 60
+const Dead_Zone = 67
 
 
 func _input(event: InputEvent) -> void:

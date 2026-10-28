@@ -642,15 +642,19 @@ shape = SubResource("RectangleShape2D_4dgpn")
 
 [node name="MusicaFundo" type="AudioStreamPlayer" parent="." unique_id=148632381]
 stream = ExtResource("16_ee40m")
+bus = &"BGM"
 
 [node name="SomAcerto" type="AudioStreamPlayer" parent="." unique_id=231545535]
 stream = ExtResource("17_b4a4h")
+bus = &"SFX"
 
 [node name="SomErro" type="AudioStreamPlayer" parent="." unique_id=1451736434]
 stream = ExtResource("17_pqdmu")
+bus = &"SFX"
 
 [node name="SomDerrota" type="AudioStreamPlayer" parent="." unique_id=638180187]
 stream = ExtResource("18_s8pk4")
+bus = &"SFX"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=2016829544]
 libraries/ = SubResource("AnimationLibrary_frdt3")

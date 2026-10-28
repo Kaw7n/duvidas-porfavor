@@ -272,12 +272,23 @@
   },
   "good_ending": {
 	"falas": [
-      "Esse é o Good ending."
+	"E tirando uma foto final, você vê Moema e os alunos que ajudou felizes com o seu trabalho",
+	"Finalmente esse primeiro dia de monitoria acabou, e pensar que foi apenas o começo.",
+	"Você conheceu tantas pessoas diferentes, de cursos diferentes e com motivações diferentes. Mas todas elas precisavam de apenas uma coisa...",
+	"Da sua ajuda!",
+	"Sentindo a gratidão de todos, você começa seu caminho de volta para casa, ansiosamente preparado para mais um dia amanhã",
+	"Muito obrigado pelo seu trabalho Monitor!"
 	]
   },
   "bad_ending": {
 	"falas": [
-      "Esse é o bad_ending."
+	  "Infelizmente, um e-mail da coordenação da monitoria chega a você:",
+	  "-Monitor, agradecemos o seu esforço, mas optamos por encerrar as monitorias da Unifor por hoje. Vamos continuar as buscas pelos monitores perdidos-",
+	  "-Por hoje, você pode descansar. Amanhã vamos analisar novas possibilidades.-",
+	  "-De: Coordenação de Monitoria-",
+	  "Realmente… hoje foi um dia difícil, acabou que não foi dessa vez!",
+	  "Mas talvez amanhã você consiga mudar isso, Sempre dá para tentar novamente",
+	  "Muito obrigado pelo seu trabalho Monitor!"
 	]
   }
 }

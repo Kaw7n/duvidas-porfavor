@@ -11,8 +11,11 @@ config_version=5
 [application]
 
 config/name="Duvídas, Porfavor!"
+config/version="1.0"
 run/main_scene="uid://ccd0bo7oecr6i"
 config/features=PackedStringArray("4.7", "Forward Plus")
+boot_splash/bg_color=Color(0.1279901, 0.3623966, 0.64152664, 1)
+config/icon="uid://c4wi0tv7qahen"
 
 [audio]
 

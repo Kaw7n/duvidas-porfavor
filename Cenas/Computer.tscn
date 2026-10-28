@@ -1472,6 +1472,7 @@ text = "X"
 
 [node name="Timer" type="AudioStreamPlayer" parent="." unique_id=1107679046]
 stream = ExtResource("25_nywf0")
+bus = &"SFX"
 
 [node name="ClickSound" type="AudioStreamPlayer" parent="." unique_id=186544889]
 stream = ExtResource("8_i7crr")
@@ -1479,6 +1480,7 @@ bus = &"SFX"
 
 [node name="ComputerMelody" type="AudioStreamPlayer" parent="." unique_id=186176515]
 stream = ExtResource("9_spv0u")
+volume_db = 5.0
 bus = &"SFX"
 
 [node name="ComputerOn" type="AudioStreamPlayer" parent="." unique_id=879743751]
@@ -1511,7 +1513,7 @@ bus = &"SFX"
 
 [node name="CCTMusic" type="AudioStreamPlayer" parent="." unique_id=662351478]
 stream = ExtResource("32_kthoi")
-volume_db = -12.0
+volume_db = -4.0
 bus = &"BGM"
 
 [node name="ComputerAnimations" type="AnimationPlayer" parent="." unique_id=990585914]

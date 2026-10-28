@@ -61,7 +61,10 @@ func point_click():
 		return
 	var collider = raycast_result.collider
 	if collider.is_in_group("computer"):
-		click_computer.emit(collider)
+		if Global.duvida_cct == false and Global.duvida_tutorial == false:
+			return
+		else:
+			click_computer.emit(collider)
 	elif collider.is_in_group("npc"):
 		click_npc.emit(collider)
 			
