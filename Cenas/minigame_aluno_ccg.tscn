@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cplwx838cyvnn" path="res://Cenas/minigame_aluno_ccg.gd" id="1_jcycq"]
 [ext_resource type="Texture2D" uid="uid://slb5r1upltbp" path="res://Assets 2D/MinigameCCG/papel1.png" id="2_s4ldr"]
+[ext_resource type="FontFile" uid="uid://ip1mpyutngtt" path="res://Misc/Datafont.ttf" id="3_nsyqp"]
 [ext_resource type="FontFile" uid="uid://crg25q10e3iqb" path="res://Misc/Dico.ttf" id="3_s4ldr"]
 [ext_resource type="Texture2D" uid="uid://dwkotcnrcxqwr" path="res://Assets 2D/MinigameCCG/certo.png" id="4_lky8y"]
 [ext_resource type="Texture2D" uid="uid://dq7pifw1hjs5g" path="res://Assets 2D/MinigameCCG/errado.png" id="5_qv2gg"]
@@ -9,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://cqlekf7slbto3" path="res://Assets 2D/MinigameCCG/avancar.png" id="7_coh3w"]
 [ext_resource type="AudioStream" uid="uid://gn25bwa4p7ee" path="res://Audio/realizacao_correcao.mp3" id="9_lky8y"]
 [ext_resource type="AudioStream" uid="uid://b4lkdlxvggrfc" path="res://Audio/som_folha_virando.mp3" id="9_s4ldr"]
-[ext_resource type="AudioStream" uid="uid://csphr6b7a7um8" path="res://Audio/som_vitoria.wav" id="10_qv2gg"]
+[ext_resource type="AudioStream" uid="uid://b3jn7ejw8jcgf" path="res://Audio/745224__onekro117__box-correct.wav" id="11_coh3w"]
 [ext_resource type="AudioStream" uid="uid://raf8xvfn3sdd" path="res://Audio/som_derrota.wav" id="11_nsyqp"]
 
 [sub_resource type="Animation" id="Animation_qv2gg"]
@@ -162,24 +163,24 @@ position = Vector2(575, 320)
 texture = ExtResource("2_s4ldr")
 
 [node name="Questao" type="Label" parent="questao1" unique_id=1731124349]
-offset_left = -235.5412
-offset_top = -288.4071
-offset_right = -11.541199
-offset_bottom = -226.4071
+offset_left = -240.0
+offset_top = -290.0
+offset_right = -16.0
+offset_bottom = -228.0
 theme_override_colors/font_color = Color(0.10189872, 0.11977533, 0.28442967, 1)
-theme_override_fonts/font = ExtResource("3_s4ldr")
+theme_override_fonts/font = ExtResource("3_nsyqp")
 theme_override_font_sizes/font_size = 46
-text = "Questao 1:"
+text = "Questão 1:"
 
 [node name="Enunciado" type="Label" parent="questao1" unique_id=1743144830]
-offset_left = -232.85672
-offset_top = -233.37302
-offset_right = 203.45874
-offset_bottom = -115.25104
+offset_left = -233.0
+offset_top = -229.0
+offset_right = 203.31546
+offset_bottom = -110.87802
 size_flags_horizontal = 4
 theme_override_colors/font_color = Color(0.20874763, 0.25605226, 0.426158, 1)
-theme_override_fonts/font = ExtResource("3_s4ldr")
-theme_override_font_sizes/font_size = 25
+theme_override_fonts/font = ExtResource("3_nsyqp")
+theme_override_font_sizes/font_size = 30
 text = "Se eu como um pedaço de bolo em 1 hora, quanto tempo eu demoro pra comer 15 pedaços?"
 autowrap_mode = 2
 
@@ -292,25 +293,25 @@ position = Vector2(575, 320)
 texture = ExtResource("2_s4ldr")
 
 [node name="Questao" type="Label" parent="questao2" unique_id=2076704131]
-offset_left = -237.66046
-offset_top = -283.9167
-offset_right = -1.6604614
-offset_bottom = -221.91669
+offset_left = -240.0
+offset_top = -290.0
+offset_right = -16.0
+offset_bottom = -228.0
 theme_override_colors/font_color = Color(0.10189872, 0.11977533, 0.28442967, 1)
-theme_override_fonts/font = ExtResource("3_s4ldr")
+theme_override_fonts/font = ExtResource("3_nsyqp")
 theme_override_font_sizes/font_size = 42
-text = "Questao 2:"
+text = "Questão 2:"
 
 [node name="Enunciado" type="Label" parent="questao2" unique_id=22517066]
-offset_left = -233.14978
-offset_top = -202.58762
-offset_right = 164.67633
-offset_bottom = -40.587616
+offset_left = -235.0
+offset_top = -234.0
+offset_right = 162.82611
+offset_bottom = -62.0
 size_flags_horizontal = 4
 theme_override_colors/font_color = Color(0.20874763, 0.25605226, 0.426158, 1)
-theme_override_fonts/font = ExtResource("3_s4ldr")
-theme_override_font_sizes/font_size = 29
-text = "Quais as duas linguagens mais faladas do mundo?
+theme_override_fonts/font = ExtResource("3_nsyqp")
+theme_override_font_sizes/font_size = 30
+text = "Quais são as duas linguagens mais faladas do mundo?
 
 "
 autowrap_mode = 2
@@ -409,23 +410,23 @@ position = Vector2(575, 320)
 texture = ExtResource("2_s4ldr")
 
 [node name="Questao" type="Label" parent="questao3" unique_id=1320399677]
-offset_left = -237.54947
-offset_top = -287.29193
-offset_right = -1.549469
-offset_bottom = -225.29193
+offset_left = -240.0
+offset_top = -290.0
+offset_right = -16.0
+offset_bottom = -228.0
 theme_override_colors/font_color = Color(0.10189872, 0.11977533, 0.28442967, 1)
-theme_override_fonts/font = ExtResource("3_s4ldr")
+theme_override_fonts/font = ExtResource("3_nsyqp")
 theme_override_font_sizes/font_size = 46
-text = "Questao 3:"
+text = "Questão 3:"
 
 [node name="Enunciado" type="Label" parent="questao3" unique_id=2005196068]
-offset_left = -235.93176
-offset_top = -220.82266
-offset_right = 215.69064
-offset_bottom = -91.82266
+offset_left = -236.0
+offset_top = -230.0
+offset_right = 215.6224
+offset_bottom = -101.0
 size_flags_horizontal = 4
 theme_override_colors/font_color = Color(0.20874763, 0.25605226, 0.426158, 1)
-theme_override_fonts/font = ExtResource("3_s4ldr")
+theme_override_fonts/font = ExtResource("3_nsyqp")
 theme_override_font_sizes/font_size = 29
 text = "Depois do futebol, qual é o maior esporte do Brasil?
 "
@@ -469,10 +470,10 @@ text = "C) Briga de dedo
 "
 
 [node name="itemD" type="Label" parent="questao3" unique_id=708739142]
-offset_left = -236.48291
-offset_top = -2.6258698
-offset_right = -12.48291
-offset_bottom = 87.37413
+offset_left = -236.483
+offset_top = -18.456
+offset_right = -12.483002
+offset_bottom = 71.544
 theme_override_colors/font_color = Color(0.15341792, 0.19120544, 0.33048913, 1)
 theme_override_fonts/font = ExtResource("3_s4ldr")
 theme_override_font_sizes/font_size = 24
@@ -516,7 +517,7 @@ text = "O aluno acertou
 ou errou?"
 
 [node name="resposta" type="Sprite2D" parent="questao3" unique_id=1932253399]
-position = Vector2(-225.48233, 2.9955597)
+position = Vector2(-225.482, -9.219)
 scale = Vector2(0.80973655, 0.8097366)
 texture = ExtResource("6_nsyqp")
 
@@ -526,14 +527,14 @@ position = Vector2(575, 320)
 texture = ExtResource("2_s4ldr")
 
 [node name="Questao" type="Label" parent="questao4" unique_id=721264766]
-offset_left = -224.84073
-offset_top = -281.58496
-offset_right = 8.159271
-offset_bottom = -219.58496
+offset_left = -240.0
+offset_top = -290.0
+offset_right = -16.0
+offset_bottom = -228.0
 theme_override_colors/font_color = Color(0.10189872, 0.11977533, 0.28442967, 1)
-theme_override_fonts/font = ExtResource("3_s4ldr")
+theme_override_fonts/font = ExtResource("3_nsyqp")
 theme_override_font_sizes/font_size = 46
-text = "Questao 4:"
+text = "Questão 4:"
 
 [node name="Enunciado" type="Label" parent="questao4" unique_id=924315882]
 offset_left = -226.31921
@@ -542,8 +543,8 @@ offset_right = 307.91418
 offset_bottom = -82.316925
 size_flags_horizontal = 4
 theme_override_colors/font_color = Color(0.20874763, 0.25605226, 0.426158, 1)
-theme_override_fonts/font = ExtResource("3_s4ldr")
-theme_override_font_sizes/font_size = 29
+theme_override_fonts/font = ExtResource("3_nsyqp")
+theme_override_font_sizes/font_size = 34
 text = "Qual o som a raposa faz?
 
 
@@ -645,24 +646,24 @@ position = Vector2(575, 320)
 texture = ExtResource("2_s4ldr")
 
 [node name="Questao" type="Label" parent="questao5" unique_id=951589316]
-offset_left = -220.90994
-offset_top = -278.8277
-offset_right = 12.090057
-offset_bottom = -216.8277
+offset_left = -240.0
+offset_top = -290.0
+offset_right = -16.0
+offset_bottom = -228.0
 theme_override_colors/font_color = Color(0.10189872, 0.11977533, 0.28442967, 1)
-theme_override_fonts/font = ExtResource("3_s4ldr")
+theme_override_fonts/font = ExtResource("3_nsyqp")
 theme_override_font_sizes/font_size = 46
-text = "Questao 5:"
+text = "Questão 5:"
 
 [node name="Enunciado" type="Label" parent="questao5" unique_id=116082065]
-offset_left = -228.41592
-offset_top = -206.48192
-offset_right = 305.81747
-offset_bottom = -77.48192
+offset_left = -226.0
+offset_top = -217.0
+offset_right = 308.2334
+offset_bottom = -118.0
 size_flags_horizontal = 4
 theme_override_colors/font_color = Color(0.20874763, 0.25605226, 0.426158, 1)
-theme_override_fonts/font = ExtResource("3_s4ldr")
-theme_override_font_sizes/font_size = 29
+theme_override_fonts/font = ExtResource("3_nsyqp")
+theme_override_font_sizes/font_size = 30
 text = "Quantos continentes existem?
 
 "
@@ -765,14 +766,14 @@ position = Vector2(575, 320)
 texture = ExtResource("2_s4ldr")
 
 [node name="Questao" type="Label" parent="questao6" unique_id=1403225973]
-offset_left = -241.0
-offset_top = -289.0
-offset_right = -5.0
-offset_bottom = -227.0
+offset_left = -240.0
+offset_top = -290.0
+offset_right = -16.0
+offset_bottom = -228.0
 theme_override_colors/font_color = Color(0.10189872, 0.11977533, 0.28442967, 1)
-theme_override_fonts/font = ExtResource("3_s4ldr")
+theme_override_fonts/font = ExtResource("3_nsyqp")
 theme_override_font_sizes/font_size = 46
-text = "Questao 6:"
+text = "Questão 6:"
 
 [node name="Enunciado" type="Label" parent="questao6" unique_id=157075674]
 offset_left = -236.03046
@@ -781,16 +782,16 @@ offset_right = 217.67279
 offset_bottom = 43.4281
 size_flags_horizontal = 4
 theme_override_colors/font_color = Color(0.20874763, 0.25605226, 0.426158, 1)
-theme_override_fonts/font = ExtResource("3_s4ldr")
-theme_override_font_sizes/font_size = 19
+theme_override_fonts/font = ExtResource("3_nsyqp")
+theme_override_font_sizes/font_size = 24
 text = "O princípio da incerteza de Heisenberg estabelece um limite para a precisão com que podemos conhecer simultaneamente determinadas propriedades de uma partícula, como posição e momento. Considerando esse princípio, quanto é 350 dividido por 2?"
 autowrap_mode = 2
 
 [node name="itemA" type="Label" parent="questao6" unique_id=2013161747]
-offset_left = -234.37616
-offset_top = -43.120667
-offset_right = 77.62384
-offset_bottom = 18.879333
+offset_left = -232.0
+offset_top = -24.0
+offset_right = 80.0
+offset_bottom = 38.0
 theme_override_colors/font_color = Color(0.15341792, 0.19120544, 0.33048913, 1)
 theme_override_fonts/font = ExtResource("3_s4ldr")
 theme_override_font_sizes/font_size = 22
@@ -811,10 +812,10 @@ a bola de bilhar
 "
 
 [node name="itemC" type="Label" parent="questao6" unique_id=808066334]
-offset_left = -231.82135
-offset_top = 92.27289
-offset_right = 321.17865
-offset_bottom = 244.27286
+offset_left = -234.0
+offset_top = 71.0
+offset_right = 319.0
+offset_bottom = 222.99997
 theme_override_colors/font_color = Color(0.15341792, 0.19120544, 0.33048913, 1)
 theme_override_fonts/font = ExtResource("3_s4ldr")
 theme_override_font_sizes/font_size = 22
@@ -825,10 +826,10 @@ text = "C) 25
 "
 
 [node name="itemD" type="Label" parent="questao6" unique_id=981801415]
-offset_left = -230.544
-offset_top = 136.97803
-offset_right = 255.456
-offset_bottom = 237.97803
+offset_left = -232.0
+offset_top = 106.0
+offset_right = 254.0
+offset_bottom = 207.0
 theme_override_colors/font_color = Color(0.15341792, 0.19120544, 0.33048913, 1)
 theme_override_fonts/font = ExtResource("3_s4ldr")
 theme_override_font_sizes/font_size = 22
@@ -872,7 +873,7 @@ text = "O aluno acertou
 ou errou?"
 
 [node name="resposta" type="Sprite2D" parent="questao6" unique_id=1774896469]
-position = Vector2(-225.69556, -35.65555)
+position = Vector2(-226, -20)
 scale = Vector2(0.8434152, 0.8434153)
 texture = ExtResource("6_nsyqp")
 
@@ -887,7 +888,7 @@ offset_top = -286.34094
 offset_right = 269.99323
 offset_bottom = -159.34094
 theme_override_colors/font_color = Color(0.10189872, 0.11977533, 0.28442967, 1)
-theme_override_fonts/font = ExtResource("3_s4ldr")
+theme_override_fonts/font = ExtResource("3_nsyqp")
 theme_override_font_sizes/font_size = 33
 text = "Monitor, sua correçao
 está..."
@@ -900,7 +901,7 @@ offset_right = 126.52991
 offset_bottom = -102.1761
 size_flags_horizontal = 4
 theme_override_colors/font_color = Color(0.101960786, 0.12156863, 0.28627452, 1)
-theme_override_fonts/font = ExtResource("3_s4ldr")
+theme_override_fonts/font = ExtResource("3_nsyqp")
 theme_override_font_sizes/font_size = 38
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -914,7 +915,7 @@ offset_right = 174.17667
 offset_bottom = 76.15527
 size_flags_horizontal = 4
 theme_override_colors/font_color = Color(0.101960786, 0.12156863, 0.28627452, 1)
-theme_override_fonts/font = ExtResource("3_s4ldr")
+theme_override_fonts/font = ExtResource("3_nsyqp")
 theme_override_font_sizes/font_size = 42
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -930,7 +931,7 @@ stream = ExtResource("9_lky8y")
 bus = &"BGM"
 
 [node name="SomVitoria" type="AudioStreamPlayer" parent="." unique_id=527400831]
-stream = ExtResource("10_qv2gg")
+stream = ExtResource("11_coh3w")
 bus = &"SFX"
 
 [node name="SomDerrota" type="AudioStreamPlayer" parent="." unique_id=468225018]
