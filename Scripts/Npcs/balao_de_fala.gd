@@ -12,7 +12,6 @@ extends Control
 @onready var voz_ccg: AudioStreamPlayer = $VozCCG
 @onready var voz_pensamento: AudioStreamPlayer = $VozPensamento
 
-
 # Voz atual
 var voz_atual: AudioStreamPlayer
 
@@ -59,7 +58,7 @@ func avancar_dialogo() -> void:
 		exibir_frase_atual()
 	else:
 		esconder_balao()
-		lista_falas.clear()
+		lista_falas = []
 		indice_atual = 0
 		dialogo_terminou.emit()
 

@@ -108,6 +108,7 @@ stream = ExtResource("8_sfkor")
 
 [node name="VozCCG" type="AudioStreamPlayer" parent="." unique_id=2039600781]
 stream = ExtResource("9_sowof")
+volume_db = -10.0
 
 [node name="VozPensamento" type="AudioStreamPlayer" parent="." unique_id=1075074435]
 stream = ExtResource("10_rqokl")

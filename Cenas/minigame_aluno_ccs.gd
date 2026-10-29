@@ -104,6 +104,14 @@ func switchCCS():
 		await animation_player.animation_finished
 		changing = false
 		
+		tempo_restante = 3
+		fase_atual = 0 
+		pontuacao = 0
+		total_orgaos_certos = 4 
+		orgaos_pontuados = []
+		tempo_jogo = 30 
+		jogo_ativo = false
+		
 		being_ccs()
 		
 		# Desligar

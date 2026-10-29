@@ -42,6 +42,7 @@
 [ext_resource type="Texture2D" uid="uid://c3yokceukmkr0" path="res://Assets 2D/Cutscenes/Figura.em.cenario.CC.png" id="32_pg371"]
 [ext_resource type="PackedScene" uid="uid://hjttdtnxb313" path="res://Cenas/minigame_aluno_ccs.tscn" id="33_pg371"]
 [ext_resource type="PackedScene" uid="uid://5mru63u16iym" path="res://Cenas/balao_de_fala.tscn" id="36_fnbj8"]
+[ext_resource type="PackedScene" uid="uid://c8ln8hr2rmu8p" path="res://Cenas/minigame_aluno_ccg.tscn" id="36_hrwhd"]
 [ext_resource type="AudioStream" uid="uid://df8w5jhta0p12" path="res://Audio/CameraFlash.wav" id="42_x74nr"]
 [ext_resource type="AudioStream" uid="uid://byvqufq2etx2c" path="res://Audio/GameOver.wav" id="43_46o8u"]
 [ext_resource type="AudioStream" uid="uid://307edq4fucr3" path="res://Audio/Notification Sound.ogg" id="44_fnynf"]
@@ -952,10 +953,12 @@ offset_bottom = 150.0
 
 [node name="Minigame_ccs" parent="." unique_id=1834344179 instance=ExtResource("33_pg371")]
 
+[node name="minigame_ccg" parent="." unique_id=1994313783 instance=ExtResource("36_hrwhd")]
+
 [node name="Fade" parent="." unique_id=1383060492 instance=ExtResource("3_eh8p8")]
 mouse_filter = 2
 
-[node name="MenuConfig" type="Panel" parent="." unique_id=477531899 node_paths=PackedStringArray("computer")]
+[node name="MenuConfig" type="Panel" parent="." unique_id=477531899 node_paths=PackedStringArray("computer", "minigame_pato_fred", "minigame_ccs", "minigame_ccg")]
 offset_left = 245.0
 offset_top = 106.0
 offset_right = 945.0
@@ -963,6 +966,9 @@ offset_bottom = 546.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_sjri2")
 script = ExtResource("8_rljct")
 computer = NodePath("../Computer")
+minigame_pato_fred = NodePath("../MinigamePatoFred")
+minigame_ccs = NodePath("../Minigame_ccs")
+minigame_ccg = NodePath("../minigame_ccg")
 
 [node name="MenuConfigLousa" type="Sprite2D" parent="MenuConfig" unique_id=445458525]
 position = Vector2(350, 219.5)

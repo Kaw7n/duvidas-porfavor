@@ -18,12 +18,15 @@ var duvida_tutorial = false;
 var duvida_cct = false;
 var duvida_pato_fred = false;
 var duvida_ccs = false;
+var duvida_ccg = false;
 
 #Sinais de duvidas
 @warning_ignore("unused_signal")
 signal signal_pato_fred
 @warning_ignore("unused_signal")
 signal signal_aluno_ccs
+@warning_ignore("unused_signal")
+signal signal_aluno_ccg
 
 #Duvida Deu certo ou errado? = false = errado / true = certo
 var duvida_status = true

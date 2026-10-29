@@ -3,15 +3,18 @@ extends Panel
 @onready var menu_config: Panel = $"."
 @export var computer: Control
 @export var minigame_pato_fred: Control
+@export var minigame_ccs: Node2D
+@export var minigame_ccg: Control
+
 
 func _ready() -> void:
 	menu_config.visible = false; #Deixar config escondido
 	
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("esc"):
-		if computer == null or computer.visible == false or minigame_pato_fred == null:
+		if Global.duvida_tutorial == false and Global.duvida_cct == false and Global.duvida_pato_fred == false and Global.duvida_ccs == false and Global.duvida_ccg == false:
 			switchMenu()
-
+			
 func switchMenu():
 	if menu_config.visible == false:
 		menu_config.visible = true;
