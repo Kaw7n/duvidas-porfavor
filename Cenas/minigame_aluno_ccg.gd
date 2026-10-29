@@ -280,9 +280,13 @@ func mostrar_resultado_final() -> void:
 			node_resultado.get_node("resultadoFinal").text = "Errada! Sinto Muito..."
 			if som_derrota:
 				som_derrota.play()
+
+
 				await get_tree().create_timer(5).timeout
 				Global.duvida_ccg = false
 				Global.duvida_status = false;
+				Global.lives -= 1
+
 				switchCCG()
 				
 				

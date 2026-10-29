@@ -28,6 +28,7 @@ GerenciadorDialogo="*uid://co4poyb5fox4b"
 
 [display]
 
+window/size/resizable=false
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 
