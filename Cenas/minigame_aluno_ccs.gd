@@ -222,6 +222,7 @@ func _on_tempo_jogo_timeout() -> void:
 		if som_derrota:
 			som_derrota.play()
 		mudar_estado_pecas(false)
+		
 		await get_tree().create_timer(6).timeout
 		Global.duvida_ccs = false
 		Global.duvida_status = false;
@@ -306,6 +307,12 @@ func _on_item_solto(item_node: Node, posicao_solta: Vector2) -> void:
 			if som_derrota:
 				som_derrota.play()
 			mudar_estado_pecas(false)
+			await get_tree().create_timer(6).timeout
+			Global.duvida_ccs = false
+			Global.duvida_status = false;
+			Global.pass_level.emit()
+			Global.lives -= 1
+			switchCCS()
 
 
 func mudar_estado_pecas(estado: bool) -> void:

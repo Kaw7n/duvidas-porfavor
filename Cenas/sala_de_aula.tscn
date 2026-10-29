@@ -46,6 +46,13 @@
 [ext_resource type="AudioStream" uid="uid://df8w5jhta0p12" path="res://Audio/CameraFlash.wav" id="42_x74nr"]
 [ext_resource type="AudioStream" uid="uid://byvqufq2etx2c" path="res://Audio/GameOver.wav" id="43_46o8u"]
 [ext_resource type="AudioStream" uid="uid://307edq4fucr3" path="res://Audio/Notification Sound.ogg" id="44_fnynf"]
+[ext_resource type="Texture2D" uid="uid://dkbh4ft70827r" path="res://Assets UI/Godot (2).png" id="44_pg4x7"]
+[ext_resource type="FontFile" uid="uid://ip1mpyutngtt" path="res://Misc/Datafont.ttf" id="45_pg4x7"]
+[ext_resource type="Texture2D" uid="uid://cqlekf7slbto3" path="res://Assets 2D/MinigameCCG/avancar.png" id="46_bb70c"]
+[ext_resource type="Texture2D" uid="uid://cedumit7mlk43" path="res://Assets UI/Vortezx.png" id="47_pg4x7"]
+[ext_resource type="AudioStream" uid="uid://b4lkdlxvggrfc" path="res://Audio/som_folha_virando.mp3" id="51_pg4x7"]
+[ext_resource type="AudioStream" uid="uid://oing8i2qk2w6" path="res://Audio/BackgroundMusic.mp3" id="52_bb70c"]
+[ext_resource type="Texture2D" uid="uid://beg8gmij03lia" path="res://Assets 2D/Logo celeste.png" id="53_yo430"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_sn0t7"]
 
@@ -610,6 +617,30 @@ tracks/9/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 0)]
 }
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("../Credits:modulate")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("../MainBMG:volume_db")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
 
 [sub_resource type="Animation" id="Animation_tgoao"]
 resource_name = "bad_ending"
@@ -625,6 +656,38 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_me1cu"]
+resource_name = "credits"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Credits:modulate")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_e5l6l"]
+resource_name = "credits_out"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Credits:modulate")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_x74nr"]
@@ -758,6 +821,36 @@ tracks/3/keys = {
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
 
+[sub_resource type="Animation" id="Animation_yo430"]
+resource_name = "main_bmg_in"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../MainBMG:volume_db")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-80.0, 0.0]
+}
+
+[sub_resource type="Animation" id="Animation_bb70c"]
+resource_name = "main_bmg_out"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../MainBMG:volume_db")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, -80.0]
+}
+
 [sub_resource type="Animation" id="Animation_th4vb"]
 resource_name = "moema_antiga_in"
 tracks/0/type = "value"
@@ -792,18 +885,26 @@ tracks/0/keys = {
 _data = {
 &"RESET": SubResource("Animation_dffwd"),
 &"bad_ending": SubResource("Animation_tgoao"),
+&"credits_in": SubResource("Animation_me1cu"),
+&"credits_out": SubResource("Animation_e5l6l"),
 &"cutscene_being_blackout": SubResource("Animation_x74nr"),
 &"cutscene_being_move_1": SubResource("Animation_pf8ni"),
 &"cutscene_being_move_2": SubResource("Animation_46o8u"),
 &"cutscene_being_out_1": SubResource("Animation_fnynf"),
 &"cutscene_being_out_2": SubResource("Animation_rowrm"),
 &"good_ending": SubResource("Animation_hrwhd"),
+&"main_bmg_in": SubResource("Animation_yo430"),
+&"main_bmg_out": SubResource("Animation_bb70c"),
 &"moema_antiga_in": SubResource("Animation_th4vb"),
 &"moema_antiga_out": SubResource("Animation_3eeau")
 }
 
-[node name="Sala de Aula" type="Node3D" unique_id=1421979112]
+[node name="Sala de Aula" type="Node3D" unique_id=1421979112 node_paths=PackedStringArray("credits", "animation_player", "som_virar_pagina", "main_bmg")]
 script = ExtResource("1_pw2gw")
+credits = NodePath("Credits")
+animation_player = NodePath("AnimationPlayer")
+som_virar_pagina = NodePath("SomVirarPagina")
+main_bmg = NodePath("MainBMG")
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=446686118]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -0.04561898, 0.0752902, 0)
@@ -840,7 +941,7 @@ omni_range = 10.751
 [node name="Room" parent="." unique_id=1118715749 instance=ExtResource("4_pj44w")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -0.078740954, -1.4429402, 0.015421808)
 
-[node name="NPCs" type="AnimatedSprite3D" parent="." unique_id=1061259584 node_paths=PackedStringArray("camera_3d", "area_3d", "npcs_animations", "balao_de_fala", "balao_de_cutscene", "animation_player", "cutscene_being_2", "cutscene_being_1", "cutscene_good_ending", "cutscene_bad_ending", "camera_flash", "game_over", "computer_notification", "moema_antiga")]
+[node name="NPCs" type="AnimatedSprite3D" parent="." unique_id=1061259584 node_paths=PackedStringArray("camera_3d", "area_3d", "npcs_animations", "balao_de_fala", "balao_de_cutscene", "animation_player", "cutscene_being_2", "cutscene_being_1", "cutscene_good_ending", "cutscene_bad_ending", "camera_flash", "game_over", "computer_notification", "moema_antiga", "main_bmg")]
 transform = Transform3D(-1.3113417e-08, 0, 0.3, 0, 0.3, 0, -0.3, 0, -1.3113417e-08, 1.5, 0, 0)
 offset = Vector2(150, -10)
 modulate = Color(0, 0, 0, 0)
@@ -861,6 +962,7 @@ camera_flash = NodePath("../CameraFlash")
 game_over = NodePath("../GameOver")
 computer_notification = NodePath("../ComputerNotification")
 moema_antiga = NodePath("../Moema_Antiga")
+main_bmg = NodePath("../MainBMG")
 
 [node name="NpcsAnimations" type="AnimationPlayer" parent="NPCs" unique_id=765308715]
 libraries/ = SubResource("AnimationLibrary_tp12v")
@@ -925,13 +1027,14 @@ position = Vector2(582, 489)
 scale = Vector2(2, 2)
 texture = ExtResource("26_fnynf")
 
-[node name="Computer" parent="." unique_id=90605145 node_paths=PackedStringArray("camera_3d", "area_click_computer", "animation_player") instance=ExtResource("20_sjri2")]
+[node name="Computer" parent="." unique_id=90605145 node_paths=PackedStringArray("animation_player_comp", "camera_3d", "area_click_computer", "animation_player") instance=ExtResource("20_sjri2")]
 modulate = Color(1, 1, 1, 0)
+animation_player_comp = NodePath("AnimationPlayerComp")
 camera_3d = NodePath("../Camera3D")
 area_click_computer = NodePath("../AreaClickComputer")
-animation_player = NodePath("AnimationPlayer")
+animation_player = NodePath("../AnimationPlayer")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Computer" unique_id=1293792405]
+[node name="AnimationPlayerComp" type="AnimationPlayer" parent="Computer" unique_id=1293792405]
 libraries/ = SubResource("AnimationLibrary_oulm0")
 
 [node name="MinigamePatoFred" parent="." unique_id=759866613 instance=ExtResource("28_pj44w")]
@@ -956,9 +1059,12 @@ offset_bottom = 150.0
 [node name="minigame_ccg" parent="." unique_id=1994313783 instance=ExtResource("36_hrwhd")]
 
 [node name="Fade" parent="." unique_id=1383060492 instance=ExtResource("3_eh8p8")]
+modulate = Color(0, 0, 0, 1)
+self_modulate = Color(0, 0, 0, 1)
 mouse_filter = 2
 
 [node name="MenuConfig" type="Panel" parent="." unique_id=477531899 node_paths=PackedStringArray("computer", "minigame_pato_fred", "minigame_ccs", "minigame_ccg")]
+visible = false
 offset_left = 245.0
 offset_top = 106.0
 offset_right = 945.0
@@ -1103,18 +1209,85 @@ max_value = 0.5
 step = 0.01
 script = ExtResource("13_jdm6y")
 
+[node name="Credits" type="Control" parent="." unique_id=266872173]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+
+[node name="Godot" type="Sprite2D" parent="Credits" unique_id=1061987328]
+position = Vector2(591.06, 420)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("44_pg4x7")
+
+[node name="ProximaFase" type="Sprite2D" parent="Credits" unique_id=2018795409]
+position = Vector2(325, 450)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("47_pg4x7")
+
+[node name="LogoCeleste" type="Sprite2D" parent="Credits" unique_id=2072934228]
+position = Vector2(780.83, 463)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("53_yo430")
+
+[node name="Agradecimento" type="Label" parent="Credits" unique_id=1945933455]
+layout_mode = 0
+offset_left = 375.0
+offset_top = 135.0
+offset_right = 772.0
+offset_bottom = 181.0
+theme_override_fonts/font = ExtResource("45_pg4x7")
+theme_override_font_sizes/font_size = 45
+text = "Obrigado Por Jogar!"
+
+[node name="Creditos" type="Label" parent="Credits" unique_id=1874301363]
+layout_mode = 0
+offset_left = 207.0
+offset_top = 200.0
+offset_right = 985.0
+offset_bottom = 344.0
+theme_override_fonts/font = ExtResource("45_pg4x7")
+theme_override_font_sizes/font_size = 45
+text = "Desenvolvedor Principal - Kawan Morais
+Desenvolvedor Adicional - João Lucas
+Desing e Artes - Leticia Lira"
+horizontal_alignment = 1
+
+[node name="avancar" type="TextureButton" parent="Credits" unique_id=203116331]
+layout_mode = 0
+offset_left = 920.0
+offset_top = 369.0
+offset_right = 1076.25
+offset_bottom = 523.0
+scale = Vector2(0.8, 0.8)
+texture_normal = ExtResource("46_bb70c")
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1782645040]
 root_node = NodePath("../BalaoDeFala")
 libraries/ = SubResource("AnimationLibrary_hrwhd")
 
 [node name="CameraFlash" type="AudioStreamPlayer" parent="." unique_id=752385698]
 stream = ExtResource("42_x74nr")
+bus = &"SFX"
 
 [node name="GameOver" type="AudioStreamPlayer" parent="." unique_id=516001434]
 stream = ExtResource("43_46o8u")
+bus = &"SFX"
 
 [node name="ComputerNotification" type="AudioStreamPlayer" parent="." unique_id=1068173644]
 stream = ExtResource("44_fnynf")
+bus = &"SFX"
+
+[node name="SomVirarPagina" type="AudioStreamPlayer" parent="." unique_id=391979046]
+stream = ExtResource("51_pg4x7")
+bus = &"SFX"
+
+[node name="MainBMG" type="AudioStreamPlayer" parent="." unique_id=97875964]
+stream = ExtResource("52_bb70c")
+autoplay = true
+bus = &"BGM"
 
 [connection signal="pressed" from="MenuConfig/ExitConfig" to="MenuConfig" method="_on_exit_config_pressed"]
 [connection signal="pressed" from="MenuConfig/ExitGame" to="MenuConfig" method="_on_exit_game_pressed"]
@@ -1122,3 +1295,4 @@ stream = ExtResource("44_fnynf")
 [connection signal="value_changed" from="MenuConfig/VolumeBGM" to="MenuConfig/VolumeBGM" method="_on_value_changed"]
 [connection signal="value_changed" from="MenuConfig/VolumeSFX" to="MenuConfig/VolumeSFX" method="_on_value_changed"]
 [connection signal="value_changed" from="MenuConfig/Sensibilidade" to="MenuConfig/Sensibilidade" method="_on_value_changed"]
+[connection signal="pressed" from="Credits/avancar" to="." method="_on_avancar_pressed"]

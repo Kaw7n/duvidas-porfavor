@@ -14,6 +14,7 @@ var zoom_switch= true;
 var lives = 3; 
 
 #Duvidas
+var cutscene_inicial = false; 
 var duvida_tutorial = false;
 var duvida_cct = false;
 var duvida_pato_fred = false;
@@ -38,3 +39,5 @@ signal dim_in
 signal dim_out
 @warning_ignore("unused_signal")
 signal pass_level
+@warning_ignore("unused_signal")
+signal the_end

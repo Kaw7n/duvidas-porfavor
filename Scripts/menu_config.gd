@@ -12,7 +12,7 @@ func _ready() -> void:
 	
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("esc"):
-		if Global.duvida_tutorial == false and Global.duvida_cct == false and Global.duvida_pato_fred == false and Global.duvida_ccs == false and Global.duvida_ccg == false:
+		if Global.duvida_tutorial == false and Global.duvida_cct == false and Global.duvida_pato_fred == false and Global.duvida_ccs == false and Global.duvida_ccg == false and Global.cutscene_inicial == false:
 			switchMenu()
 			
 func switchMenu():

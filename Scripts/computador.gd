@@ -9,6 +9,7 @@ extends Control
 @export var cct_minigame: Sprite2D
 @export var blackout: Sprite2D
 @export var counter: AnimatedSprite2D
+@export var animation_player_comp: AnimationPlayer
 
 
 @export var computer_animations: AnimationPlayer
@@ -80,10 +81,10 @@ func switchComputer():
 	if changing == true:
 		return
 		
-	if computador.visible == false and Global.duvida_tutorial == true or Global.duvida_cct == true:
+	if (computador.visible == false and Global.duvida_tutorial == true) or (Global.duvida_cct == true):
 		changing = true;
 		Global.dim_in.emit()
-		animation_player.play('fade_in_computer')
+		animation_player_comp.play('fade_in_computer')
 		click_sound_switch = true;
 		computador.visible = true;
 		Global.click_switch = false;
@@ -91,7 +92,7 @@ func switchComputer():
 		Global.zoom_switch = false;
 		iniciar()
 		changing = false;
-	elif computador.visible == true and Global.duvida_tutorial == false and Global.duvida_cct == false:
+	elif (computador.visible == true and Global.duvida_tutorial) == false or (Global.duvida_cct == false):
 		
 		changing = true;
 		Global.click_switch = true;
@@ -99,7 +100,7 @@ func switchComputer():
 		Global.zoom_switch = true;
 		click_sound_switch = false;
 		Global.dim_out.emit()
-		animation_player.play('fade_out_computer')
+		animation_player_comp.play('fade_out_computer')
 		await animation_player.animation_finished
 		computador.visible = false;
 		changing = false;
@@ -136,9 +137,9 @@ func tutorial():
 	final.visible = true; 
 	duvida_win.play()
 	await get_tree().create_timer(2).timeout
-	Global.duvida_tutorial = false; 
-	await switchComputer()
+	Global.duvida_tutorial = false;
 	Global.pass_level.emit()
+	await switchComputer()
 	
 	
 #Duvidas CCT
@@ -155,6 +156,7 @@ func duvida_cct():
 	mouse_on_false_moema = 0
 	mouse_on_true_moema = 0
 	
+	animation_player.play("main_bmg_out")
 	await get_tree().create_timer(1).timeout
 	cct_music.play()
 	cct_minigame.visible = true
@@ -182,9 +184,6 @@ func _on_area_click_computer(_collider):
 		switchComputer()
 		
 func _input(event: InputEvent) -> void:
-	if event.is_action_pressed("esc") and computador.visible == true:
-		switchComputer()
-		return
 		
 	if active_round and event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
 		if mouse_on_false_moema > 0:

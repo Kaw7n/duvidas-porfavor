@@ -913,10 +913,12 @@ bus = &"SFX"
 [node name="DucksFall" type="AudioStreamPlayer" parent="." unique_id=1676570365]
 stream = ExtResource("14_vb36g")
 volume_db = -10.0
+bus = &"SFX"
 
 [node name="PatofredMusic" type="AudioStreamPlayer" parent="." unique_id=978353953]
 stream = ExtResource("15_weu0a")
 volume_db = -10.0
+bus = &"BGM"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=957757177]
 root_node = NodePath("../AnimatedSprite2D")

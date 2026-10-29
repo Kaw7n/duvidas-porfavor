@@ -113,3 +113,4 @@ stream = ExtResource("9_t5vyn")
 stream = ExtResource("10_7lg0c")
 volume_db = -20.0
 pitch_scale = 0.67
+bus = &"SFX"

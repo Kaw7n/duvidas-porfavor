@@ -158,8 +158,9 @@ func maze_reset():
 		maze = true;
 		
 func teleport_mouse(): #teleporta o mouse
-	var i := mouse_begin.get_global_transform_with_canvas().origin
-	Input.warp_mouse(i)
+	var canvas_pos := mouse_begin.get_global_transform_with_canvas().origin
+	var window_pos := get_viewport().get_screen_transform() * canvas_pos
+	Input.warp_mouse(window_pos)
 
 func fail():
 	if maze_fail == true:

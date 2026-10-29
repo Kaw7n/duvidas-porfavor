@@ -923,15 +923,19 @@ metadata/_edit_use_anchors_ = true
 
 [node name="SomVirarPagina" type="AudioStreamPlayer" parent="." unique_id=1937965851]
 stream = ExtResource("9_s4ldr")
+bus = &"SFX"
 
 [node name="MusicaFundo" type="AudioStreamPlayer" parent="." unique_id=1255354187]
 stream = ExtResource("9_lky8y")
+bus = &"BGM"
 
 [node name="SomVitoria" type="AudioStreamPlayer" parent="." unique_id=527400831]
 stream = ExtResource("10_qv2gg")
+bus = &"SFX"
 
 [node name="SomDerrota" type="AudioStreamPlayer" parent="." unique_id=468225018]
 stream = ExtResource("11_nsyqp")
+bus = &"SFX"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=617962176]
 root_node = NodePath("../resultado/resultadoFinal")

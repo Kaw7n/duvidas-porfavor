@@ -3,15 +3,15 @@
 [ext_resource type="Script" uid="uid://cgvgq6hhg483h" path="res://Scripts/main_menu.gd" id="1_j6ip4"]
 [ext_resource type="Texture2D" uid="uid://l2ettrc8j7ar" path="res://Assets UI/Menu/Menu.png" id="2_cvjuc"]
 [ext_resource type="Script" uid="uid://b7lijytg10hv2" path="res://Scripts/Cameras/camera_2d.gd" id="4_l0j11"]
-[ext_resource type="Texture2D" uid="uid://3q6j76ji1rtj" path="res://Assets UI/Butões/1.png" id="6_evydy"]
-[ext_resource type="Texture2D" uid="uid://c3vwv5j0l32kj" path="res://Assets UI/Butões/3.png" id="7_cvjuc"]
-[ext_resource type="Texture2D" uid="uid://bpogl5i77ccwp" path="res://Assets UI/Butões/2.png" id="8_bocn1"]
-[ext_resource type="Texture2D" uid="uid://cmv02ey8sgkbh" path="res://Assets UI/Butões/4.png" id="9_h5isk"]
-[ext_resource type="Texture2D" uid="uid://dl4idgv66l35k" path="res://Assets UI/Butões/6.png" id="10_xmwsq"]
-[ext_resource type="Texture2D" uid="uid://bikbxp4lhhfk5" path="res://Assets UI/Butões/5.png" id="11_fi82c"]
-[ext_resource type="Texture2D" uid="uid://ls184dbrp7d0" path="res://Assets UI/Butões/7.png" id="12_okv4r"]
-[ext_resource type="Texture2D" uid="uid://c4j73ilmg6eum" path="res://Assets UI/Butões/9.png" id="13_bn6jt"]
-[ext_resource type="Texture2D" uid="uid://5bsndfsiplsa" path="res://Assets UI/Butões/8.png" id="14_4iy1a"]
+[ext_resource type="Texture2D" uid="uid://nkeb2apnoml" path="res://Assets UI/Butões/ButõesFinais/1.png" id="5_cvjuc"]
+[ext_resource type="Texture2D" uid="uid://bwrnjmhallsv1" path="res://Assets UI/Butões/ButõesFinais/3.png" id="6_bocn1"]
+[ext_resource type="Texture2D" uid="uid://c3y2b2yugalit" path="res://Assets UI/Butões/ButõesFinais/2.png" id="7_h5isk"]
+[ext_resource type="Texture2D" uid="uid://bbcs4dsqhrkb3" path="res://Assets UI/Butões/ButõesFinais/4.png" id="8_xmwsq"]
+[ext_resource type="Texture2D" uid="uid://wcfvyycucwux" path="res://Assets UI/Butões/ButõesFinais/6.png" id="9_fi82c"]
+[ext_resource type="Texture2D" uid="uid://dmr4gx3omfiuy" path="res://Assets UI/Butões/ButõesFinais/5.png" id="10_okv4r"]
+[ext_resource type="Texture2D" uid="uid://ixitkl7mmvmm" path="res://Assets UI/Butões/ButõesFinais/7.png" id="11_bn6jt"]
+[ext_resource type="Texture2D" uid="uid://bws1gtgppotwx" path="res://Assets UI/Butões/ButõesFinais/9.png" id="12_4iy1a"]
+[ext_resource type="Texture2D" uid="uid://4kb5bu0o8yqk" path="res://Assets UI/Butões/ButõesFinais/8.png" id="13_8dbf3"]
 [ext_resource type="AudioStream" uid="uid://ce1b2ydqcvayy" path="res://Audio/Nova Musica de fundo do menu.wav" id="15_bocn1"]
 [ext_resource type="AudioStream" uid="uid://1vo0m5yrxtgk" path="res://Audio/Som-De-Caneta-Iniciar.ogg" id="16_evydy"]
 [ext_resource type="AudioStream" uid="uid://cw4a2vh30fpwl" path="res://Audio/Som-de-Caneta-Configurações.ogg" id="17_cvjuc"]
@@ -25,16 +25,8 @@
 [ext_resource type="Script" uid="uid://ckylgk8gcpbaw" path="res://Scripts/Audio/volume_sfx.gd" id="24_bocn1"]
 [ext_resource type="Script" uid="uid://d0tybdgcv8d6g" path="res://Scripts/Cameras/sens.gd" id="25_cvjuc"]
 [ext_resource type="FontFile" uid="uid://crg25q10e3iqb" path="res://Misc/Dico.ttf" id="26_bocn1"]
-
-[sub_resource type="Gradient" id="Gradient_w7d22"]
-offsets = PackedFloat32Array(0.1506024, 0.939759)
-colors = PackedColorArray(1, 1, 1, 0, 0, 0, 0, 0.4627451)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_ml7fk"]
-gradient = SubResource("Gradient_w7d22")
-fill = 1
-fill_from = Vector2(0.5043478, 0.49130434)
-fill_to = Vector2(0.9956522, 1)
+[ext_resource type="Texture2D" uid="uid://8fl6sj540p5y" path="res://Assets 2D/Balões/logo com traçado.png" id="26_cvjuc"]
+[ext_resource type="Texture2D" uid="uid://beg8gmij03lia" path="res://Assets 2D/Logo celeste.png" id="27_bocn1"]
 
 [sub_resource type="GDScript" id="GDScript_2rfsq"]
 script/source = "extends AudioStreamPlayer2D
@@ -83,7 +75,60 @@ bg_color = Color(0.6, 0.6, 0.6, 0)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fi82c"]
 bg_color = Color(0.73333335, 0.7372549, 0.83137256, 0)
 
-[node name="MainMenu" type="Control" unique_id=66402352]
+[sub_resource type="Animation" id="Animation_h5isk"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../LogoCeleste:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_xmwsq"]
+resource_name = "celeste_in"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../LogoCeleste:modulate")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_fi82c"]
+resource_name = "celeste_out"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../LogoCeleste:modulate")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.5, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_okv4r"]
+_data = {
+&"RESET": SubResource("Animation_h5isk"),
+&"celeste_in": SubResource("Animation_xmwsq"),
+&"celeste_out": SubResource("Animation_fi82c")
+}
+
+[node name="MainMenu" type="Control" unique_id=66402352 node_paths=PackedStringArray("animation_player")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -93,68 +138,64 @@ offset_right = -2.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_j6ip4")
-
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=487005081]
-
-[node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=364255181]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 2
-texture = SubResource("GradientTexture2D_ml7fk")
+animation_player = NodePath("AnimationPlayer")
 
 [node name="Mesa de Fundo" type="Sprite2D" parent="." unique_id=476997413]
-position = Vector2(577.00024, 323)
+position = Vector2(612.465, 350.535)
 scale = Vector2(1, 0.992)
 texture = ExtResource("2_cvjuc")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=2097106382]
 position = Vector2(24, 0)
-offset = Vector2(574.425, 322.75)
+offset = Vector2(586.265, 322.75)
 zoom = Vector2(1.25, 1.25)
 script = ExtResource("4_l0j11")
 
+[node name="LogoComTraçado" type="Sprite2D" parent="." unique_id=1780107312]
+position = Vector2(604, 181.975)
+rotation = 0.06981316
+scale = Vector2(0.40000004, 0.40000004)
+texture = ExtResource("26_cvjuc")
+
 [node name="BotaoIniciar" type="TextureButton" parent="." unique_id=2141046020]
 layout_mode = 0
-offset_left = 382.265
-offset_top = 271.975
-offset_right = 682.26514
-offset_bottom = 321.975
+offset_left = 407.2
+offset_top = 314.07
+offset_right = 1307.1992
+offset_bottom = 414.07
 rotation = 0.08726646
-scale = Vector2(1.2, 1.2)
-texture_normal = ExtResource("6_evydy")
-texture_pressed = ExtResource("7_cvjuc")
-texture_hover = ExtResource("8_bocn1")
+scale = Vector2(0.45, 0.45)
+texture_normal = ExtResource("5_cvjuc")
+texture_pressed = ExtResource("6_bocn1")
+texture_hover = ExtResource("7_h5isk")
 ignore_texture_size = true
 stretch_mode = 3
 
 [node name="BotaoConfig" type="TextureButton" parent="." unique_id=615470740]
 layout_mode = 0
-offset_left = 429.785
-offset_top = 364.56
-offset_right = 629.7849
-offset_bottom = 414.56
+offset_left = 439.75
+offset_top = 401.105
+offset_right = 1139.7499
+offset_bottom = 501.10477
 rotation = 0.08726646
-scale = Vector2(1.2, 1.2)
-texture_normal = ExtResource("9_h5isk")
-texture_pressed = ExtResource("10_xmwsq")
-texture_hover = ExtResource("11_fi82c")
+scale = Vector2(0.45, 0.45)
+texture_normal = ExtResource("8_xmwsq")
+texture_pressed = ExtResource("9_fi82c")
+texture_hover = ExtResource("10_okv4r")
 ignore_texture_size = true
 stretch_mode = 3
 
 [node name="BotaoSair" type="TextureButton" parent="." unique_id=996526146]
 layout_mode = 0
-offset_left = 470.23
-offset_top = 468.1
-offset_right = 570.2304
-offset_bottom = 518.1
-rotation = 0.116937056
-scale = Vector2(1.2, 1.2)
-texture_normal = ExtResource("12_okv4r")
-texture_pressed = ExtResource("13_bn6jt")
-texture_hover = ExtResource("14_4iy1a")
+offset_left = 516.065
+offset_top = 499.03
+offset_right = 816.065
+offset_bottom = 599.0299
+rotation = 0.06981317
+scale = Vector2(0.45, 0.45)
+texture_normal = ExtResource("11_bn6jt")
+texture_pressed = ExtResource("12_4iy1a")
+texture_hover = ExtResource("13_8dbf3")
 ignore_texture_size = true
 stretch_mode = 3
 
@@ -326,14 +367,26 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_fi82c")
 text = "X"
 
 [node name="Fade" parent="." unique_id=1383060492 instance=ExtResource("20_hcwcd")]
-visible = false
+modulate = Color(0, 0, 0, 1)
+self_modulate = Color(0, 0, 0, 1)
 layout_mode = 1
 offset_left = -1.0
 offset_top = -3.0
 offset_right = -1.0
 offset_bottom = -3.0
+mouse_filter = 2
 
 [node name="Timer" type="Timer" parent="Fade" unique_id=872475080]
+
+[node name="LogoCeleste" type="Sprite2D" parent="." unique_id=1618563056]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(602.05, 323.17)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("27_bocn1")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=2131305260]
+root_node = NodePath("../Mesa de Fundo")
+libraries/ = SubResource("AnimationLibrary_okv4r")
 
 [connection signal="pressed" from="BotaoIniciar" to="." method="_on_texture_button_pressed"]
 [connection signal="pressed" from="BotaoConfig" to="." method="_on_texture_button_2_pressed"]
