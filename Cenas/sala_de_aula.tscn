@@ -208,6 +208,11 @@ animations = [{
 "loop": 1,
 "name": &"RODRIGO-talk",
 "speed": 5.0
+}, {
+"frames": [],
+"loop": 1,
+"name": &"null",
+"speed": 5.0
 }]
 
 [sub_resource type="Animation" id="Animation_ro5h3"]
@@ -946,7 +951,7 @@ transform = Transform3D(-1.3113417e-08, 0, 0.3, 0, 0.3, 0, -0.3, 0, -1.3113417e-
 offset = Vector2(150, -10)
 modulate = Color(0, 0, 0, 0)
 sprite_frames = SubResource("SpriteFrames_bhunq")
-animation = &"CCG-happy"
+animation = &"null"
 script = ExtResource("6_jdm6y")
 camera_3d = NodePath("../Camera3D")
 area_3d = NodePath("../AreaClickNpc")
@@ -991,8 +996,10 @@ scale = Vector2(1.2, 1.2)
 texture = ExtResource("32_pg371")
 
 [node name="Dim" type="ColorRect" parent="." unique_id=240347224 node_paths=PackedStringArray("animation_player")]
-offset_right = 1067.2727
-offset_bottom = 590.0
+offset_left = -81.99999
+offset_top = -44.0
+offset_right = 1079.8181
+offset_bottom = 626.0
 scale = Vector2(1.1, 1.1)
 mouse_filter = 2
 color = Color(0, 0, 0, 0)
@@ -1252,7 +1259,7 @@ theme_override_fonts/font = ExtResource("45_pg4x7")
 theme_override_font_sizes/font_size = 45
 text = "Desenvolvedor Principal - Kawan Morais
 Desenvolvedor Adicional - João Lucas
-Desing e Artes - Leticia Lira"
+Design e Artes - Leticia Lira"
 horizontal_alignment = 1
 
 [node name="avancar" type="TextureButton" parent="Credits" unique_id=203116331]

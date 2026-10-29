@@ -14,11 +14,11 @@
 [ext_resource type="Texture2D" uid="uid://b3yo537m0nfci" path="res://Assets 2D/MinigamesSaude/elemento real 2 anatomia.png" id="10_6xlfg"]
 [ext_resource type="Texture2D" uid="uid://qnyat0y740mg" path="res://Assets 2D/MinigamesSaude/elemento real 3 anatomia.png" id="11_ci5pf"]
 [ext_resource type="Texture2D" uid="uid://m7jl7s0bcglw" path="res://Assets 2D/MinigamesSaude/elemento real 4 anatomia.png" id="12_fpfl4"]
-[ext_resource type="FontFile" uid="uid://crg25q10e3iqb" path="res://Misc/Dico.ttf" id="14_ti6je"]
+[ext_resource type="FontFile" uid="uid://ip1mpyutngtt" path="res://Misc/Datafont.ttf" id="15_b4a4h"]
 [ext_resource type="AudioStream" uid="uid://bmixpgd6vd0hh" path="res://Audio/Audio minigame ccs.mp3" id="16_ee40m"]
-[ext_resource type="AudioStream" uid="uid://l3fq4wa1n3bu" path="res://Audio/coracao.mp3" id="17_b4a4h"]
 [ext_resource type="AudioStream" uid="uid://bcv747umpkp0d" path="res://Audio/SomErro.mp3" id="17_pqdmu"]
 [ext_resource type="AudioStream" uid="uid://dxcixib3vh6pu" path="res://Audio/SomMorte.mp3" id="18_s8pk4"]
+[ext_resource type="AudioStream" uid="uid://582ohwuwnaq6" path="res://Audio/Som correto.wav" id="19_0wv2x"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_g4v7s"]
 animations = [{
@@ -597,7 +597,7 @@ offset_bottom = 90.5
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
-theme_override_fonts/font = ExtResource("14_ti6je")
+theme_override_fonts/font = ExtResource("15_b4a4h")
 theme_override_font_sizes/font_size = 26
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -645,7 +645,7 @@ stream = ExtResource("16_ee40m")
 bus = &"BGM"
 
 [node name="SomAcerto" type="AudioStreamPlayer" parent="." unique_id=231545535]
-stream = ExtResource("17_b4a4h")
+stream = ExtResource("19_0wv2x")
 bus = &"SFX"
 
 [node name="SomErro" type="AudioStreamPlayer" parent="." unique_id=1451736434]

@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://ckt3f65yu0kfg" path="res://Scripts/minigame_pato_fred.gd" id="1_nr1tt"]
 [ext_resource type="Texture2D" uid="uid://ch3mjuq58jjyj" path="res://Assets 2D/Pato fred labirinto/PatoFredCursor.png" id="2_0u104"]
+[ext_resource type="AudioStream" uid="uid://307edq4fucr3" path="res://Audio/Notification Sound.ogg" id="2_2qw5p"]
 [ext_resource type="Texture2D" uid="uid://cgd6f2wmrhxbs" path="res://Assets 2D/Balões/Balões de pensamento/446 Sem Título_20261021180224.png" id="2_tc76v"]
 [ext_resource type="Texture2D" uid="uid://c64kgh6yboaf6" path="res://Assets 2D/Balões/Balões de pensamento/446 Sem Título_20261021180220.png" id="3_8v7xh"]
 [ext_resource type="Texture2D" uid="uid://cqogx1wrr7sqi" path="res://Assets 2D/Balões/Balões de pensamento/446 Sem Título_20261021180228.png" id="4_uko5u"]
@@ -17,6 +18,7 @@
 [ext_resource type="AudioStream" uid="uid://dhicbvxs53qct" path="res://Audio/SFX/DuvidaWin.mp3" id="12_ddw2e"]
 [ext_resource type="Texture2D" uid="uid://b8wn3b08oicnk" path="res://Assets 2D/Pato fred labirinto/Coração .png" id="13_c446p"]
 [ext_resource type="AudioStream" uid="uid://b5dr2n8crujf2" path="res://Audio/SFX/DuvidaFail.mp3" id="13_y1o5u"]
+[ext_resource type="FontFile" uid="uid://ip1mpyutngtt" path="res://Misc/Datafont.ttf" id="14_1da5d"]
 [ext_resource type="AudioStream" uid="uid://bkb7e1vaq75v4" path="res://Audio/SFX/DucksFalling.wav" id="14_vb36g"]
 [ext_resource type="AudioStream" uid="uid://5kld4p51fv5g" path="res://Audio/SFX/PatoFredMusic.wav" id="15_weu0a"]
 
@@ -725,7 +727,7 @@ _data = {
 &"map_dim": SubResource("Animation_n0iqb")
 }
 
-[node name="MinigamePatoFred" type="Control" unique_id=759866613 node_paths=PackedStringArray("animation_player", "area_2d_ok_path", "area_2d_blocked_path_1", "area_2d_blocked_path_2", "mouse_begin", "area_2d_exit", "area_2d_white_duck", "area_2d_red_duck", "area_2d_yellow_duck", "area_2d_green_duck", "quack", "ducks_fail", "duvida_win", "duvida_fail", "ducks_fall", "patofred_music", "animated_sprite_2d", "mapa", "caminho", "blocos", "white_duck", "red_duck", "yellow_duck", "green_duck", "minigame_pato_fred", "heart", "heart_2", "heart_3")]
+[node name="MinigamePatoFred" type="Control" unique_id=759866613 node_paths=PackedStringArray("animation_player", "notification_sound", "area_2d_ok_path", "area_2d_blocked_path_1", "area_2d_blocked_path_2", "mouse_begin", "area_2d_exit", "area_2d_white_duck", "area_2d_red_duck", "area_2d_yellow_duck", "area_2d_green_duck", "aviso", "quack", "ducks_fail", "duvida_win", "duvida_fail", "ducks_fall", "patofred_music", "animated_sprite_2d", "mapa", "caminho", "blocos", "white_duck", "red_duck", "yellow_duck", "green_duck", "minigame_pato_fred", "heart", "heart_2", "heart_3")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -739,6 +741,7 @@ grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("1_nr1tt")
 animation_player = NodePath("AnimationPlayer")
+notification_sound = NodePath("NotificationSound")
 area_2d_ok_path = NodePath("Caminho/Area2DOkPath")
 area_2d_blocked_path_1 = NodePath("Caminho/Area2DBlockedPath1")
 area_2d_blocked_path_2 = NodePath("Caminho/Area2DBlockedPath2")
@@ -749,6 +752,7 @@ area_2d_white_duck = NodePath("WhiteDuck/Area2DWhiteDuck")
 area_2d_red_duck = NodePath("RedDuck/Area2DRedDuck")
 area_2d_yellow_duck = NodePath("YellowDuck/Area2DYellowDuck")
 area_2d_green_duck = NodePath("GreenDuck/Area2DGreenDuck")
+aviso = NodePath("Aviso")
 quack = NodePath("Quack")
 ducks_fail = NodePath("DucksFail")
 duvida_win = NodePath("DuvidaWin")
@@ -889,6 +893,26 @@ modulate = Color(1, 1, 1, 0)
 position = Vector2(135, 147)
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("13_c446p")
+
+[node name="Aviso" type="Label" parent="." unique_id=511437839]
+layout_mode = 0
+offset_left = 113.0
+offset_top = 254.0
+offset_right = 228.0
+offset_bottom = 365.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_fonts/font = ExtResource("14_1da5d")
+theme_override_font_sizes/font_size = 14
+text = "O Pato Fred 
+vai aparecer 
+aqui monitor!!
+--------------->
+Use Seu Cursor
+Para Guia-lo!"
+
+[node name="NotificationSound" type="AudioStreamPlayer" parent="." unique_id=1787977246]
+stream = ExtResource("2_2qw5p")
+bus = &"SFX"
 
 [node name="Quack" type="AudioStreamPlayer" parent="." unique_id=179880188]
 stream = ExtResource("10_8v7xh")

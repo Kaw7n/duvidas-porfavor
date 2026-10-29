@@ -2,6 +2,8 @@ extends Control
 
 @export var animation_player: AnimationPlayer
 
+@export var notification_sound: AudioStreamPlayer
+
 @export var area_2d_ok_path: Area2D
 @export var area_2d_blocked_path_1: Area2D
 @export var area_2d_blocked_path_2: Area2D
@@ -12,6 +14,7 @@ extends Control
 @export var area_2d_red_duck: Area2D
 @export var area_2d_yellow_duck: Area2D
 @export var area_2d_green_duck: Area2D
+@export var aviso: Label
 
 @export var quack: AudioStreamPlayer
 @export var ducks_fail: AudioStreamPlayer
@@ -56,6 +59,7 @@ func _ready() -> void:
 	heart.visible = false
 	heart_2.visible = false
 	heart_3.visible = false
+	aviso.visible = false
 
 var changing = false; 
 	
@@ -141,21 +145,58 @@ func _input(event: InputEvent) -> void:
 func maze_start():
 	Input.set_custom_mouse_cursor(pato_fred_cursor, Input.CURSOR_ARROW, Vector2(16, 31))
 	teleport_mouse()
-	maze = true;
+	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+	aviso.visible = true
+	notification_sound.play()
+	await get_tree().create_timer(0.5).timeout
+	aviso.visible = false
+	await get_tree().create_timer(0.5).timeout
+	aviso.visible = true
+	notification_sound.play()
+	await get_tree().create_timer(0.5).timeout
+	aviso.visible = false
+	await get_tree().create_timer(0.5).timeout
+	aviso.visible = true
+	notification_sound.play()
+	await get_tree().create_timer(1.5).timeout
+	aviso.visible = false
+	await get_tree().create_timer(0.5).timeout
+	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+	teleport_mouse()
+	maze = true
 	
 func maze_reset():
-	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	if maze_lifes <= 0:
+		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 		duvida_fail.play()
 		Global.duvida_pato_fred = false
-		Global.duvida_status = false;
+		Global.duvida_status = false
 		Global.pass_level.emit()
 		Global.lives -= 1
 		switchComputer()
 	else:
+		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 		teleport_mouse()
 		maze_fail = false
-		maze = true;
+		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+		aviso.visible = true
+		notification_sound.play()
+		await get_tree().create_timer(0.5).timeout
+		aviso.visible = false
+		await get_tree().create_timer(0.5).timeout
+		aviso.visible = true
+		notification_sound.play()
+		await get_tree().create_timer(0.5).timeout
+		aviso.visible = false
+		await get_tree().create_timer(0.5).timeout
+		aviso.visible = true
+		notification_sound.play()
+		await get_tree().create_timer(1.5).timeout
+		aviso.visible = false
+		await get_tree().create_timer(0.5).timeout
+		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+		teleport_mouse()
+		maze = true
 		
 func teleport_mouse(): #teleporta o mouse
 	var canvas_pos := mouse_begin.get_global_transform_with_canvas().origin
