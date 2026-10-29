@@ -71,6 +71,7 @@ func think(falas: String, voz: String = "VozPensamento") -> void:
 	await balao_de_cutscene.dialogo_terminou
 
 func cutscene_inicial():
+	Global.cutscene_inicial = true
 	moema_antiga.visible = true
 	cutscene_being_2.visible = true
 	cutscene_being_1.visible = true
@@ -102,6 +103,7 @@ func cutscene_inicial():
 	moema_antiga.visible = false
 	await think("cutscene_6")
 	Global.click_switch = true;
+	Global.cutscene_inicial = false
 	Global.level+=1 
 		
 func level_tutorial():

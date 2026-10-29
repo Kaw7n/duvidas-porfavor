@@ -14,6 +14,7 @@ var zoom_switch= true;
 var lives = 3; 
 
 #Duvidas
+var cutscene_inicial = false; 
 var duvida_tutorial = false;
 var duvida_cct = false;
 var duvida_pato_fred = false;
